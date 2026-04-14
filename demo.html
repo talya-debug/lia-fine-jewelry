@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIA Fine Jewelry - מערכת ניהול</title>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#07101e;--card:#0e1a2e;--card2:#132240;--gold:#c9a84c;--gold2:#e8d48b;--gold3:#9a7b2e;--txt:#e2e8f0;--dim:#64748b;--green:#22c55e;--red:#ef4444;--blue:#3b82f6;--orange:#f59e0b;--purple:#a855f7;--cyan:#06b6d4;--pink:#ec4899}
+body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh}
+
+/* HEADER */
+.hdr{background:linear-gradient(135deg,#080f1e,#0f1d35);border-bottom:2px solid var(--gold);padding:12px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+.logo-text{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:var(--gold);letter-spacing:5px;text-shadow:0 2px 12px rgba(201,168,76,0.25)}
+.logo-sub{font-size:9px;color:var(--gold2);letter-spacing:5px;opacity:0.6;margin-top:-4px}
+.prices{display:flex;gap:12px}
+.pbadge{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:7px 16px;text-align:center;min-width:110px}
+.pbadge .pl{font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:1.5px}
+.pbadge .pv{font-size:17px;font-weight:700;color:var(--gold);direction:ltr}
+.pbadge .pu{font-size:7px;color:rgba(100,116,139,0.6)}
+.pbadge.on .pv{color:var(--green)}
+
+/* NAV */
+.nav{display:flex;background:var(--card);border-bottom:1px solid rgba(201,168,76,0.1);padding:0 28px;overflow-x:auto}
+.nav a{padding:13px 24px;color:var(--dim);font-size:13px;font-weight:500;cursor:pointer;border-bottom:3px solid transparent;transition:.3s;text-decoration:none;white-space:nowrap}
+.nav a:hover{color:var(--gold2)}
+.nav a.on{color:var(--gold);border-color:var(--gold)}
+
+/* MAIN */
+.main{padding:22px 28px;max-width:1480px;margin:0 auto}
+.pg{display:none}.pg.on{display:block}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
+.st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:14px;text-align:center}
+.st .sv{font-size:28px;font-weight:800;color:var(--gold)}
+.st .sl{font-size:10px;color:var(--dim);margin-top:2px}
+
+/* FILTERS */
+.filters{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap;align-items:center}
+.sbox{flex:1;min-width:200px;position:relative}
+.sbox input{width:100%;padding:10px 16px 10px 38px;background:var(--card);border:1px solid rgba(201,168,76,0.2);border-radius:10px;color:var(--txt);font-size:13px;font-family:'Heebo';outline:none}
+.sbox input:focus{border-color:var(--gold);box-shadow:0 0 12px rgba(201,168,76,0.08)}
+.sbox::before{content:'🔍';position:absolute;left:12px;top:50%;transform:translateY(-50%);font-size:13px;opacity:.5}
+.fsel{padding:10px 12px;background:var(--card);border:1px solid rgba(201,168,76,0.2);border-radius:10px;color:var(--txt);font-size:11px;font-family:'Heebo';cursor:pointer;outline:none;min-width:110px}
+.fsel option{background:var(--card)}
+.rcount{color:var(--dim);font-size:11px;margin-bottom:8px}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .3s cubic-bezier(.4,0,.2,1)}
+.card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 48px rgba(201,168,76,0.1)}
+.cimg{height:210px;background:linear-gradient(145deg,#0a1525,#0d1a30,#101f38);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.cimg::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(201,168,76,0.04),transparent 60%)}
+.cimg img{max-width:82%;max-height:82%;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(0,0,0,0.4));transition:transform .3s}
+.card:hover .cimg img{transform:scale(1.05)}
+.cimg .noimg{font-size:48px;opacity:.12}
+.badge-type{position:absolute;top:10px;right:10px;background:var(--gold);color:var(--bg);padding:3px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:.5px}
+.badge-kt{position:absolute;top:10px;left:10px;background:rgba(255,255,255,0.08);color:var(--gold2);padding:3px 9px;border-radius:20px;font-size:8px;font-weight:600;border:1px solid rgba(201,168,76,0.15)}
+.cdets{padding:14px 16px}
+.csku{font-size:9px;color:var(--gold3);letter-spacing:2px;font-weight:600}
+.cname{font-size:14px;font-weight:600;margin:4px 0 8px;line-height:1.3;min-height:36px}
+.ctags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px}
+.tag{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.12);padding:2px 8px;border-radius:5px;font-size:9px;color:var(--gold2)}
+.cprice{display:flex;justify-content:space-between;align-items:flex-end;padding-top:10px;border-top:1px solid rgba(255,255,255,0.03)}
+.cp-main{font-size:21px;font-weight:700;color:var(--gold);line-height:1}
+.cp-main small{display:block;font-size:9px;font-weight:400;color:var(--dim);margin-top:2px}
+.cp-side{text-align:left;font-size:10px;color:var(--dim)}
+.cp-side b{display:block;color:rgba(34,197,94,0.8);font-size:9px}
+
+/* MODAL */
+.mover{display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(3px)}
+.mover.on{display:flex}
+.modal{background:var(--card);border:1px solid rgba(201,168,76,0.25);border-radius:18px;max-width:700px;width:100%;max-height:90vh;overflow-y:auto;padding:28px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.modal::-webkit-scrollbar{width:5px}.modal::-webkit-scrollbar-thumb{background:var(--gold3);border-radius:3px}
+.mclose{float:left;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:var(--dim);width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.3s}
+.mclose:hover{background:rgba(239,68,68,0.2);color:var(--red)}
+.mtitle{font-size:22px;color:var(--gold);font-weight:700}
+.msku{font-size:11px;color:var(--dim);letter-spacing:2px;margin-top:3px}
+.mimg{width:100%;height:300px;background:linear-gradient(145deg,#0a1525,#0d1a30);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:18px 0;overflow:hidden}
+.mimg img{max-width:88%;max-height:88%;object-fit:contain;filter:drop-shadow(0 6px 24px rgba(0,0,0,.4))}
+.dgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
+.ditem{background:rgba(201,168,76,0.03);padding:12px;border-radius:9px;border:1px solid rgba(201,168,76,0.06)}
+.ditem .dl{font-size:9px;color:var(--dim);letter-spacing:.5px;margin-bottom:3px}
+.ditem .dv{font-size:14px;font-weight:600}
+
+.stones-box{background:rgba(201,168,76,0.03);border:1px solid rgba(201,168,76,0.08);border-radius:10px;padding:14px;margin-bottom:18px}
+.stones-box h4{font-size:12px;color:var(--gold);margin-bottom:8px}
+.srow{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;padding:5px 0;font-size:11px;color:var(--dim);border-bottom:1px solid rgba(255,255,255,0.02)}
+.srow.sh{color:var(--gold3);font-weight:600;font-size:9px;text-transform:uppercase;letter-spacing:1px}
+
+.pbreak{background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.15);border-radius:14px;padding:20px}
+.pbreak h4{color:var(--gold);font-size:14px;margin-bottom:12px}
+.brow{display:flex;justify-content:space-between;padding:6px 0;font-size:12px;color:var(--dim)}
+.brow.sub{font-weight:600;color:var(--txt);border-top:1px dashed rgba(201,168,76,0.15);margin-top:6px;padding-top:10px}
+.brow.tot{border-top:2px solid var(--gold);margin-top:8px;padding-top:12px;color:var(--gold);font-size:20px;font-weight:700}
+.brow.marg{font-size:10px;opacity:.5}
+.disc{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.1);border-radius:8px;padding:12px;font-size:11px;color:var(--dim);margin-top:14px;line-height:1.6}
+.disc b{color:var(--gold)}
+
+/* ADD FORM */
+.fbox{max-width:780px;margin:0 auto;background:var(--card);border:1px solid rgba(201,168,76,0.12);border-radius:18px;padding:32px}
+.ftitle{font-size:20px;color:var(--gold);margin-bottom:4px}
+.fsub{color:var(--dim);font-size:11px;margin-bottom:28px}
+.fstep{margin-bottom:26px;padding-bottom:22px;border-bottom:1px solid rgba(255,255,255,0.03)}
+.fstep-h{display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.fstep-n{width:26px;height:26px;background:var(--gold);color:var(--bg);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px}
+.fstep-t{font-size:14px;font-weight:600}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fg label{font-size:10px;color:var(--dim);font-weight:500}
+.fg input,.fg select,.fg textarea{padding:9px 12px;background:var(--bg);border:1px solid rgba(201,168,76,0.2);border-radius:8px;color:var(--txt);font-size:13px;font-family:'Heebo';outline:none;transition:.3s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg select option{background:var(--bg)}
+.autosku{background:rgba(34,197,94,0.06);border:1px solid rgba(34,197,94,0.2);border-radius:10px;padding:11px 14px}
+.autosku span{font-size:20px;font-weight:700;color:var(--green);letter-spacing:2px;font-family:monospace}
+.ss{background:rgba(201,168,76,0.02);border-radius:9px;padding:12px}
+.se{display:grid;grid-template-columns:1.2fr .8fr .6fr .8fr auto;gap:8px;align-items:end;margin-bottom:8px}
+.imgup{border:2px dashed rgba(201,168,76,0.2);border-radius:14px;padding:30px;text-align:center;cursor:pointer;transition:.3s}
+.imgup:hover{border-color:var(--gold);background:rgba(201,168,76,0.02)}
+.imgup input{display:none}
+.btn{padding:11px 26px;border-radius:10px;border:none;font-family:'Heebo';font-size:13px;font-weight:600;cursor:pointer;transition:.3s}
+.btn-g{background:linear-gradient(135deg,var(--gold),var(--gold3));color:var(--bg)}
+.btn-g:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,0.25)}
+.btn-o{background:transparent;border:1px solid rgba(201,168,76,0.3);color:var(--gold)}
+.btn-s{padding:7px 14px;font-size:11px}
+.btn-d{background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);color:var(--red)}
+
+/* PRICING PAGE */
+.pinfo{max-width:880px;margin:0 auto}
+.pcard{background:var(--card);border:1px solid rgba(201,168,76,0.1);border-radius:16px;padding:28px;margin-bottom:20px}
+.pcard h2{color:var(--gold);font-size:18px;margin-bottom:12px}
+.fbox2{background:var(--bg);border:1px solid rgba(201,168,76,0.15);border-radius:10px;padding:20px;margin:12px 0;text-align:center}
+.fbox2 .ff{font-family:'Courier New',monospace;font-size:14px;color:var(--gold);direction:ltr;margin-bottom:6px}
+.fbox2 .fe{font-size:11px;color:var(--dim);line-height:1.6}
+.ptbl{width:100%;border-collapse:collapse;margin:12px 0}
+.ptbl th{background:rgba(201,168,76,0.08);padding:8px 12px;text-align:right;font-size:10px;color:var(--gold);border:1px solid rgba(201,168,76,0.06);letter-spacing:.5px}
+.ptbl td{padding:8px 12px;font-size:12px;border:1px solid rgba(255,255,255,0.03);color:var(--dim)}
+.ptbl tr:hover td{background:rgba(201,168,76,0.02)}
+
+/* PAGINATION */
+.pagi{display:flex;justify-content:center;gap:5px;margin-top:22px}
+.pbtn{padding:7px 13px;background:var(--card);border:1px solid rgba(201,168,76,0.1);border-radius:8px;color:var(--dim);cursor:pointer;font-family:'Heebo';font-size:11px;transition:.2s}
+.pbtn:hover{border-color:var(--gold);color:var(--gold)}
+.pbtn.on{background:var(--gold);color:var(--bg);border-color:var(--gold);font-weight:700}
+
+.toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--green);color:#fff;padding:12px 26px;border-radius:12px;font-weight:600;font-size:13px;z-index:300;transition:transform .4s;box-shadow:0 8px 25px rgba(34,197,94,.3)}
+.toast.on{transform:translateX(-50%) translateY(0)}
+
+/* ============ INVENTORY ============ */
+.inv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.inv-card{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:14px;padding:18px;transition:.3s}
+.inv-card:hover{border-color:rgba(201,168,76,0.25)}
+.inv-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.inv-sku{font-size:10px;color:var(--gold3);letter-spacing:2px;font-weight:600}
+.inv-name{font-size:14px;font-weight:600;margin:4px 0}
+.inv-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700}
+.inv-badge.in{background:rgba(34,197,94,0.15);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
+.inv-badge.out{background:rgba(239,68,68,0.15);color:var(--red);border:1px solid rgba(239,68,68,0.3)}
+.inv-sizes{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.inv-sz{background:var(--bg);border:1px solid rgba(201,168,76,0.1);border-radius:8px;padding:6px 10px;text-align:center;min-width:60px}
+.inv-sz .sz-label{font-size:9px;color:var(--dim)}
+.inv-sz .sz-val{font-size:16px;font-weight:700;color:var(--gold)}
+.inv-sz.zero .sz-val{color:var(--red)}
+.inv-sz input{width:50px;padding:4px;background:var(--bg);border:1px solid rgba(201,168,76,0.2);border-radius:5px;color:var(--txt);font-size:13px;text-align:center;font-family:'Heebo';outline:none}
+.inv-sz input:focus{border-color:var(--gold)}
+.inv-total{font-size:11px;color:var(--dim);margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.03)}
+
+/* ============ CRM ============ */
+.crm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:16px}
+.crm-card{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:14px;padding:20px;transition:.3s;cursor:pointer}
+.crm-card:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,168,76,0.08)}
+.crm-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold3));display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:var(--bg)}
+.crm-info{flex:1}
+.crm-name{font-size:16px;font-weight:600;color:var(--txt)}
+.crm-detail{font-size:11px;color:var(--dim);margin-top:2px}
+.crm-stats{display:flex;gap:16px;margin-top:10px}
+.crm-stat{text-align:center}
+.crm-stat .csv{font-size:18px;font-weight:700;color:var(--gold)}
+.crm-stat .csl{font-size:9px;color:var(--dim)}
+.crm-history{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.03)}
+.crm-order{display:flex;justify-content:space-between;padding:6px 0;font-size:11px;color:var(--dim);border-bottom:1px solid rgba(255,255,255,0.02)}
+
+/* ============ ORDERS ============ */
+.ord-list{display:flex;flex-direction:column;gap:14px}
+.ord-card{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:14px;padding:22px;transition:.3s}
+.ord-card:hover{border-color:rgba(201,168,76,0.2)}
+.ord-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px}
+.ord-id{font-size:18px;font-weight:700;color:var(--gold);font-family:monospace;letter-spacing:1px}
+.ord-customer{font-size:13px;color:var(--txt)}
+.ord-item{font-size:12px;color:var(--dim)}
+.ord-date{font-size:10px;color:var(--dim)}
+
+/* STATUS BADGES */
+.status-badge{display:inline-block;padding:4px 14px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.status-badge.production{background:rgba(245,158,11,0.15);color:var(--orange);border:1px solid rgba(245,158,11,0.3)}
+.status-badge.packing{background:rgba(6,182,212,0.15);color:var(--cyan);border:1px solid rgba(6,182,212,0.3)}
+.status-badge.payment{background:rgba(168,85,247,0.15);color:var(--purple);border:1px solid rgba(168,85,247,0.3)}
+.status-badge.shipping{background:rgba(59,130,246,0.15);color:var(--blue);border:1px solid rgba(59,130,246,0.3)}
+.status-badge.done{background:rgba(34,197,94,0.15);color:var(--green);border:1px solid rgba(34,197,94,0.3)}
+.status-badge.cancelled{background:rgba(239,68,68,0.15);color:var(--red);border:1px solid rgba(239,68,68,0.3)}
+
+/* ORDER TIMELINE */
+.timeline{position:relative;padding:20px 0;margin:16px 0}
+.tl-track{display:flex;align-items:center;position:relative;overflow-x:auto;padding-bottom:10px}
+.tl-step{display:flex;flex-direction:column;align-items:center;min-width:100px;position:relative;z-index:2;flex-shrink:0}
+.tl-dot{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:all .4s;position:relative;z-index:2}
+.tl-dot.pending{background:var(--bg);border:2px solid rgba(100,116,139,0.3);color:var(--dim)}
+.tl-dot.active{background:linear-gradient(135deg,var(--gold),var(--gold3));color:var(--bg);box-shadow:0 0 20px rgba(201,168,76,0.4);animation:tlPulse 2s infinite}
+.tl-dot.done{background:var(--green);color:#fff;box-shadow:0 0 12px rgba(34,197,94,0.3)}
+.tl-label{font-size:9px;color:var(--dim);margin-top:8px;text-align:center;max-width:90px;line-height:1.3}
+.tl-label.active{color:var(--gold);font-weight:600}
+.tl-label.done{color:var(--green)}
+.tl-connector{flex:1;height:3px;min-width:20px;background:rgba(100,116,139,0.15);position:relative;z-index:1;margin:0 -4px;margin-top:-22px}
+.tl-connector.done{background:linear-gradient(90deg,var(--green),var(--green))}
+.tl-connector.active{background:linear-gradient(90deg,var(--green),var(--gold))}
+
+@keyframes tlPulse{
+  0%,100%{box-shadow:0 0 20px rgba(201,168,76,0.4)}
+  50%{box-shadow:0 0 35px rgba(201,168,76,0.7),0 0 60px rgba(201,168,76,0.2)}
+}
+
+.ord-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.ord-price{font-size:20px;font-weight:700;color:var(--gold)}
+
+/* NEW ORDER FORM */
+.new-ord{max-width:700px;margin:0 auto 24px}
+.new-ord .fbox{margin-bottom:20px}
+
+/* CRM FORM */
+.crm-form{max-width:600px;margin:0 auto 24px}
+
+/* SECTION HEADER */
+.sec-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px}
+.sec-title{font-size:22px;font-weight:700;color:var(--gold)}
+.sec-sub{font-size:11px;color:var(--dim)}
+
+/* SUMMARY STATS */
+.sum-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
+.sum-st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:16px;text-align:center}
+.sum-st .ssv{font-size:26px;font-weight:800}
+.sum-st .ssl{font-size:10px;color:var(--dim);margin-top:2px}
+.sum-st.gold .ssv{color:var(--gold)}
+.sum-st.green .ssv{color:var(--green)}
+.sum-st.orange .ssv{color:var(--orange)}
+.sum-st.blue .ssv{color:var(--blue)}
+.sum-st.red .ssv{color:var(--red)}
+.sum-st.purple .ssv{color:var(--purple)}
+.sum-st.cyan .ssv{color:var(--cyan)}
+
+/* RESPONSIVE */
+@media(max-width:768px){.hdr{flex-direction:column;gap:10px;padding:10px 14px}.prices{flex-wrap:wrap;justify-content:center;gap:6px}.filters{flex-direction:column}.grid{grid-template-columns:1fr 1fr}.frow{grid-template-columns:1fr}.dgrid{grid-template-columns:1fr 1fr}.stats{grid-template-columns:repeat(3,1fr)}.main{padding:14px}.se{grid-template-columns:1fr 1fr}.sum-stats{grid-template-columns:1fr 1fr}.nav{padding:0 12px}.nav a{padding:10px 14px;font-size:11px}.inv-grid{grid-template-columns:1fr}.crm-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.sum-stats{grid-template-columns:1fr 1fr}}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--gold3);border-radius:3px}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <div><div class="logo-text">LIA</div><div class="logo-sub">FINE JEWELRY</div></div>
+  <div class="prices">
+    <div class="pbadge" id="pbGold"><div class="pl">GOLD / OZ</div><div class="pv" id="pvGold">$3,250</div><div class="pu" id="puGold">loading...</div></div>
+    <div class="pbadge" id="pbUsd"><div class="pl">USD / ILS</div><div class="pv" id="pvUsd">₪3.04</div><div class="pu" id="puUsd">loading...</div></div>
+    <div class="pbadge"><div class="pl">14K / GRAM</div><div class="pv" id="pv14k">---</div><div class="pu">calculated</div></div>
+    <div class="pbadge"><div class="pl">18K / GRAM</div><div class="pv" id="pv18k">---</div><div class="pu">calculated</div></div>
+  </div>
+</div>
+
+<div class="nav">
+  <a class="on" onclick="go('cat',this)">קטלוג</a>
+  <a onclick="go('inv',this)">מלאי</a>
+  <a onclick="go('crm',this)">לקוחות</a>
+  <a onclick="go('ord',this)">הזמנות</a>
+  <a onclick="go('add',this)">הוסף פריט +</a>
+  <a onclick="go('pri',this)">תמחור</a>
+</div>
+
+<div class="main">
+  <!-- CATALOG -->
+  <div class="pg on" id="pg-cat">
+    <div class="stats">
+      <div class="st"><div class="sv" id="sAll">0</div><div class="sl">סה"כ</div></div>
+      <div class="st"><div class="sv" id="sR">0</div><div class="sl">טבעות</div></div>
+      <div class="st"><div class="sv" id="sE">0</div><div class="sl">עגילים</div></div>
+      <div class="st"><div class="sv" id="sP">0</div><div class="sl">תליונים</div></div>
+      <div class="st"><div class="sv" id="sB">0</div><div class="sl">צמידים / צ'יינס</div></div>
+    </div>
+    <div class="filters">
+      <div class="sbox"><input id="qSearch" placeholder="חיפוש מק&quot;ט, שם..." oninput="fil()"></div>
+      <select class="fsel" id="fType" onchange="fil()"><option value="">כל הסוגים</option><option value="טבעת">טבעות</option><option value="עגיל">עגילים</option><option value="תליון">תליונים</option><option value="צמיד">צמידים</option><option value="צ'יינס">צ'יינס</option></select>
+      <select class="fsel" id="fMat" onchange="fil()"><option value="">כל החומרים</option><option value="זהב">זהב</option><option value="כסף">כסף</option></select>
+      <select class="fsel" id="fKt" onchange="fil()"><option value="">קראט</option><option value="14K">14K</option><option value="18K">18K</option></select>
+      <select class="fsel" id="fSt" onchange="fil()"><option value="">אבנים</option><option value="y">עם אבנים</option><option value="n">ללא אבנים</option><option value="Round">Round</option><option value="Oval">Oval</option><option value="Pear">Pear</option><option value="Marquise">Marquise</option><option value="Emerald">Emerald</option></select>
+      <select class="fsel" id="fSort" onchange="fil()"><option value="sku">מיון: מק"ט</option><option value="pa">מחיר ↑</option><option value="pd">מחיר ↓</option><option value="wa">משקל ↑</option><option value="wd">משקל ↓</option></select>
+    </div>
+    <div class="rcount" id="rcount"></div>
+    <div class="grid" id="grid"></div>
+    <div class="pagi" id="pagi"></div>
+  </div>
+
+  <!-- INVENTORY -->
+  <div class="pg" id="pg-inv">
+    <div class="sec-head">
+      <div><div class="sec-title">ניהול מלאי</div><div class="sec-sub">מעקב כמויות לפי פריט ומידה</div></div>
+    </div>
+    <div class="sum-stats" id="invStats"></div>
+    <div class="filters">
+      <div class="sbox"><input id="invSearch" placeholder="חיפוש מק&quot;ט, שם..." oninput="renderInv()"></div>
+      <select class="fsel" id="invFilter" onchange="renderInv()"><option value="">הכל</option><option value="in">במלאי</option><option value="out">אזל</option><option value="low">מלאי נמוך</option></select>
+    </div>
+    <div class="inv-grid" id="invGrid"></div>
+  </div>
+
+  <!-- CRM -->
+  <div class="pg" id="pg-crm">
+    <div class="sec-head">
+      <div><div class="sec-title">ניהול לקוחות</div><div class="sec-sub">רשימת לקוחות והיסטוריית הזמנות</div></div>
+      <button class="btn btn-g" onclick="toggleCrmForm()">+ לקוח חדש</button>
+    </div>
+    <div class="crm-form" id="crmForm" style="display:none">
+      <div class="fbox">
+        <div class="ftitle">לקוח חדש</div>
+        <div class="fsub">הוסף/י פרטי לקוח למערכת</div>
+        <div class="frow"><div class="fg"><label>שם מלא</label><input id="cName" placeholder="ישראל ישראלי"></div><div class="fg"><label>טלפון</label><input id="cPhone" placeholder="050-1234567"></div></div>
+        <div class="frow"><div class="fg"><label>אימייל</label><input id="cEmail" placeholder="email@example.com"></div><div class="fg"><label>כתובת</label><input id="cAddr" placeholder="תל אביב, רחוב הרצל 1"></div></div>
+        <div class="frow"><div class="fg"><label>הערות</label><input id="cNotes" placeholder="הערות נוספות..."></div></div>
+        <div style="display:flex;gap:12px;justify-content:center;padding-top:12px"><button class="btn btn-g" onclick="saveCust()">שמור לקוח</button><button class="btn btn-o" onclick="toggleCrmForm()">ביטול</button></div>
+      </div>
+    </div>
+    <div class="filters">
+      <div class="sbox"><input id="crmSearch" placeholder="חיפוש לקוח..." oninput="renderCrm()"></div>
+    </div>
+    <div class="crm-grid" id="crmGrid"></div>
+  </div>
+
+  <!-- ORDERS -->
+  <div class="pg" id="pg-ord">
+    <div class="sec-head">
+      <div><div class="sec-title">ניהול הזמנות</div><div class="sec-sub">מעקב הזמנות, ייצור ומשלוח</div></div>
+      <button class="btn btn-g" onclick="toggleOrdForm()">+ הזמנה חדשה</button>
+    </div>
+    <div class="new-ord" id="ordForm" style="display:none">
+      <div class="fbox">
+        <div class="ftitle">הזמנה חדשה</div>
+        <div class="fsub">בחר/י לקוח ופריט ליצירת הזמנה</div>
+        <div class="frow"><div class="fg"><label>לקוח</label><select id="oCustomer"><option value="">בחר לקוח...</option></select></div><div class="fg"><label>פריט</label><select id="oItem"><option value="">בחר פריט...</option></select></div></div>
+        <div class="frow"><div class="fg"><label>מידה</label><select id="oSize"><option value="">בחר מידה...</option></select></div><div class="fg"><label>כמות</label><input id="oQty" type="number" value="1" min="1"></div></div>
+        <div class="frow"><div class="fg"><label>הערות</label><input id="oNotes" placeholder="הערות להזמנה..."></div><div class="fg"><label>הנחה (%)</label><input id="oDiscount" type="number" value="0" min="0" max="100"></div></div>
+        <div id="oPreview" style="margin:12px 0"></div>
+        <div style="display:flex;gap:12px;justify-content:center;padding-top:12px"><button class="btn btn-g" onclick="saveOrder()">צור הזמנה</button><button class="btn btn-o" onclick="toggleOrdForm()">ביטול</button></div>
+      </div>
+    </div>
+    <div class="sum-stats" id="ordStats"></div>
+    <div class="filters">
+      <div class="sbox"><input id="ordSearch" placeholder="חיפוש הזמנה, לקוח..." oninput="renderOrd()"></div>
+      <select class="fsel" id="ordFilter" onchange="renderOrd()"><option value="">כל הסטטוסים</option><option value="ייצור">בייצור</option><option value="אריזה">אריזה</option><option value="תשלום">תשלום</option><option value="משלוח">משלוח</option><option value="הושלם">הושלם</option></select>
+    </div>
+    <div class="ord-list" id="ordList"></div>
+  </div>
+
+  <!-- ADD -->
+  <div class="pg" id="pg-add">
+    <div class="fbox">
+      <div class="ftitle">הוספת דגם חדש</div>
+      <div class="fsub">מלא/י את הפרטים — מק"ט ייווצר אוטומטי לפי הסידורי האחרון</div>
+      <div class="fstep"><div class="fstep-h"><div class="fstep-n">1</div><div class="fstep-t">סוג התכשיט</div></div>
+        <div class="frow"><div class="fg"><label>סוג</label><select id="nType" onchange="autoSku()"><option value="">בחר...</option><option value="טבעת">טבעת</option><option value="עגיל">עגיל</option><option value="תליון">תליון</option><option value="צמיד">צמיד</option><option value="צ'יינס">צ'יינס</option></select></div><div class="fg"><label>מק"ט</label><div class="autosku"><span id="askuV">---</span></div></div></div>
+      </div>
+      <div class="fstep"><div class="fstep-h"><div class="fstep-n">2</div><div class="fstep-t">פרטי הדגם</div></div>
+        <div class="frow"><div class="fg"><label>שם המוצר</label><input id="nName" placeholder="טבעת חישוק עם יהלומים"></div><div class="fg"><label>דגם מודליסט</label><input id="nMod" placeholder="Adi_R045"></div></div>
+        <div class="frow"><div class="fg"><label>סוג מתכת</label><select id="nKt"><option value="14K">14K</option><option value="18K">18K</option></select></div><div class="fg"><label>חומר</label><select id="nMat"><option value="זהב">זהב</option><option value="כסף">כסף</option></select></div></div>
+        <div class="frow"><div class="fg"><label>משקל (גרם)</label><input type="number" id="nWt" step="0.01" placeholder="0.00"></div><div class="fg"><label>מידות (מ"מ)</label><input id="nDim" placeholder="12.5x10.2"></div></div>
+      </div>
+      <div class="fstep"><div class="fstep-h"><div class="fstep-n">3</div><div class="fstep-t">אבנים</div></div>
+        <div class="ss" id="ssBox"><div class="se"><div class="fg"><label>צורה</label><select class="sc-sh"><option value="">ללא</option><option>Round</option><option>Oval</option><option>Pear</option><option>Marquise</option><option>Emerald</option><option>Princess</option><option>Baguette</option></select></div><div class="fg"><label>קראט</label><input type="number" class="sc-ct" step="0.001" placeholder="0.000"></div><div class="fg"><label>כמות</label><input type="number" class="sc-cn" placeholder="1"></div><div class="fg"><label>מידה</label><input class="sc-sz" placeholder="1.5*1.5"></div></div></div>
+        <button class="btn btn-o btn-s" onclick="addSR()" style="margin-top:8px">+ שורת אבן</button>
+      </div>
+      <div class="fstep"><div class="fstep-h"><div class="fstep-n">4</div><div class="fstep-t">תמונה</div></div>
+        <div class="imgup" onclick="document.getElementById('imgIn').click()"><input type="file" id="imgIn" accept="image/*" onchange="prevImg(event)"><div id="imgPrev"><div style="font-size:32px;opacity:.3">📷</div><div style="color:var(--dim);font-size:12px;margin-top:6px">לחץ להעלאת תמונה</div></div></div>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:center;padding-top:8px"><button class="btn btn-g" onclick="saveItem()">שמור דגם</button><button class="btn btn-o" onclick="rstForm()">נקה</button></div>
+    </div>
+  </div>
+
+  <!-- PRICING -->
+  <div class="pg" id="pg-pri">
+    <div class="pinfo">
+      <div class="pcard">
+        <h2>&#9670; מודל התמחור של LIA Fine Jewelry</h2>
+        <p style="color:var(--dim);margin-bottom:18px;line-height:1.7;font-size:13px">כל המחירים מחושבים בזמן אמת לפי מחיר הזהב העולמי ושער הדולר. להלן פירוט מלא:</p>
+        <h3 style="color:var(--gold2);margin:18px 0 8px;font-size:15px">1. מחיר זהב לגרם</h3>
+        <div class="fbox2"><div class="ff">Gold_Per_Gram = (Gold_USD × USD_ILS) ÷ 31.1035 × Karat%</div><div class="fe">מחיר אונקיה × שער דולר ÷ גרם לאונקיה × אחוז טוהר</div></div>
+        <table class="ptbl"><tr><th>קראט</th><th>טוהר</th><th>מחיר/גרם</th></tr><tr><td>14K</td><td>58.5%</td><td id="t14k">---</td></tr><tr><td>18K</td><td>75.0%</td><td id="t18k">---</td></tr><tr><td>22K</td><td>91.0%</td><td id="t22k">---</td></tr></table>
+        <h3 style="color:var(--gold2);margin:18px 0 8px;font-size:15px">2. עלות חומר גלם</h3>
+        <div class="fbox2"><div class="ff">Gold_Cost = Weight × 1.08 × Gold_Per_Gram</div><div class="fe">משקל × 1.08 (8% בזבוז יציקה) × מחיר גרם</div></div>
+        <h3 style="color:var(--gold2);margin:18px 0 8px;font-size:15px">3. עלויות ייצור</h3>
+        <table class="ptbl"><tr><th>רכיב</th><th>עלות</th><th>הסבר</th></tr><tr><td>יציקה</td><td>₪300</td><td>עלות קבועה</td></tr><tr><td>שיבוץ</td><td>₪1 / משקל×2.5×7</td><td>ידני / מכונה</td></tr><tr><td>גימור</td><td>משקל × 4</td><td>ליטוש וציפוי</td></tr></table>
+        <h3 style="color:var(--gold2);margin:18px 0 8px;font-size:15px">4. אבנים</h3>
+        <table class="ptbl"><tr><th>סוג</th><th>טווח</th><th>$/pt</th></tr><tr><td>יהלום קטנה</td><td>עד 2.5pt</td><td>$3</td></tr><tr><td>יהלום בינונית</td><td>2.5-2.8</td><td>$5</td></tr><tr><td>יהלום גדולה</td><td>2.81+</td><td>$7</td></tr><tr><td>מרכזית</td><td>כל גודל</td><td>$10</td></tr><tr><td>צבעונית קטנה</td><td>עד 1.5</td><td>$3</td></tr><tr><td>צבעונית בינונית</td><td>1.5-2.8</td><td>$5</td></tr><tr><td>צבעונית גדולה</td><td>2.81+</td><td>$10</td></tr></table>
+        <h3 style="color:var(--gold2);margin:18px 0 8px;font-size:15px">5. מחיר סופי</h3>
+        <div class="fbox2"><div class="ff" style="font-size:17px">Final = Total_Cost × 2.6 × 1.7</div><div class="fe">עלות כוללת × מרווח (160%) × רווח+מע"מ (70%) = <b style="color:var(--gold)">מכפיל ×4.42</b></div></div>
+        <div class="disc"><b>⚠ הבהרה:</b> המחירים הם הערכה אוטומטית בלבד. המחיר הסופי עשוי להשתנות לפי זמינות, מורכבות, ותנאי שוק. מחירי הזהב והדולר מתעדכנים אוטומטית כל 5 דקות.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mover" id="mover" onclick="if(event.target===this)closeM()"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ===== PRICES =====
+let G = 3250, U = 3.04, GPG = 0;
+
+async function fetchP() {
+  try { const r=await fetch('https://api.gold-api.com/price/XAU',{signal:AbortSignal.timeout(4000)}); const d=await r.json(); if(d.price>0){G=d.price; document.getElementById('puGold').textContent=new Date().toLocaleTimeString('he-IL');} } catch(e){}
+  document.getElementById('pvGold').textContent='$'+G.toLocaleString('en',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+  try { const r=await fetch('https://api.exchangerate-api.com/v4/latest/USD',{signal:AbortSignal.timeout(4000)}); const d=await r.json(); if(d.rates?.ILS>0){U=d.rates.ILS; document.getElementById('puUsd').textContent=new Date().toLocaleTimeString('he-IL');} } catch(e){
+    try { const r=await fetch('https://open.er-api.com/v6/latest/USD',{signal:AbortSignal.timeout(4000)}); const d=await r.json(); if(d.rates?.ILS>0){U=d.rates.ILS; document.getElementById('puUsd').textContent=new Date().toLocaleTimeString('he-IL');} } catch(e){}
+  }
+  document.getElementById('pvUsd').textContent='₪'+U.toFixed(2);
+  recalc();
+}
+
+function recalc() {
+  GPG = (G*U)/31.1035;
+  const p14=GPG*0.585, p18=GPG*0.75, p22=GPG*0.91;
+  document.getElementById('pv14k').textContent='₪'+Math.round(p14);
+  document.getElementById('pv18k').textContent='₪'+Math.round(p18);
+  document.getElementById('t14k').textContent='₪'+p14.toFixed(2);
+  document.getElementById('t18k').textContent='₪'+p18.toFixed(2);
+  document.getElementById('t22k').textContent='₪'+p22.toFixed(2);
+  render();
+}
+
+// ===== DATA =====
+const DATA = [{"sku_lia": "LIA_B001", "sku_original": "Adi_BR001", "name": "חמסה עם עין", "type": "צמיד", "material": "דן", "gold_type": "14K", "weight": 0.7, "dimensions": "13.1x7.65x1.2", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.5*1.5"}], "drive_id": "1uyMwkPlHkO8sr6QO0PN1MVNWMk9QqepG"}, {"sku_lia": "LIA_B002", "sku_original": "Adi_BR002", "name": "חמסה נקי", "type": "צמיד", "material": "דן", "gold_type": "14K", "weight": 0.72, "dimensions": "13.1x7.65x1.2", "stones": [], "drive_id": "1s4HmvfdBDfTaV6zoV3f5YsoJ1-ihYo-8"}, {"sku_lia": "LIA_E001", "sku_original": "Adi_E001", "name": "חישוק עם סיומת מחודדת", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.9, "dimensions": "12.5x10.2x2.4X1.5", "stones": [], "drive_id": "1Fh7Na8IvJVnz9ZVPk7Q0_gHfMS1TsI_6"}, {"sku_lia": "LIA_E002", "sku_original": "Adi_E002", "name": "עגיל עגול עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.31, "dimensions": "5.4x1.6", "stones": [{"shape": "Round", "carat": 0.019, "count": 5, "size": "1*1"}], "drive_id": "1VkxOQgEiZuHOVvY-nu7Z2E5wVloyhjK0"}, {"sku_lia": "LIA_E003", "sku_original": "Adi_E003", "name": "שן פיל עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.15, "dimensions": "8.03x1.4", "stones": [{"shape": "Round", "carat": 0.015, "count": 4, "size": "1*1"}], "drive_id": "1yBjBuIw7K3p8uMh-cD38RDdIVRYLdsP_"}, {"sku_lia": "LIA_E004", "sku_original": "Adi_E004", "name": "עגיל צמוד", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.2, "dimensions": "לא צויין", "stones": [{"shape": "Round", "carat": 0.05, "count": 4, "size": "1.5*1.5"}], "drive_id": "1efEwQE3vW173LwAkKqzCRw54TWcSLswM"}, {"sku_lia": "LIA_E005", "sku_original": "Adi_E005", "name": "פרח 3 עלי כותרת עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.14, "dimensions": "5.13x4.70x1.2", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1*1"}], "drive_id": "1OevvVTYouInKskXw_oOAT1O11L0egFSq"}, {"sku_lia": "LIA_E006", "sku_original": "Adi_E006", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.14, "dimensions": "4.20x3.15x1.80X2.13", "stones": [{"shape": "Round", "carat": 0.033, "count": 4, "size": "1.30*1.30"}], "drive_id": "1BdKpaAQUC9ri2ocZolS6D6JMx639mFYJ"}, {"sku_lia": "LIA_E007", "sku_original": "Adi_E007", "name": "עגיל פרחוני", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.28, "dimensions": "5.00x1.30", "stones": [{"shape": "Round", "carat": 0.049, "count": 6, "size": "1.30*1.30"}], "drive_id": "1eW4Lu_iJe-CiF34x0qRovWKKpemiqzBP"}, {"sku_lia": "LIA_E008", "sku_original": "Adi_E008", "name": "עגיל פרחוני תלוי", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.37, "dimensions": "5.00X15.0X1.3", "stones": [{"shape": "Round", "carat": 0.049, "count": 6, "size": "1.30*1.30"}], "drive_id": "1qK8fXcOHissoECSG0cBQjKgq55kDdOVA"}, {"sku_lia": "LIA_E009", "sku_original": "Adi_E009", "name": "תליון טיפה עם יהלום גדול וקטנים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.45, "dimensions": "8.21X2.13X0.8X13.54X1.14X1.40", "stones": [{"shape": "Round", "carat": 0.06, "count": 3, "size": "1.70*1.70"}, {"shape": "Oval", "carat": 0.17, "count": 1, "size": "5.0*3.0"}], "drive_id": "1Xjwxllbrd7IOBlrH9QJVoT0Ge_1wmm8-"}, {"sku_lia": "LIA_E010", "sku_original": "Adi_E010", "name": "תליון טיפה עם יהלום ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.34, "dimensions": "7.34X2.28X0.8X0.86X1.40", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}, {"shape": "Oval", "carat": 0.17, "count": 1, "size": "5.0*3.0"}], "drive_id": "1Ue6d0r_Sk4Qm4LBRrT7Hgz8sSM8yabNe"}, {"sku_lia": "LIA_E011", "sku_original": "Adi_E011", "name": "יהלום עם צינורות", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.29, "dimensions": "5.21X6.15X2.47X1.30", "stones": [{"shape": "Round", "carat": 0.1, "count": 1, "size": "3.0*3.0"}], "drive_id": "1J15tbwlfs_qMRxuMKBza-7F-qkHdTPgd"}, {"sku_lia": "LIA_E012", "sku_original": "Adi_E012", "name": "חישוק עם קוצים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.89, "dimensions": "12.43X4.87X8.90X1.50", "stones": [{"shape": "Round", "carat": 0.09, "count": 4, "size": "1.80*1.80"}], "drive_id": "1EAuJqwgsQAY14PgtsH4UApAcG4TZiTGU"}, {"sku_lia": "LIA_E013", "sku_original": "Adi_E013", "name": "עגיל תלוי עם אבן ורודה", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.13, "dimensions": "12.15X5.98X20.40", "stones": [{"shape": "Round", "carat": 0.025, "count": 3, "size": "1.30*1.30"}], "drive_id": "1p3WYNHMpyTxmJ9Sram9erfsLAyiSmsCb"}, {"sku_lia": "LIA_E014", "sku_original": "Adi_E014", "name": "עגיל צמוד עם שלושה עלי כותרת", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.09, "dimensions": "4.04X3.04X1.41", "stones": [], "drive_id": "1D4mu7RnYHGDHdW3rDt0vDRq4jYepvEpb"}, {"sku_lia": "LIA_E015", "sku_original": "Adi_E015", "name": "עגיל צמוד עם שלושה עלי כותרת", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.13, "dimensions": "5.0X3.76X1.41", "stones": [], "drive_id": "1u-XGXVSiz6SzyqidiWL83xH-YgG9Iblc"}, {"sku_lia": "LIA_E016", "sku_original": "Adi_E016", "name": "עגיל תלוי עם עיגול גדול", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.97, "dimensions": "14.76X6.0X9.78X6.19X2.50X1.0", "stones": [], "drive_id": "17Rxi-mfAma2-2Vrb-6QiJSaV_8zN_dXM"}, {"sku_lia": "LIA_E017", "sku_original": "Adi_E017", "name": "עגיל חישוק שלושה יהלומים וקוצים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.86, "dimensions": "13.0x9.50x1.60", "stones": [{"shape": "Round", "carat": 0.031, "count": 2, "size": "1.60*1.60"}], "drive_id": "1g1Trq_K2qcAPqIWzFkAgnINN6h-wiEbw"}, {"sku_lia": "LIA_E018", "sku_original": "Adi_E018", "name": "עגיל ארוך משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.19, "dimensions": "5.61x1.30x1.91", "stones": [{"shape": "Round", "carat": 0.06, "count": 1, "size": "2.50*2.50"}], "drive_id": "1vtEQfdWJXHQOgzOteVT-TX2VZhT9fPZi"}, {"sku_lia": "LIA_E019", "sku_original": "Adi_E019", "name": "תליון קטן עם אבנים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.11, "dimensions": "4.6x2.94x1.0x1.68", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}], "drive_id": "1uBfMScb3iMSxn1JKQPIvZdIqWVa9GOJU"}, {"sku_lia": "LIA_E020", "sku_original": "Adi_E020", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.11, "dimensions": "7.41x1.40", "stones": [{"shape": "Round", "carat": 0.038, "count": 3, "size": "1.50*1.50"}], "drive_id": "1g2n55jRMT4mkv9UzQSzeBFKrovnFa-yJ"}, {"sku_lia": "LIA_E021", "sku_original": "Adi_E021", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.11, "dimensions": "5.59x3.68x1.40", "stones": [{"shape": "Round", "carat": 0.038, "count": 3, "size": "1.50*1.50"}], "drive_id": "1bWrx6RtNlJ_aZtyA7Khxy7nZvHEE6LcS"}, {"sku_lia": "LIA_E022", "sku_original": "Adi_E022", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.47, "dimensions": "7.59x4.55x2.0x2.01", "stones": [], "drive_id": "12HbW6NBLXTgfXIj95wph-ZettZfIe9o1"}, {"sku_lia": "LIA_E023", "sku_original": "Adi_E023", "name": "עגיל עין עם יהלום", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.27, "dimensions": "7.84x4.90x2.1x0.70x1.45x1.0", "stones": [{"shape": "Round", "carat": 0.02, "count": 1, "size": "1.75*1.75"}], "drive_id": "1YvqHXv7b6A4Nom2n3un9Hmk4mdoJpscC"}, {"sku_lia": "LIA_E024", "sku_original": "Adi_E024", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.19, "dimensions": "7.0x1.77x0.8x1.40", "stones": [{"shape": "Round", "carat": 0.031, "count": 2, "size": "1.60*1.60"}], "drive_id": "10iF_kA09vLvXZ67DuKRnxygWBscxKK6l"}, {"sku_lia": "LIA_E025", "sku_original": "Adi_E025", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.16, "dimensions": "7.20x1.50x1.40", "stones": [{"shape": "Round", "carat": 0.015, "count": 3, "size": "1.10*1.10"}], "drive_id": "1EhdeiRN92Cc1W8uZJXfFULTkB_zPxWSs"}, {"sku_lia": "LIA_E026", "sku_original": "Adi_E026", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.22, "dimensions": "6.03X3.13X1.40", "stones": [{"shape": "Round", "carat": 0.025, "count": 3, "size": "1.30*1.30"}], "drive_id": "1tqo9tFmZSQLDFl0aNyyJUidV_6EAyh0A"}, {"sku_lia": "LIA_E027", "sku_original": "Adi_E027", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.41, "dimensions": "8.0X1.40", "stones": [{"shape": "Round", "carat": 0.015, "count": 3, "size": "1.10*1.10"}], "drive_id": "1h9GXH77tnLC5ENykl_tdAQ_-wOttDvWw"}, {"sku_lia": "LIA_E028", "sku_original": "Adi_E028", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.14, "dimensions": "9.5X0.95X0.85", "stones": [{"shape": "Round", "carat": 0.09, "count": 3, "size": "2.0*2.0"}], "drive_id": "1k9nHElksRqHxMYspRdyeMj1SFchal87Q"}, {"sku_lia": "LIA_E029", "sku_original": "Adi_E029", "name": "תליון טיפה אלגנטי", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.66, "dimensions": "11.0X6.62X2.30X1.90X0.90", "stones": [{"shape": "Round", "carat": 0.04, "count": 1, "size": "2.20*2.20"}], "drive_id": "1ZtccX_-NOddEm2QKxW33kV1QTSzEKdqj"}, {"sku_lia": "LIA_E030", "sku_original": "Adi_E030", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.044, "dimensions": "8.45X6.79X1.20X1.0", "stones": [{"shape": "Round", "carat": 0.026, "count": 4, "size": "1.20*1.20"}], "drive_id": "126L_dEYP9NVHoQeQzNBWUXhmZ2X5bdSw"}, {"sku_lia": "LIA_E031", "sku_original": "Adi_E031", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.14, "dimensions": "4.85X4.53X1.41", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}], "drive_id": "1_ikSh35yyYWjAQzXleCUZQlm-ohc7lqX"}, {"sku_lia": "LIA_E032", "sku_original": "Adi_E032", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.33, "dimensions": "6.10X1.60", "stones": [{"shape": "Round", "carat": 0.07, "count": 9, "size": "1.30*1.30"}], "drive_id": "1MhK7CjGUW0sOcFfxuIimu4XRTG-IR9eY"}, {"sku_lia": "LIA_E033", "sku_original": "Adi_E033", "name": "עגיל עין עם יהלום", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.22, "dimensions": "3.0X6.0X1.70", "stones": [{"shape": "Round", "carat": 0.022, "count": 1, "size": "1.80*1.80"}], "drive_id": "1oAJ1gjTwEVAi_sQv8gP2W6nMyCAn3q8a"}, {"sku_lia": "LIA_E034", "sku_original": "Adi_E034", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.3, "dimensions": "10.22X1.83", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": "1P0qsQerCCrv5zUY8JJtazQXaH6YKibry"}, {"sku_lia": "LIA_E035", "sku_original": "Adi_E035", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.15, "dimensions": "6.43X2.91X1.40", "stones": [{"shape": "Round", "carat": 0.002, "count": 1, "size": "0.8*0.8"}], "drive_id": "1lOCato14BR2r9UTOrlEaBiQl5ukTRvkI"}, {"sku_lia": "LIA_E036", "sku_original": "Adi_E036", "name": "תליון לוטוס מעוצב", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.4, "dimensions": "8.0X1.73X1.0", "stones": [], "drive_id": "1SUk2X-ibT8DDkT1IQvDVIEBP5pm2NVk7"}, {"sku_lia": "LIA_E037", "sku_original": "Adi_E037", "name": "עגיל לוטוס ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.39, "dimensions": "8.0X1.49", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": "1vh4ATWV1_P41s0v5FmgeT5S7KT2DxQCP"}, {"sku_lia": "LIA_E038", "sku_original": "Adi_E038", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.52, "dimensions": "8.25X4.89X2.60", "stones": [{"shape": "Marquisr", "carat": 0.18, "count": 1, "size": "6.0*3.0"}], "drive_id": "1IqhqCZYr4A8zP7pMz1goRLyENEGVZcVo"}, {"sku_lia": "LIA_E039", "sku_original": "Adi_E039", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.6, "dimensions": "7.46X2.36X0.65", "stones": [{"shape": "Round", "carat": 0.05, "count": 1, "size": "2.40*2.40"}], "drive_id": "1wuL70SJUa8-TrKm2P8UzHeCah8jaIoh9"}, {"sku_lia": "", "sku_original": "Adi_E040", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.16, "dimensions": "4.43X1.46X1.0", "stones": [{"shape": "Round", "carat": 0.038, "count": 3, "size": "1.50*1.50"}], "drive_id": "1gpfE7JvuiI6nEhpNGSNecLFY4C9cfaIZ"}, {"sku_lia": "LIA_E041", "sku_original": "Adi_E041", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.62, "dimensions": "10.19X9.91X4.68", "stones": [{"shape": "Round", "carat": 0.005, "count": 2, "size": "0.9*0.9"}], "drive_id": "10pOflPYc1cJq-yPd_wjfe2VTDcX1Qu9x"}, {"sku_lia": "LIA_E042", "sku_original": "Adi_E042", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.56, "dimensions": "4.40X10.0X1.30", "stones": [{"shape": "Round", "carat": 0.039, "count": 6, "size": "1.20*1.20"}], "drive_id": "1Q2Z75Cyv0-EKzhxuqUW-7v8akMotKY1e"}, {"sku_lia": "LIA_E043", "sku_original": "Adi_E043", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.98, "dimensions": "23.50X1.80", "stones": [{"shape": "Round", "carat": 0.013, "count": 2, "size": "1.20*1.20"}], "drive_id": "1X6ExkKIHGaiCvr-TxePyGP0xRcvvDZDm"}, {"sku_lia": "LIA_E044", "sku_original": "Adi_E044", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.68, "dimensions": "14.36X3.10X1.15X1.20", "stones": [{"shape": "Round", "carat": 0.007, "count": 2, "size": "1.0*1.0"}], "drive_id": "1zOCWihaZ4C-vcR8dhWyNydJi1epEDFB4"}, {"sku_lia": "LIA_E045", "sku_original": "Adi_E045", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.18, "dimensions": "5.71X3.59X1.30X1.30", "stones": [], "drive_id": "1rxnxZAU2wx0ZOOPda-UGtKkzF_1b2wrm"}, {"sku_lia": "LIA_E046", "sku_original": "Adi_E046", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.16, "dimensions": "5.72X0.70X2.21X2.78", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}], "drive_id": "1qv-Q_pZC-n4-0Adb31jvcF_VLBKixz84"}, {"sku_lia": "LIA_E047", "sku_original": "Adi_E047", "name": "עגיל לב ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.11, "dimensions": "3.28X2.89X1.30", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E048", "sku_original": "Adi_E048", "name": "חישוק עם סיומת מחודדת", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.13, "dimensions": "14.0X12.0X8.54X2.38", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E049", "sku_original": "Adi_E049", "name": "עגיל תלוי עם לבבות", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.09, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E050", "sku_original": "Adi_E050", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.29, "dimensions": "14.32X1.34X0.90X0.85", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E051", "sku_original": "Adi_E051", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.68, "dimensions": "13.72X10.08X1.20", "stones": [{"shape": "Round", "carat": 0.05, "count": 1, "size": "2.30*2.30"}], "drive_id": ""}, {"sku_lia": "LIA_E052", "sku_original": "Adi_E052", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.01, "dimensions": "13.0X3.41X5.71X7.76", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E053", "sku_original": "Adi_E053", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.63, "dimensions": "17.40X5.65X3.01X5.65X1.60X1.0", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E054", "sku_original": "Adi_E054", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.67, "dimensions": "20.2X2.80X1.60X0.83", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E055", "sku_original": "Adi_E055", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.17, "dimensions": "7.69X1.63X0.67X1.40", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E056", "sku_original": "Adi_E056", "name": "לוטוס צמוד", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.06, "dimensions": "3.23X0.30X1.28", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E057", "sku_original": "Adi_E057", "name": "חישוק זהב", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.26, "dimensions": "14.0X6.08X10.0X2.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E058", "sku_original": "Adi_E058", "name": "חישוק עם סיומת מחודדת", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.95, "dimensions": "18.0X5.10X5.05X2.92X1.80", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E059", "sku_original": "Adi_E059", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.39, "dimensions": "18.18X1.30", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}, {"shape": "Baguette Straight", "carat": 0.046, "count": 1, "size": "3.0*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E060", "sku_original": "Adi_E060", "name": "חישוק ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.89, "dimensions": "13.0X5.82X0.55X2.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E061", "sku_original": "Adi_E061", "name": "חישוק זהב קטן", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.29, "dimensions": "17.03X4.96X14.26X1.60X4.20X1.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E063", "sku_original": "Adi_E063", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.19, "dimensions": "7.36X4.50X1.80X1.60", "stones": [{"shape": "Round", "carat": 0.022, "count": 1, "size": "1.80*1.80"}], "drive_id": ""}, {"sku_lia": "LIA_E064", "sku_original": "Adi_E064", "name": "חישוק עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.69, "dimensions": "16.50X5.50", "stones": [{"shape": "Marquise", "carat": 0.42, "count": 5, "size": "4.0*2.0"}, {"shape": "Round", "carat": 0.1, "count": 8, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E065", "sku_original": "Adi_E065", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.11, "dimensions": "10.0X5.50", "stones": [{"shape": "Round", "carat": 0.05, "count": 4, "size": "1.50*1.50"}, {"shape": "Marquise", "carat": 0.17, "count": 2, "size": "4.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_E066", "sku_original": "Adi_E066", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.14, "dimensions": "8.34X7.67X0.70X0.50X0.90X0.70X3.0", "stones": [{"shape": "Marquise", "carat": 0.26, "count": 1, "size": "6.0*3.0"}, {"shape": "Round", "carat": 0.06, "count": 3, "size": "1.70*1.70"}], "drive_id": ""}, {"sku_lia": "LIA_E067", "sku_original": "Adi_E067", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.0, "dimensions": "13.0X5.06X9.60X0.70X0.90X1.90", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E068", "sku_original": "Adi_E068", "name": "עגיל נחש זהב צהוב", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.12, "dimensions": "19.01X2.32X1.61X2.30X5.03X8.98", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E069", "sku_original": "Adi_E069", "name": "חישוק חצי פתוח משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.5, "dimensions": "15.45X1.70X0.60", "stones": [{"shape": "Round", "carat": 0.03, "count": 8, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E070", "sku_original": "Adi_E070", "name": "תליון חרב ייחודי", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.95, "dimensions": "20.71X4.59X1.20X1.40X0.65", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E071", "sku_original": "Adi_E071", "name": "עגיל חישוק מחודד עם מוט", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.61, "dimensions": "18.0X3.9X4.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E072", "sku_original": "Adi_E072", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.89, "dimensions": "18.0X6.50X4.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E073", "sku_original": "Adi_E073", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.09, "dimensions": "5.77X3.15X0.90", "stones": [{"shape": "Round", "carat": 0.007, "count": 1, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_E074", "sku_original": "Adi_E074", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.09, "dimensions": "14.35X13.50X4.46X3.90X1.50", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_E075", "sku_original": "Adi_E075", "name": "עגיל צמוד עם יהלום במרכז", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.37, "dimensions": "0.60X2.0X0.70X1.70X1.32", "stones": [{"shape": "Round", "carat": 0.12, "count": 2, "size": "2.50*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_E076", "sku_original": "Adi_E076", "name": "עגיל בצורת עלה עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.23, "dimensions": "6.95X1.30", "stones": [{"shape": "Round", "carat": 0.015, "count": 4, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E077", "sku_original": "Adi_E077", "name": "חישוק דק עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.95, "dimensions": "14.28X5.0X1.60X1.30", "stones": [{"shape": "Round", "carat": 0.05, "count": 11, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_E078", "sku_original": "Adi_E078", "name": "חישוק קטן עם יהלומים גדולים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.58, "dimensions": "10.20X6.80X1.60X5.32X1.80X1.40", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E079", "sku_original": "Adi_E079", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.16, "dimensions": "6.70x6.70x2.10", "stones": [{"shape": "7 יהלומים", "carat": 0.07, "count": 0, "size": ""}], "drive_id": ""}, {"sku_lia": "LIA_E080", "sku_original": "Adi_E080", "name": "לטאות צמודות אוזן", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.51, "dimensions": "12.12X1.09", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E081", "sku_original": "Adi_E081", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.43, "dimensions": "8.20X5.0X3.36", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E082", "sku_original": "Adi_E082", "name": "תליון בינוני עם נגיעות אבנים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.34, "dimensions": "8.13X5.67X1.13X3.23X1.25", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E083", "sku_original": "Adi_E083", "name": "עגיל מחומש משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.22, "dimensions": "16.17X14.0X1.50X1.80", "stones": [{"shape": "Round", "carat": 0.07, "count": 10, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_E084", "sku_original": "Adi_E084", "name": "תליון פרחוני בינוני", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.38, "dimensions": "10.0X5.79X2.60", "stones": [{"shape": "Round", "carat": 0.1, "count": 1, "size": "3.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_E085", "sku_original": "Adi_E085", "name": "עגיל מעויין משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.22, "dimensions": "7.39X4.20X1.40", "stones": [{"shape": "Round", "carat": 0.02, "count": 3, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_E086", "sku_original": "Adi_E086", "name": "חישוק משושה עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.28, "dimensions": "14.58X14.0X11.0X5.50X1.80", "stones": [{"shape": "Round", "carat": 0.033, "count": 5, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_E087", "sku_original": "Adi_E087", "name": "חישוק משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.65, "dimensions": "16.00 x 13.0X5.26X1.50X2.30", "stones": [{"shape": "Round", "carat": 0.09, "count": 11, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_E088", "sku_original": "Adi_E088", "name": "עגיל משובץ 3 אבנים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.32, "dimensions": "9.13 x 1.50", "stones": [{"shape": "Round", "carat": 0.044, "count": 2, "size": "1.80*1.80"}], "drive_id": ""}, {"sku_lia": "LIA_E089", "sku_original": "Adi_E089", "name": "עגיל זיגזג 3 אבנים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.37, "dimensions": "18.84 x 5.71 x 1.50", "stones": [{"shape": "Round", "carat": 0.07, "count": 3, "size": "1.80*1.80"}], "drive_id": ""}, {"sku_lia": "LIA_E091", "sku_original": "Adi_E091", "name": "עגיל חישוק גיאומטרי חצי פתוח משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.4, "dimensions": "21.00 x 18.31 x 1.60", "stones": [{"shape": "Round", "carat": 0.08, "count": 10, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_E092", "sku_original": "Adi_E092", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.06, "dimensions": "12.00 x 6.00 x 2.00", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E093", "sku_original": "Adi_E093", "name": "עגיל טיפה משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.54, "dimensions": "17.01 x 2.40", "stones": [{"shape": "Pear", "carat": 0.13, "count": 1, "size": "4.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_E094", "sku_original": "Adi_E094", "name": "עגיל שיבוץ כתר", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.49, "dimensions": "3.60 x 2.60", "stones": [{"shape": "Round", "carat": 0.24, "count": 1, "size": "4.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_E095", "sku_original": "Adi_E095", "name": "שן פיל צמוד משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.51, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E096", "sku_original": "Adi_E096", "name": "עגיל חישוק משולב יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 5.26, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.007, "count": 1, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_E097", "sku_original": "Adi_E097", "name": "תליון מרקיזה משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.09, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}, {"shape": "Marquise", "carat": 0.29, "count": 1, "size": "6.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_E098", "sku_original": "Adi_E098", "name": "עגיל חישוק משושה", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.47, "dimensions": "8.50 x 1.68 x 1.10", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E099", "sku_original": "Adi_E099", "name": "עגיל חישוק עם שיבוץ צד", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.63, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.04, "count": 1, "size": "2.20*2.20"}], "drive_id": ""}, {"sku_lia": "LIA_E100", "sku_original": "Adi_E100", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.64, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E101", "sku_original": "Adi_E101", "name": "תליון", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 2.08, "dimensions": "15.00 x 6.44", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E102", "sku_original": "Adi_E102", "name": "תליון", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.07, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.07, "count": 3, "size": "1.80*1.80"}, {"shape": "Marquise", "carat": 0.1, "count": 1, "size": "5.0*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_E103", "sku_original": "Adi_E103", "name": "צמוד שלושה יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.2, "dimensions": "4.52 x 0.90", "stones": [{"shape": "Round", "carat": 0.09, "count": 3, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_E104", "sku_original": "Adi_E104", "name": "עגילים צמודים שישה יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.26, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.011, "count": 3, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E105", "sku_original": "Adi_E105", "name": "עגיל לוכד חלומות", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.93, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.022, "count": 1, "size": "1.80*1.80"}, {"shape": "Pear", "carat": 0.35, "count": 1, "size": "6.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_E106", "sku_original": "Adi_E106", "name": "עגיל חישוק", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.98, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.07, "count": 2, "size": "2.10*210"}], "drive_id": ""}, {"sku_lia": "LIA_E107", "sku_original": "Adi_E107", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.33, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.06, "count": 1, "size": "2.50*2.50"}, {"shape": "Marquise", "carat": 0.17, "count": 1, "size": "5.0*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_E108", "sku_original": "Adi_E108", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.6, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.05, "count": 1, "size": "2.40*2.40"}], "drive_id": ""}, {"sku_lia": "LIA_E109", "sku_original": "Adi_E109", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.86, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.1, "count": 8, "size": "1.50*1.50"}, {"shape": "Marquise", "carat": 0.21, "count": 4, "size": "4.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_E110", "sku_original": "Adi_E110", "name": "עגיל משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 3.0, "dimensions": "14.60x9.20x2.79", "stones": [{"shape": "Round", "carat": 0.06, "count": 6, "size": "1.40*1.40"}], "drive_id": ""}, {"sku_lia": "LIA_E111", "sku_original": "Adi_E111", "name": "עגיל עגול משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.27, "dimensions": "10.00x2.00x0.70", "stones": [{"shape": "Round", "carat": 0.02, "count": 1, "size": "1.75*1.75"}], "drive_id": ""}, {"sku_lia": "LIA_E112", "sku_original": "Adi_E112", "name": "עגיל עגול חצי פתוח משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.85, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.04, "count": 1, "size": "2.20*2.20"}], "drive_id": ""}, {"sku_lia": "LIA_E113", "sku_original": "Adi_E113", "name": "שפרירית נקייה", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.18, "dimensions": "6.76x4.44x1.41", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E114", "sku_original": "Adi_E114", "name": "שפרירית עם יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.43, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E116", "sku_original": "Adi_E116", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 1.24, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E117", "sku_original": "Adi_E117", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.32, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.016, "count": 2, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_E118", "sku_original": "Adi_E118", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.18, "dimensions": "6.00x6.00x1.20", "stones": [{"shape": "Round", "carat": 0.013, "count": 1, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_E119", "sku_original": "Adi_E119", "name": "עגיל חישוק משובץ", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.94, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E120", "sku_original": "Adi_E120", "name": "עגיל צמוד איקס יהלומים למחצה", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.38, "dimensions": "14.30x5.00x0.95", "stones": [{"shape": "Round", "carat": 0.03, "count": 11, "size": "0.90*0.90"}], "drive_id": ""}, {"sku_lia": "LIA_E121", "sku_original": "Adi_E121", "name": "עגיל מעוין משובץ יהלומים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.98, "dimensions": "15.00x7.80x1.80", "stones": [{"shape": "Round", "carat": 0.06, "count": 7, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_E122", "sku_original": "Adi_E122", "name": "לבבות משולבים יהלומים בצדדים", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.56, "dimensions": "5.05x5.03x2.00", "stones": [{"shape": "Round", "carat": 0.01, "count": 2, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_E123", "sku_original": "Adi_E123", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.75, "dimensions": "5.05x5.03x2.00", "stones": [{"shape": "Round", "carat": 0.009, "count": 1, "size": "1.35*1.35"}], "drive_id": ""}, {"sku_lia": "LIA_E124", "sku_original": "Adi_E124", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.47, "dimensions": "8.32x8.32x1.40", "stones": [{"shape": "Round", "carat": 0.06, "count": 16, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_E125", "sku_original": "Adi_E125", "name": "", "type": "עגיל", "material": "דן", "gold_type": "14K", "weight": 0.68, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P001", "sku_original": "Adi_P001", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.35, "dimensions": "6.26x2X2.53", "stones": [{"shape": "Round", "carat": 0.12, "count": 4, "size": "2*2"}], "drive_id": ""}, {"sku_lia": "LIA_P002", "sku_original": "Adi_P002", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.69, "dimensions": "12.81X7.80X2.30X0.80X1.50", "stones": [{"shape": "Round", "carat": 0.041, "count": 5, "size": "1.30*1.30"}, {"shape": "Marquise", "carat": 0.18, "count": 1, "size": "6.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_P003", "sku_original": "Adi_P003", "name": "", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.565, "dimensions": "10.00X2.30", "stones": [{"shape": "Round", "carat": 0.041, "count": 5, "size": "1.30*1.30"}, {"shape": "Marquise", "carat": 0.18, "count": 1, "size": "6.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_P004", "sku_original": "Adi_P004", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.23, "dimensions": "7.0X3.30X1.0X1.7", "stones": [{"shape": "Round", "carat": 0.007, "count": 2, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_P005", "sku_original": "Adi_P005", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.66, "dimensions": "11.00x7.00x2.69X1.10", "stones": [{"shape": "Round", "carat": 0.01, "count": 1, "size": "1.40*1.40"}], "drive_id": ""}, {"sku_lia": "LIA_P006", "sku_original": "Adi_P006", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.36, "dimensions": "7.45X0.8X1.0X1.40X1.50", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}, {"shape": "Marquise", "carat": 0.18, "count": 1, "size": "6.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_P007", "sku_original": "Adi_P007", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.01, "dimensions": "17.0X10.0X2.7", "stones": [{"shape": "Round", "carat": 0.24, "count": 1, "size": "4.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_P008", "sku_original": "Adi_P008", "name": "תליון", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.66, "dimensions": "10.41X8.0X2.33X1.83X0.7", "stones": [{"shape": "Round", "carat": 0.06, "count": 1, "size": "2.50*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_P009", "sku_original": "Adi_P009", "name": "תליון מעוין", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.39, "dimensions": "9.12x6.26x2.00X0.7", "stones": [{"shape": "Round", "carat": 0.12, "count": 4, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_P010", "sku_original": "Adi_P010", "name": "", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.99, "dimensions": "14.38X1.10X0.9X0.9X1.51", "stones": [{"shape": "Oval", "carat": 1.09, "count": 1, "size": "8.0*6.0"}, {"shape": "Round", "carat": 0.06, "count": 1, "size": "2.50*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_P011", "sku_original": "Adi_P011", "name": "תליון מגן דוד", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.04, "dimensions": "11.00x2.20x1.41X1.10", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P012", "sku_original": "Adi_P012", "name": "תליון טיפה", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.41, "dimensions": "8.50X1.10X1.92X1.50X1.0X1.20", "stones": [{"shape": "Round", "carat": 0.32, "count": 1, "size": "4.40*4.40"}], "drive_id": ""}, {"sku_lia": "LIA_P013", "sku_original": "Adi_P013", "name": "תליון נחש", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.3, "dimensions": "14.57x13.00x1.03X0.90X0.70", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P014", "sku_original": "Adi_P014", "name": "תליון קולב", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.42, "dimensions": "25x1.80X1.40", "stones": [{"shape": "Round", "carat": 0.005, "count": 1, "size": "1.12*1.12"}], "drive_id": ""}, {"sku_lia": "LIA_P015", "sku_original": "Adi_P015", "name": "תליון אובלי", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.58, "dimensions": "11.38X1.0X0.60X0.80X1.52", "stones": [{"shape": "Round", "carat": 0.018, "count": 1, "size": "1.70*1.70"}, {"shape": "Oval", "carat": 0.36, "count": 1, "size": "6.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_P016", "sku_original": "Adi_P016", "name": "", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.61, "dimensions": "11.30X1.0X0.60X0.80X1.92X1.50", "stones": [{"shape": "Round", "carat": 0.018, "count": 1, "size": "1.70*1.70"}, {"shape": "Oval", "carat": 0.36, "count": 1, "size": "6.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_P017", "sku_original": "Adi_P017", "name": "תליון טיפה", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.86, "dimensions": "17.50x10.0X3.50X3.11X1.23", "stones": [{"shape": "Pear", "carat": 0.62, "count": 1, "size": "7.25*4.97"}], "drive_id": ""}, {"sku_lia": "LIA_P018", "sku_original": "Adi_P018", "name": "תליון מרקיזה", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.78, "dimensions": "4.60x3.50X0.60", "stones": [{"shape": "Marquise", "carat": 0.34, "count": 1, "size": "6.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_P019", "sku_original": "Adi_P019", "name": "תליון אבנים", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.46, "dimensions": "6.86x4.73X2.0X1.20X0.37", "stones": [{"shape": "Round", "carat": 0.015, "count": 4, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_P020", "sku_original": "Adi_P020", "name": "תליון משובץ", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.44, "dimensions": "10.55x2", "stones": [{"shape": "Round", "carat": 0.019, "count": 5, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_P021", "sku_original": "Adi_P021", "name": "תליון מגן דוד", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.51, "dimensions": "7.40x1.20", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P022", "sku_original": "Adi_P022", "name": "תליון מגן דוד משובץ", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.96, "dimensions": "9.11x2.40", "stones": [{"shape": "Round", "carat": 0.022, "count": 6, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_P023", "sku_original": "Adi_P023", "name": "", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.57, "dimensions": "9.30x1.60", "stones": [{"shape": "Round", "carat": 0.007, "count": 1, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_P024", "sku_original": "Adi_P024", "name": "תליון כוכב משובץ", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.7, "dimensions": "8.40x1.80", "stones": [{"shape": "Round", "carat": 0.11, "count": 13, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_P025", "sku_original": "Adi_P025", "name": "מגן דוד משובץ בפינות", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.64, "dimensions": "12.80x1.50", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_P026", "sku_original": "Adi_P026", "name": "מגן דוד משובץ מלא", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.81, "dimensions": "12.63x1.60", "stones": [{"shape": "Round", "carat": 0.13, "count": 13, "size": "1.40*1.40"}], "drive_id": ""}, {"sku_lia": "LIA_P027", "sku_original": "Adi_P027", "name": "תליון ראש צבי", "type": "תליון", "material": "דן", "gold_type": "כסף 925", "weight": 4.79, "dimensions": "25.69x30", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P028", "sku_original": "Adi_P028", "name": "תליון קשר", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.85, "dimensions": "10.39x2.13", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P029", "sku_original": "Adi_P029", "name": "", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.37, "dimensions": "4.40x3.54", "stones": [{"shape": "Round", "carat": 0.32, "count": 1, "size": "4.40*4.40"}], "drive_id": ""}, {"sku_lia": "LIA_P030", "sku_original": "Adi_P030", "name": "תליון NOVA נובה", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 2.26, "dimensions": "14.83x1.50", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P031", "sku_original": "Adi_P031", "name": "תליון מגן דוד פתוח", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.4, "dimensions": "9.80x1.40", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P032", "sku_original": "Adi_P032", "name": "תליון פרפר", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.53, "dimensions": "", "stones": [{"shape": "Marquise", "carat": 0.35, "count": 2, "size": "6.0*3.0"}, {"shape": "Round", "carat": 0.2, "count": 3, "size": "2.60*2.60"}], "drive_id": ""}, {"sku_lia": "LIA_P033", "sku_original": "Adi_P033", "name": "מגן דוד קטן", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.59, "dimensions": "7.40x2.00", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P034", "sku_original": "Adi_P034", "name": "בן עם כתר", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 4.01, "dimensions": "34.27", "stones": [{"shape": "Round", "carat": 0.07, "count": 1, "size": "2.70*2.70"}], "drive_id": ""}, {"sku_lia": "LIA_P035", "sku_original": "Adi_P035", "name": "תליון מגן דוד תלת ממדי", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.5, "dimensions": "11.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P036", "sku_original": "Adi_P036", "name": "תליון מגן דוד תלת ממדי גדול", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.78, "dimensions": "12.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P037", "sku_original": "Adi_P037", "name": "בן אלגנטי עם כתר", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 4.69, "dimensions": "39.65", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P038", "sku_original": "Adi_P038", "name": "תליון מלבן לחריטה", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 3.36, "dimensions": "25.0", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P039", "sku_original": "Adi_P039", "name": "תליון טיפה משובצת", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.98, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.05, "count": 1, "size": "2.40*2.40"}, {"shape": "Pear", "carat": 0.77, "count": 1, "size": "8.07*5.15"}], "drive_id": ""}, {"sku_lia": "LIA_P040", "sku_original": "Adi_P040", "name": "תליון עין משובצת", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 3.04, "dimensions": "20.89", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_P041", "sku_original": "Adi_P041", "name": "תליון אמרלד משובץ", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.1, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.1, "count": 28, "size": "1.0*1.0"}, {"shape": "Emerald", "carat": 0.93, "count": 1, "size": "12.0*3.20"}], "drive_id": ""}, {"sku_lia": "LIA_P042", "sku_original": "Adi_P042", "name": "תליון עם לב", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.83, "dimensions": "12.3", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P043", "sku_original": "Adi_P043", "name": "תליון טיפה יהלום גדול", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.58, "dimensions": "18.08", "stones": [{"shape": "Cabochon_pear", "carat": 4.98, "count": 1, "size": "16.68*8.07"}], "drive_id": ""}, {"sku_lia": "LIA_P044", "sku_original": "Adi_P044", "name": "תליון נחש", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.11, "dimensions": "5.20X5.10X0.90", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P045", "sku_original": "Adi_P045", "name": "תליון טיפה פתוח", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.91, "dimensions": "8.97X6.72X4.47", "stones": [{"shape": "Pear", "carat": 1.32, "count": 1, "size": "8.97*6.72"}], "drive_id": ""}, {"sku_lia": "LIA_P046", "sku_original": "Adi_P046", "name": "תליון טיפה סגור", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 2.26, "dimensions": "8.03X6.13X3.80", "stones": [{"shape": "Pear", "carat": 1.13, "count": 1, "size": "8.03*6.13"}], "drive_id": ""}, {"sku_lia": "LIA_P047", "sku_original": "Adi_P047", "name": "תליון טיפה יהלום גדול עם יהלום קטן נוסף", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.67, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.018, "count": 1, "size": "1.70*1.70"}, {"shape": "Pear", "carat": 0.32, "count": 1, "size": "6.35*3.82"}], "drive_id": ""}, {"sku_lia": "LIA_P048", "sku_original": "Adi_P048", "name": "תליון טיפה פתוח גדול", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 1.2, "dimensions": "9.75X7.00X5.07", "stones": [{"shape": "Pear", "carat": 1.77, "count": 1, "size": "9.75*7.0"}], "drive_id": ""}, {"sku_lia": "LIA_P049", "sku_original": "Adi_P049", "name": "תליון פרח משובץ", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.41, "dimensions": "7.12X7.27X1.40", "stones": [{"shape": "Round", "carat": 0.18, "count": 3, "size": "2.50*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_P050", "sku_original": "Adi_P050", "name": "תליון שפירית משובצת", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.79, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.016, "count": 2, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_P051", "sku_original": "Adi_P051", "name": "תליון אות M", "type": "תליון", "material": "דן", "gold_type": "14K", "weight": 0.37, "dimensions": "4.20X2.60X1.50", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R001", "sku_original": "Adi_R001", "name": "טבעת משובצת", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.42, "dimensions": "8.00X5.76X3.00", "stones": [{"shape": "Round", "carat": 0.045, "count": 12, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R002", "sku_original": "Adi_R002", "name": "טבעת חלקה", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.55, "dimensions": "9.50X9.00X3.00", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R003", "sku_original": "Adi_R003", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.19, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.07, "count": 10, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_R004", "sku_original": "Adi_R004", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.94, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R005", "sku_original": "Adi_R005", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.73, "dimensions": "", "stones": [{"shape": "Marquise", "carat": 0.1, "count": 1, "size": "5.0*2.50"}, {"shape": "Round", "carat": 0.05, "count": 4, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R006", "sku_original": "Adi_R006", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.05, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.041, "count": 5, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_R007", "sku_original": "Adi_R007", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.4, "dimensions": "", "stones": [{"shape": "Pear", "carat": 0.17, "count": 1, "size": "5.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_R008", "sku_original": "Adi_R008", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.09, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.1, "count": 1, "size": "3.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_R009", "sku_original": "Adi_R009", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.22, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.021, "count": 2, "size": "1.40*1.40"}], "drive_id": ""}, {"sku_lia": "LIA_R010", "sku_original": "Adi_R010", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 6.01, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R011", "sku_original": "Adi_R011", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.85, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R012", "sku_original": "Adi_R012", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.82, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R013", "sku_original": "Adi_R013", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.35, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.06, "count": 5, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R014", "sku_original": "Adi_R014", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.27, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.24, "count": 1, "size": "4.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_R015", "sku_original": "Adi_R015", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.18, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.13, "count": 27, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_R016", "sku_original": "Adi_R016", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.45, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.14, "count": 11, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R017", "sku_original": "Adi_R017", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.9, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R018", "sku_original": "Adi_R018", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.69, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.015, "count": 4, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R019", "sku_original": "Adi_R019", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.87, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.013, "count": 2, "size": "1.20*1.20"}, {"shape": "Princess", "carat": 0.27, "count": 1, "size": "3.50*3.50"}], "drive_id": ""}, {"sku_lia": "LIA_R020", "sku_original": "Adi_R020", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 8.89, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R021", "sku_original": "Adi_R021", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.26, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R022", "sku_original": "Adi_R022", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.1, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.021, "count": 2, "size": "1.40*1.40"}], "drive_id": ""}, {"sku_lia": "LIA_R024", "sku_original": "Adi_R024", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.62, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.007, "count": 2, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R025", "sku_original": "Adi_R025", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.06, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.044, "count": 2, "size": "1.80*1.80"}, {"shape": "Oval", "carat": 1.09, "count": 1, "size": "8.0*6.0"}], "drive_id": ""}, {"sku_lia": "LIA_R026", "sku_original": "Adi_R026", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.37, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.025, "count": 2, "size": "1.50*1.50"}, {"shape": "Princess", "carat": 0.4, "count": 1, "size": "4.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_R027", "sku_original": "Adi_R027", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.02, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R028", "sku_original": "Adi_R028", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 6.31, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.05, "count": 4, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R029", "sku_original": "Adi_R029", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.86, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.06, "count": 2, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R030", "sku_original": "Adi_R030", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.84, "dimensions": "", "stones": [{"shape": "Oval", "carat": 0.36, "count": 1, "size": "6.0*4.0"}], "drive_id": ""}, {"sku_lia": "LIA_R031", "sku_original": "Adi_R031", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.41, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.18, "count": 6, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R033", "sku_original": "Adi_R033", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.57, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}, {"shape": "Marquise", "carat": 0.1, "count": 2, "size": "4.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R034", "sku_original": "Adi_R034", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.69, "dimensions": "", "stones": [{"shape": "Round", "carat": 5.46, "count": 1, "size": "11.0*11.0"}], "drive_id": ""}, {"sku_lia": "LIA_R035", "sku_original": "Adi_R035", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.47, "dimensions": "", "stones": [{"shape": "Round", "carat": 1.0, "count": 25, "size": "2.20*2.20"}], "drive_id": ""}, {"sku_lia": "LIA_R036", "sku_original": "Adi_R036", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.22, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}, {"shape": "Oval", "carat": 0.66, "count": 1, "size": "7.16*4.66"}], "drive_id": ""}, {"sku_lia": "LIA_R037", "sku_original": "Adi_R036-B", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.75, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}, {"shape": "Oval", "carat": 0.66, "count": 1, "size": "7.16*4.66"}], "drive_id": ""}, {"sku_lia": "LIA_R038", "sku_original": "Adi_R037", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.19, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R039", "sku_original": "Adi_R038", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.08, "dimensions": "", "stones": [{"shape": "Baguette Steaight", "carat": 1.41, "count": 1, "size": "7.0*5.0"}, {"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R040", "sku_original": "Adi_R039", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.31, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R041", "sku_original": "Adi_R040", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.87, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R042", "sku_original": "Adi_R041", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.09, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R043", "sku_original": "Adi_R042", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.1, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R044", "sku_original": "Adi_R043", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.86, "dimensions": "", "stones": [{"shape": "Custom_Baguette", "carat": 0.15, "count": 1, "size": "4.63*2.20"}], "drive_id": ""}, {"sku_lia": "LIA_R045", "sku_original": "Adi_R044", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.39, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R046", "sku_original": "Adi_R045", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.59, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R047", "sku_original": "Adi_R046", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.85, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R048", "sku_original": "Adi_R047", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.08, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R049", "sku_original": "Adi_R048", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.71, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R050", "sku_original": "Adi_R049", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.1, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R051", "sku_original": "Adi_R050", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.8, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.12, "count": 19, "size": "1.20*1.20"}], "drive_id": ""}, {"sku_lia": "LIA_R052", "sku_original": "Adi_R051", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.17, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}, {"shape": "Emerald", "carat": 1.02, "count": 1, "size": "7.0*5.0"}], "drive_id": ""}, {"sku_lia": "LIA_R053", "sku_original": "Adi_R052", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.77, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.045, "count": 12, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R054", "sku_original": "Adi_R053", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 21.51, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R055", "sku_original": "Adi_R054", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.42, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 16, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_R056", "sku_original": "Adi_R055", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.89, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.05, "count": 4, "size": "1.50*1.50"}, {"shape": "Marquise", "carat": 0.16, "count": 3, "size": "4.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R057", "sku_original": "Adi_R056", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.5, "dimensions": "", "stones": [{"shape": "Marquise", "carat": 0.05, "count": 1, "size": "4.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R058", "sku_original": "Adi_R057", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.0, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.05, "count": 4, "size": "1.50*1.50"}, {"shape": "Marquise", "carat": 0.1, "count": 1, "size": "5.0*2.50"}], "drive_id": ""}, {"sku_lia": "LIA_R059", "sku_original": "Adi_R058", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.77, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.18, "count": 6, "size": "2.0*2.0"}, {"shape": "Marquise", "carat": 0.18, "count": 1, "size": "5.05*2.60"}], "drive_id": ""}, {"sku_lia": "LIA_R060", "sku_original": "Adi_R059", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.18, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.22, "count": 1, "size": "3.90*3.90"}], "drive_id": ""}, {"sku_lia": "LIA_R061", "sku_original": "Adi_R060", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.6, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R062", "sku_original": "Adi_R061", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.48, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 16, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_R063", "sku_original": "Adi_R062", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.78, "dimensions": "", "stones": [{"shape": "Oval", "carat": 1.2, "count": 1, "size": "8.80*5.93"}], "drive_id": ""}, {"sku_lia": "LIA_R064", "sku_original": "Adi_R063", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.51, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.11, "count": 1, "size": "3.10*3.10"}], "drive_id": ""}, {"sku_lia": "LIA_R065", "sku_original": "Adi_R064", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.19, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.004, "count": 1, "size": "1.0*1.0"}, {"shape": "Oval", "carat": 1.35, "count": 1, "size": "8.46*7.24"}], "drive_id": ""}, {"sku_lia": "LIA_R066", "sku_original": "Adi_R065", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.52, "dimensions": "", "stones": [{"shape": "Triangle", "carat": 0.4, "count": 2, "size": "4.21*4.90"}, {"shape": "Round", "carat": 0.02, "count": 4, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_R067", "sku_original": "Adi_R066", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.8, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 5, "size": "1.60*1.60"}, {"shape": "Round", "carat": 0.08, "count": 5, "size": "1.60*1.60"}, {"shape": "Round", "carat": 0.08, "count": 5, "size": "1.60*1.60"}], "drive_id": ""}, {"sku_lia": "LIA_R068", "sku_original": "Adi_R067", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.99, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.03, "count": 8, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R069", "sku_original": "Adi_R068", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.2, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.47, "count": 1, "size": "5.0*5.0"}], "drive_id": ""}, {"sku_lia": "LIA_R070", "sku_original": "Adi_R069", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.81, "dimensions": "", "stones": [{"shape": "Round", "carat": 2.23, "count": 20, "size": "3.10*3.10"}], "drive_id": ""}, {"sku_lia": "LIA_R071", "sku_original": "Adi_R070", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.65, "dimensions": "", "stones": [{"shape": "Triangle", "carat": 0.22, "count": 2, "size": "3.12*3.60"}, {"shape": "Emerald", "carat": 1.18, "count": 1, "size": "6.20*5.46"}], "drive_id": ""}, {"sku_lia": "LIA_R072", "sku_original": "Adi_R071", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R073", "sku_original": "Adi_R072", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.6, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 16, "size": "1.10*1.10"}], "drive_id": ""}, {"sku_lia": "LIA_R074", "sku_original": "Adi_R073", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.77, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.07, "count": 18, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R075", "sku_original": "Adi_R074", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.81, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R076", "sku_original": "Adi_R075", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.85, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.23, "count": 4, "size": "2.50*2.50"}, {"shape": "Princess", "carat": 1.61, "count": 1, "size": "6.20*6.20"}], "drive_id": ""}, {"sku_lia": "LIA_R077", "sku_original": "Adi_R076", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.49, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.022, "count": 6, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R079", "sku_original": "Adi_R078", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.85, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.14, "count": 17, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_R080", "sku_original": "Adi_R079", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.14, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.74, "count": 5, "size": "3.40*3.40"}], "drive_id": ""}, {"sku_lia": "LIA_R081", "sku_original": "Adi_R080", "name": "טבעת בשיבוץ מלא של יהלומים קטנים", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.98, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.26, "count": 31, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_R082", "sku_original": "Adi_R081", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.45, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.2, "count": 2, "size": "3.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_R083", "sku_original": "Adi_R082", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 4.93, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R084", "sku_original": "Adi_R083", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.24, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R085", "sku_original": "Adi_R084", "name": "לב גדול", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 10.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R086", "sku_original": "Adi_R085", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.88, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.51, "count": 5, "size": "3.0*3.0"}], "drive_id": ""}, {"sku_lia": "LIA_R087", "sku_original": "Adi_R086", "name": "שני קווים משתלבים", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.47, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R088", "sku_original": "Adi_R087", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.11, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}, {"shape": "Baguette Straight", "carat": 1.16, "count": 1, "size": "7.0*5.0"}], "drive_id": ""}, {"sku_lia": "LIA_R089", "sku_original": "Adi_R088", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.61, "dimensions": "", "stones": [{"shape": "Pear", "carat": 0.24, "count": 2, "size": "4.10*2.60"}, {"shape": "Round", "carat": 0.51, "count": 1, "size": "5.15*5.15"}], "drive_id": ""}, {"sku_lia": "LIA_R090", "sku_original": "Adi_R089", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 5.89, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R091", "sku_original": "Adi_R090", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 3.16, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.07, "count": 8, "size": "1.30*1.30"}], "drive_id": ""}, {"sku_lia": "LIA_R092", "sku_original": "Adi_R091", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.68, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.007, "count": 2, "size": "1.0*1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R093", "sku_original": "Adi_R092", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.87, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.1, "count": 8, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R094", "sku_original": "Adi_R093", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.51, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.025, "count": 2, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R095", "sku_original": "Adi_R094", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 2.65, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.11, "count": 6, "size": "1.70*1.70"}, {"shape": "Oval", "carat": 0.49, "count": 1, "size": "6.60*4.25"}], "drive_id": ""}, {"sku_lia": "LIA_R096", "sku_original": "Adi_R095", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.53, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.03, "count": 1, "size": "2.0*2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R097", "sku_original": "Adi_R096", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.9, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.037, "count": 2, "size": "1.70*1.70"}], "drive_id": ""}, {"sku_lia": "LIA_R098", "sku_original": "Adi_R097", "name": "", "type": "טבעת", "material": "דן", "gold_type": "14K", "weight": 1.75, "dimensions": "", "stones": [{"shape": "Round", "carat": 0.08, "count": 6, "size": "1.50*1.50"}], "drive_id": ""}, {"sku_lia": "LIA_R102", "sku_original": "טבעת פסטות", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 9.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R103", "sku_original": "טבעת פסטות מרוקן", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 5.6, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R110", "sku_original": "טבעת אבנים סגולות", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R113", "sku_original": "טבעת אובלית מלא", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.5, "dimensions": "", "stones": [{"shape": "RD", "carat": 0.023, "count": 1, "size": "1.8"}], "drive_id": ""}, {"sku_lia": "LIA_R114", "sku_original": "טבעת אובלית חלולה", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.4, "dimensions": "", "stones": [{"shape": "RD", "carat": 0.023, "count": 1, "size": "1.8"}], "drive_id": ""}, {"sku_lia": "LIA_R115", "sku_original": "טבעת שמש מרקיזה- יהלומים", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.5, "dimensions": "", "stones": [{"shape": "RD", "carat": 0.005, "count": 4, "size": "1.0"}], "drive_id": ""}, {"sku_lia": "LIA_R116", "sku_original": "טבעת שמש מרקיזה-כדורים", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.25, "dimensions": "", "stones": [{"shape": "RD", "carat": 0.014, "count": 2, "size": "1.5"}], "drive_id": ""}, {"sku_lia": "LIA_R117", "sku_original": "חותם חריצים", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 8.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R118", "sku_original": "טבעת מרקיזה וינטג'", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 5.0, "dimensions": "", "stones": [{"shape": "RD", "carat": 0.031, "count": 1, "size": "2.0"}], "drive_id": ""}, {"sku_lia": "LIA_R134", "sku_original": "LIA 112", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.6, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B004", "sku_original": "LIA 115", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 0.9, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B005", "sku_original": "LIA 116", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 0.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E145", "sku_original": "LIA 118", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.35, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R135", "sku_original": "LIA 120", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R136", "sku_original": "LIA 121", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R138", "sku_original": "LIA 123", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 1.8, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R139", "sku_original": "LIA 124", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.1, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R140", "sku_original": "LIA 125", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E147", "sku_original": "LIA 127- A", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R142", "sku_original": "LIA 129", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R143", "sku_original": "LIA 130", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 1.7, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P061", "sku_original": "LIA 134", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.9, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P062", "sku_original": "LIA 134 (2)", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B006", "sku_original": "LIA 135", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 0.6, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P064", "sku_original": "LIA 137", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.7, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B007", "sku_original": "LIA 138", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 0.8, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B008", "sku_original": "LIA 139", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 0.7, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E148", "sku_original": "LIA 140", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B010", "sku_original": "LIA 146", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 1.2, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R150", "sku_original": "LIA 147", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P065", "sku_original": "LIA 148", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.8, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_B011", "sku_original": "LIA 149", "name": "", "type": "צמיד", "material": "שירה", "gold_type": "14K", "weight": 1.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E151", "sku_original": "LIA 150", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.35, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E152", "sku_original": "LIA 151", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.25, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E154", "sku_original": "LIA 153", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P066", "sku_original": "LIA 154", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 1.16, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E155", "sku_original": "LIA 156", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E156", "sku_original": "LIA 157", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E158", "sku_original": "LIA 158-1", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R153", "sku_original": "LIA 159", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R154", "sku_original": "LIA 160", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 1.6, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E159", "sku_original": "LIA 161", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.2, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E160", "sku_original": "LIA 161-1", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.4, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R155", "sku_original": "LIA 162", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R156", "sku_original": "LIA 163", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P067", "sku_original": "LIA 165", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.85, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R159", "sku_original": "LIA 166", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R160", "sku_original": "LIA 168", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.6, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R161", "sku_original": "LIA 169", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E161", "sku_original": "LIA 170", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.09, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E162", "sku_original": "LIA 171", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.04, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E168", "sku_original": "LIA 179", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.45, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R163", "sku_original": "LIA 183", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.8, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "", "sku_original": "LIA 188", "name": "", "type": "צ'ארם", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P072", "sku_original": "LIA 189", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E178", "sku_original": "LIA 190", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.2, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P073", "sku_original": "LIA 191", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 0.75, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E179", "sku_original": "LIA 192", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.45, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E180", "sku_original": "LIA 193", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.55, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E181", "sku_original": "LIA 194", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.68, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R170", "sku_original": "LIA 195", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R174", "sku_original": "LIA 199", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R175", "sku_original": "LIA 200", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R176", "sku_original": "LIA 201", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P074", "sku_original": "LIA 204", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 1.2, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R183", "sku_original": "LIA 207", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 4.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R184", "sku_original": "LIA 208", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.1, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "", "sku_original": "LIA 216.2", "name": "", "type": "צ'ארם", "material": "שירה", "gold_type": "14K", "weight": 0.7, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R192", "sku_original": "LIA 228", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.2, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R193", "sku_original": "LIA 229", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E190", "sku_original": "LIA 230", "name": "בסיכום חודש ינואראין אבן אך בתמונה יש אבן", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P077", "sku_original": "LIA 231", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R194", "sku_original": "LIA 232", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_P078", "sku_original": "LIA 233", "name": "", "type": "תליון", "material": "שירה", "gold_type": "14K", "weight": 1.5, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R195", "sku_original": "LIA 234", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.3, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E191", "sku_original": "LIA 237", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 0.56, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R196", "sku_original": "LIA 239", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 2.8, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_R198", "sku_original": "LIA 242", "name": "", "type": "טבעת", "material": "שירה", "gold_type": "14K", "weight": 3.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E195", "sku_original": "LIA 243", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}, {"sku_lia": "LIA_E196", "sku_original": "LIA 244", "name": "", "type": "עגיל", "material": "שירה", "gold_type": "14K", "weight": 1.0, "dimensions": "", "stones": [], "drive_id": ""}];
+
+let FD=[], CP=1, PP=20;
+const SKU_MAX={R:198,E:196,P:80,B:11,C:0};
+const T2P={'טבעת':'R','עגיל':'E','תליון':'P','צמיד':'B',"צ'יינס":'C'};
+
+// ===== INVENTORY DATA =====
+const INVENTORY = {};
+function initInventory() {
+  const sizes = {
+    'טבעת': ['5','6','7','8','9','10'],
+    'עגיל': ['OS'],
+    'תליון': ['OS'],
+    'צמיד': ['S','M','L'],
+    "צ'יינס": ['40cm','45cm','50cm']
+  };
+  DATA.forEach(it => {
+    const szList = sizes[it.type] || ['OS'];
+    INVENTORY[it.sku_lia] = {};
+    szList.forEach(sz => {
+      INVENTORY[it.sku_lia][sz] = Math.floor(Math.random() * 5);
+    });
+  });
+  // Make some items out of stock
+  const skus = Object.keys(INVENTORY);
+  for(let i=0;i<Math.floor(skus.length*0.2);i++){
+    const sk=skus[Math.floor(Math.random()*skus.length)];
+    Object.keys(INVENTORY[sk]).forEach(sz=>INVENTORY[sk][sz]=0);
+  }
+}
+
+function getItemStock(sku) {
+  if(!INVENTORY[sku]) return 0;
+  return Object.values(INVENTORY[sku]).reduce((a,b)=>a+b,0);
+}
+
+// ===== CUSTOMERS =====
+let CUSTOMERS = [
+  {id:'C001',name:'רונית כהן',phone:'050-1234567',email:'ronit@gmail.com',addr:'תל אביב, רחוב דיזנגוף 42',notes:'לקוחה VIP',created:'2025-11-15'},
+  {id:'C002',name:'מיכל לוי',phone:'052-9876543',email:'michal.l@gmail.com',addr:'רמת גן, שדרות ירושלים 18',notes:'אוהבת יהלומים',created:'2025-12-02'},
+  {id:'C003',name:'דנה אברהם',phone:'054-5551234',email:'dana.a@yahoo.com',addr:'הרצליה, רחוב הנשיא 7',notes:'',created:'2026-01-10'},
+  {id:'C004',name:'שרה גולדשטיין',phone:'050-7778899',email:'sarah.g@outlook.com',addr:'ירושלים, ממילא 3',notes:'מעדיפה 18K',created:'2026-02-20'},
+  {id:'C005',name:'יעל פרידמן',phone:'053-1112233',email:'yael.f@gmail.com',addr:'חיפה, שדרות הנשיא 55',notes:'הזמנות לאירועים',created:'2026-03-05'},
+  {id:'C006',name:'נועה ביטון',phone:'058-4445566',email:'noa.b@hotmail.com',addr:'נתניה, רחוב הרצל 12',notes:'',created:'2026-03-18'}
+];
+let custIdCounter = 7;
+
+// ===== ORDERS =====
+const PROD_STAGES = [
+  'זיהוי חומר',
+  'מודליסט / ייצור',
+  'בדיקת מידה + שיבוץ',
+  'ליטוש / גימור',
+  'אריזה'
+];
+const FULL_FLOW_PROD = [...PROD_STAGES, 'תשלום', 'משלוח', 'הושלם'];
+const FULL_FLOW_STOCK = ['אריזה ומשלוח', 'תשלום', 'משלוח', 'הושלם'];
+
+let ORDERS = [];
+let ordIdCounter = 1;
+
+function initOrders() {
+  const demoOrders = [
+    {custId:'C001',sku:'LIA_R005',size:'7',qty:1,discount:0,flow:'prod',stageIdx:4,date:'2026-03-28',notes:'מתנת יום הולדת'},
+    {custId:'C002',sku:'LIA_E002',size:'OS',qty:2,discount:5,flow:'stock',stageIdx:2,date:'2026-04-01',notes:''},
+    {custId:'C003',sku:'LIA_P010',size:'OS',qty:1,discount:0,flow:'prod',stageIdx:6,date:'2026-03-15',notes:'משלוח אקספרס'},
+    {custId:'C004',sku:'LIA_R020',size:'8',qty:1,discount:10,flow:'prod',stageIdx:2,date:'2026-04-05',notes:'18K בהזמנה מיוחדת'},
+    {custId:'C005',sku:'LIA_B001',size:'M',qty:1,discount:0,flow:'stock',stageIdx:3,date:'2026-04-08',notes:''},
+    {custId:'C001',sku:'LIA_E010',size:'OS',qty:2,discount:0,flow:'prod',stageIdx:7,date:'2026-02-10',notes:'הושלם'},
+    {custId:'C006',sku:'LIA_P003',size:'OS',qty:1,discount:0,flow:'prod',stageIdx:1,date:'2026-04-12',notes:'תליון מתנה'},
+    {custId:'C002',sku:'LIA_R050',size:'6',qty:1,discount:15,flow:'prod',stageIdx:5,date:'2026-03-20',notes:'ממתינה לתשלום'}
+  ];
+  demoOrders.forEach(o => {
+    const it = DATA.find(d=>d.sku_lia===o.sku);
+    if(!it) return;
+    const pr = calc(it);
+    const total = pr.p * o.qty * (1 - o.discount/100);
+    const stages = o.flow === 'prod' ? FULL_FLOW_PROD : FULL_FLOW_STOCK;
+    ORDERS.push({
+      id: 'ORD-'+String(ordIdCounter++).padStart(4,'0'),
+      custId: o.custId,
+      sku: o.sku,
+      itemName: it.name || it.sku_lia,
+      size: o.size,
+      qty: o.qty,
+      discount: o.discount,
+      unitPrice: pr.p,
+      total: total,
+      flow: o.flow,
+      stages: stages,
+      stageIdx: o.stageIdx,
+      date: o.date,
+      notes: o.notes
+    });
+  });
+}
+
+function getStatusLabel(order) {
+  return order.stages[order.stageIdx] || 'הושלם';
+}
+
+function getStatusClass(order) {
+  const st = getStatusLabel(order);
+  if(st==='הושלם') return 'done';
+  if(st.includes('תשלום')) return 'payment';
+  if(st.includes('משלוח') || st.includes('אריזה')) return 'shipping';
+  if(st.includes('אריזה ומשלוח')) return 'packing';
+  return 'production';
+}
+
+// ===== PRICING (unchanged) =====
+function kf(k){return k==='18K'?0.75:k==='22K'?0.91:0.585}
+function sp(stones){let t=0;for(const s of stones){const pt=s.carat*100;const m=pt>2.8?7:pt>=2.5?5:3;t+=s.carat*s.count*m*U}return t}
+function calc(it){
+  if(!GPG)return{c:0,p:0,b:{}};
+  const ppg=GPG*kf(it.gold_type), gold=it.weight*1.08*ppg, cast=300;
+  const hasStones=(it.stones||[]).length>0;
+  const set=hasStones ? it.weight*2.5*7 : 1;
+  const fin=it.weight*4, st=sp(it.stones||[]);
+  const c=gold+cast+set+fin+st, p=c*2.6*1.7;
+  return{c,p,b:{gold,cast,set,fin,st,ppg}}
+}
+
+// ===== IMAGE URL =====
+function imgUrl(it){
+  if(it.sku_original) return 'images/'+it.sku_original+'.png';
+  if(it.drive_id) return 'https://lh3.googleusercontent.com/d/'+it.drive_id+'=w400';
+  return '';
+}
+
+// ===== FILTER =====
+function fil(){
+  const q=document.getElementById('qSearch').value.toLowerCase();
+  const ft=document.getElementById('fType').value;
+  const fm=document.getElementById('fMat').value;
+  const fk=document.getElementById('fKt').value;
+  const fs=document.getElementById('fSt').value;
+  const so=document.getElementById('fSort').value;
+  FD=DATA.filter(i=>{
+    if(q&&![i.sku_lia,i.name,i.type].join(' ').toLowerCase().includes(q))return false;
+    if(ft&&i.type!==ft)return false;
+    if(fm&&i.material!==fm)return false;
+    if(fk&&i.gold_type!==fk)return false;
+    if(fs==='y'&&!(i.stones||[]).length)return false;
+    if(fs==='n'&&(i.stones||[]).length)return false;
+    if(fs&&fs!=='y'&&fs!=='n'&&!(i.stones||[]).some(s=>s.shape===fs))return false;
+    return true;
+  });
+  FD.sort((a,b)=>{
+    if(so==='pa')return calc(a).p-calc(b).p;
+    if(so==='pd')return calc(b).p-calc(a).p;
+    if(so==='wa')return a.weight-b.weight;
+    if(so==='wd')return b.weight-a.weight;
+    return(a.sku_lia||'').localeCompare(b.sku_lia||'');
+  });
+  CP=1; render();
+}
+
+// ===== RENDER CATALOG =====
+function render(){
+  document.getElementById('sAll').textContent=DATA.length;
+  document.getElementById('sR').textContent=DATA.filter(i=>i.type==='טבעת').length;
+  document.getElementById('sE').textContent=DATA.filter(i=>i.type==='עגיל').length;
+  document.getElementById('sP').textContent=DATA.filter(i=>i.type==='תליון').length;
+  document.getElementById('sB').textContent=DATA.filter(i=>i.type==='צמיד'||i.type==="צ'יינס").length;
+
+  const s=(CP-1)*PP, items=FD.slice(s,s+PP), tp=Math.ceil(FD.length/PP);
+  document.getElementById('rcount').textContent=FD.length?`מציג ${s+1}–${Math.min(s+PP,FD.length)} מתוך ${FD.length}`:'לא נמצאו פריטים';
+
+  document.getElementById('grid').innerHTML=items.map((it,idx)=>{
+    const pr=calc(it), url=imgUrl(it);
+    const sts=(it.stones||[]).map(s=>s.shape).filter(Boolean).join(', ');
+    const stock=getItemStock(it.sku_lia);
+    return`<div class="card" onclick="openM(${s+idx})">
+      <div class="cimg">
+        ${url?`<img src="${url}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`:''}
+        <div class="noimg" style="${url?'display:none':'display:flex;align-items:center;justify-content:center;width:100%;height:100%'}">💎</div>
+        <div class="badge-type">${it.type}</div>
+        <div class="badge-kt">${it.gold_type}</div>
+      </div>
+      <div class="cdets">
+        <div class="csku">${it.sku_lia} <span style="float:left;font-size:8px;color:${stock>0?'var(--green)':'var(--red)'}">${stock>0?'במלאי: '+stock:'אזל'}</span></div>
+        <div class="cname">${it.name||'—'}</div>
+        <div class="ctags">
+          <span class="tag">${it.weight}g</span>
+          <span class="tag">${it.material||'זהב'}</span>
+          ${sts?`<span class="tag">${sts}</span>`:'<span class="tag">ללא אבנים</span>'}
+        </div>
+        <div class="cprice">
+          <div class="cp-main">₪${Math.round(pr.p).toLocaleString()}<small>מחיר מחושב</small></div>
+          <div class="cp-side">עלות ₪${Math.round(pr.c).toLocaleString()}<b>רווח ${pr.p?Math.round(((pr.p-pr.c)/pr.p)*100):0}%</b></div>
+        </div>
+      </div>
+    </div>`}).join('');
+
+  const pg=document.getElementById('pagi');
+  if(tp<=1){pg.innerHTML='';return}
+  let h='';
+  if(CP>1)h+=`<button class="pbtn" onclick="gp(${CP-1})">→ הקודם</button>`;
+  for(let i=1;i<=tp;i++){
+    if(i===1||i===tp||(i>=CP-2&&i<=CP+2))h+=`<button class="pbtn ${i===CP?'on':''}" onclick="gp(${i})">${i}</button>`;
+    else if(i===CP-3||i===CP+3)h+='<span style="color:var(--dim);padding:0 4px">…</span>';
+  }
+  if(CP<tp)h+=`<button class="pbtn" onclick="gp(${CP+1})">הבא ←</button>`;
+  pg.innerHTML=h;
+}
+function gp(p){CP=p;render();window.scrollTo({top:260,behavior:'smooth'})}
+
+// ===== MODAL =====
+function openM(idx){
+  const it=FD[idx]; if(!it)return;
+  const pr=calc(it), b=pr.b, url=imgUrl(it);
+  let stH='';
+  if(it.stones?.length){
+    stH=`<div class="stones-box"><h4>💎 אבנים</h4><div class="srow sh"><span>צורה</span><span>קראט</span><span>כמות</span><span>מידה</span></div>${it.stones.map(s=>`<div class="srow"><span>${s.shape}</span><span>${s.carat}</span><span>${s.count}</span><span>${s.size||'—'}</span></div>`).join('')}</div>`;
+  }
+  document.getElementById('modal').innerHTML=`
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px">
+      <div><div class="mtitle">${it.name||'—'}</div><div class="msku">${it.sku_lia} · ${it.type} · ${it.material||'זהב'} · ${it.gold_type}</div></div>
+      <button class="mclose" onclick="closeM()">✕</button>
+    </div>
+    <div class="mimg">${url?`<img src="${url}">`:'<div style="font-size:80px;opacity:.1">💎</div>'}</div>
+    <div class="dgrid">
+      <div class="ditem"><div class="dl">מק"ט</div><div class="dv">${it.sku_lia}</div></div>
+      <div class="ditem"><div class="dl">קראט</div><div class="dv">${it.gold_type}</div></div>
+      <div class="ditem"><div class="dl">חומר</div><div class="dv">${it.material||'זהב'}</div></div>
+      <div class="ditem"><div class="dl">משקל</div><div class="dv">${it.weight}g</div></div>
+      <div class="ditem"><div class="dl">מידות</div><div class="dv">${it.dimensions||'—'}</div></div>
+      <div class="ditem"><div class="dl">מלאי</div><div class="dv" style="color:${getItemStock(it.sku_lia)>0?'var(--green)':'var(--red)'}">${getItemStock(it.sku_lia)} יח'</div></div>
+    </div>
+    ${stH}
+    <div class="pbreak">
+      <h4>💰 פירוט תמחור</h4>
+      <div class="brow"><span>זהב ${it.gold_type} · ${it.weight}g × ₪${(b.ppg||0).toFixed(1)}/g × 1.08</span><span>₪${Math.round(b.gold||0).toLocaleString()}</span></div>
+      <div class="brow"><span>יציקה</span><span>₪${b.cast||0}</span></div>
+      <div class="brow"><span>שיבוץ</span><span>₪${b.set||0}</span></div>
+      <div class="brow"><span>גימור</span><span>₪${Math.round(b.fin||0)}</span></div>
+      ${(b.st||0)>0?`<div class="brow"><span>אבנים</span><span>₪${Math.round(b.st).toLocaleString()}</span></div>`:''}
+      <div class="brow sub"><span>עלות ייצור</span><span>₪${Math.round(pr.c).toLocaleString()}</span></div>
+      <div class="brow marg"><span>מכפיל ×2.6 × ×1.7 = ×4.42</span><span></span></div>
+      <div class="brow tot"><span>מחיר ללקוח</span><span>₪${Math.round(pr.p).toLocaleString()}</span></div>
+    </div>
+    <div class="disc"><b>⚠</b> מחיר מחושב על בסיס זהב $${G.toLocaleString()} ודולר ₪${U.toFixed(2)}. המחיר הסופי עשוי להשתנות.</div>`;
+  document.getElementById('mover').classList.add('on');
+}
+function closeM(){document.getElementById('mover').classList.remove('on')}
+
+// ===== ADD ITEM =====
+function autoSku(){const t=document.getElementById('nType').value,p=T2P[t];if(!p){document.getElementById('askuV').textContent='---';return}document.getElementById('askuV').textContent=`LIA_${p}${String((SKU_MAX[p]||0)+1).padStart(3,'0')}`}
+function addSR(){const b=document.getElementById('ssBox'),d=document.createElement('div');d.className='se';d.innerHTML=`<div class="fg"><label>צורה</label><select class="sc-sh"><option value="">ללא</option><option>Round</option><option>Oval</option><option>Pear</option><option>Marquise</option><option>Emerald</option><option>Princess</option></select></div><div class="fg"><label>קראט</label><input type="number" class="sc-ct" step="0.001"></div><div class="fg"><label>כמות</label><input type="number" class="sc-cn"></div><div class="fg"><label>מידה</label><input class="sc-sz"></div><div class="fg"><label>&nbsp;</label><button class="btn btn-d btn-s" onclick="this.closest('.se').remove()">✕</button></div>`;b.appendChild(d)}
+function prevImg(e){const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=v=>{document.getElementById('imgPrev').innerHTML=`<img src="${v.target.result}" style="max-width:100%;max-height:160px;border-radius:10px">`};r.readAsDataURL(f)}
+function saveItem(){
+  const type=document.getElementById('nType').value,name=document.getElementById('nName').value,wt=parseFloat(document.getElementById('nWt').value)||0;
+  if(!type){toast('בחר סוג');return}if(!name){toast('הזן שם');return}if(!wt){toast('הזן משקל');return}
+  const p=T2P[type];SKU_MAX[p]=(SKU_MAX[p]||0)+1;const sku=`LIA_${p}${String(SKU_MAX[p]).padStart(3,'0')}`;
+  const stones=[];document.querySelectorAll('.se').forEach(e=>{const sh=e.querySelector('.sc-sh')?.value;if(sh)stones.push({shape:sh,carat:parseFloat(e.querySelector('.sc-ct')?.value)||0,count:parseInt(e.querySelector('.sc-cn')?.value)||1,size:e.querySelector('.sc-sz')?.value||''})});
+  DATA.unshift({sku_lia:sku,name,type,material:document.getElementById('nMat').value,gold_type:document.getElementById('nKt')?.value||'14K',weight:wt,dimensions:document.getElementById('nDim').value,stones,drive_id:''});
+  // Init inventory for new item
+  const sizes={'טבעת':['5','6','7','8','9','10'],'עגיל':['OS'],'תליון':['OS'],'צמיד':['S','M','L'],"צ'יינס":['40cm','45cm','50cm']};
+  INVENTORY[sku]={};(sizes[type]||['OS']).forEach(sz=>{INVENTORY[sku][sz]=0});
+  toast(sku+' נוסף!');rstForm();go('cat',document.querySelector('.nav a'));fil();
+}
+function rstForm(){['nType','nName','nMod','nWt','nDim'].forEach(id=>{const e=document.getElementById(id);if(e)e.tagName==='SELECT'?e.selectedIndex=0:e.value=''});document.getElementById('askuV').textContent='---';document.getElementById('imgPrev').innerHTML='<div style="font-size:32px;opacity:.3">📷</div><div style="color:var(--dim);font-size:12px;margin-top:6px">לחץ להעלאת תמונה</div>'}
+
+// ===== INVENTORY RENDER =====
+function renderInv() {
+  const q = (document.getElementById('invSearch')?.value||'').toLowerCase();
+  const f = document.getElementById('invFilter')?.value||'';
+
+  let items = DATA.filter(it => {
+    if(q && ![it.sku_lia,it.name,it.type].join(' ').toLowerCase().includes(q)) return false;
+    const stock = getItemStock(it.sku_lia);
+    if(f==='in' && stock<=0) return false;
+    if(f==='out' && stock>0) return false;
+    if(f==='low' && (stock<=0 || stock>3)) return false;
+    return true;
+  });
+
+  // Stats
+  const totalItems = DATA.length;
+  const inStock = DATA.filter(it=>getItemStock(it.sku_lia)>0).length;
+  const outStock = totalItems - inStock;
+  const totalUnits = DATA.reduce((a,it)=>a+getItemStock(it.sku_lia),0);
+  document.getElementById('invStats').innerHTML = `
+    <div class="sum-st gold"><div class="ssv">${totalItems}</div><div class="ssl">פריטים בקטלוג</div></div>
+    <div class="sum-st green"><div class="ssv">${inStock}</div><div class="ssl">במלאי</div></div>
+    <div class="sum-st red"><div class="ssv">${outStock}</div><div class="ssl">אזל מהמלאי</div></div>
+    <div class="sum-st blue"><div class="ssv">${totalUnits}</div><div class="ssl">סה"כ יחידות</div></div>`;
+
+  document.getElementById('invGrid').innerHTML = items.map(it => {
+    const inv = INVENTORY[it.sku_lia] || {};
+    const stock = getItemStock(it.sku_lia);
+    const sizesHtml = Object.entries(inv).map(([sz,qty]) => `
+      <div class="inv-sz ${qty===0?'zero':''}">
+        <div class="sz-label">${sz}</div>
+        <input type="number" value="${qty}" min="0" onchange="updateInv('${it.sku_lia}','${sz}',this.value)" style="width:50px">
+      </div>`).join('');
+    return `<div class="inv-card">
+      <div class="inv-head">
+        <div>
+          <div class="inv-sku">${it.sku_lia}</div>
+          <div class="inv-name">${it.name||'—'}</div>
+          <div style="font-size:10px;color:var(--dim)">${it.type} · ${it.gold_type} · ${it.weight}g</div>
+        </div>
+        <span class="inv-badge ${stock>0?'in':'out'}">${stock>0?'במלאי':'אזל'}</span>
+      </div>
+      <div class="inv-sizes">${sizesHtml}</div>
+      <div class="inv-total">סה"כ: <b style="color:var(--gold)">${stock}</b> יחידות</div>
+    </div>`;
+  }).join('');
+}
+
+function updateInv(sku, size, val) {
+  if(!INVENTORY[sku]) INVENTORY[sku] = {};
+  INVENTORY[sku][size] = Math.max(0, parseInt(val)||0);
+  renderInv();
+  toast('מלאי עודכן');
+}
+
+// ===== CRM RENDER =====
+function toggleCrmForm() {
+  const f = document.getElementById('crmForm');
+  f.style.display = f.style.display==='none'?'block':'none';
+}
+
+function saveCust() {
+  const name=document.getElementById('cName').value;
+  const phone=document.getElementById('cPhone').value;
+  if(!name){toast('הזן שם');return}
+  if(!phone){toast('הזן טלפון');return}
+  const id='C'+String(custIdCounter++).padStart(3,'0');
+  CUSTOMERS.push({
+    id, name, phone,
+    email:document.getElementById('cEmail').value,
+    addr:document.getElementById('cAddr').value,
+    notes:document.getElementById('cNotes').value,
+    created:new Date().toISOString().slice(0,10)
+  });
+  ['cName','cPhone','cEmail','cAddr','cNotes'].forEach(i=>{document.getElementById(i).value=''});
+  toggleCrmForm();
+  toast(name+' נוסף/ה!');
+  renderCrm();
+}
+
+function renderCrm() {
+  const q = (document.getElementById('crmSearch')?.value||'').toLowerCase();
+  const custs = CUSTOMERS.filter(c => {
+    if(q && ![c.name,c.phone,c.email].join(' ').toLowerCase().includes(q)) return false;
+    return true;
+  });
+
+  document.getElementById('crmGrid').innerHTML = custs.map(c => {
+    const orders = ORDERS.filter(o=>o.custId===c.id);
+    const totalSpent = orders.reduce((a,o)=>a+o.total,0);
+    const historyHtml = orders.length ? orders.slice(0,4).map(o=>`
+      <div class="crm-order">
+        <span>${o.id} · ${o.itemName}</span>
+        <span style="color:var(--gold)">₪${Math.round(o.total).toLocaleString()}</span>
+        <span class="status-badge ${getStatusClass(o)}" style="padding:2px 8px;font-size:8px">${getStatusLabel(o)}</span>
+      </div>`).join('') : '<div style="font-size:11px;color:var(--dim);padding:8px 0">אין הזמנות עדיין</div>';
+    return `<div class="crm-card">
+      <div style="display:flex;gap:14px;align-items:center">
+        <div class="crm-avatar">${c.name.charAt(0)}</div>
+        <div class="crm-info">
+          <div class="crm-name">${c.name}</div>
+          <div class="crm-detail">${c.phone} · ${c.email||'—'}</div>
+          <div class="crm-detail">${c.addr||'—'}</div>
+        </div>
+      </div>
+      <div class="crm-stats">
+        <div class="crm-stat"><div class="csv">${orders.length}</div><div class="csl">הזמנות</div></div>
+        <div class="crm-stat"><div class="csv">₪${Math.round(totalSpent).toLocaleString()}</div><div class="csl">סה"כ</div></div>
+        <div class="crm-stat"><div class="csv">${c.created}</div><div class="csl">הצטרפות</div></div>
+      </div>
+      <div class="crm-history"><div style="font-size:10px;color:var(--gold3);margin-bottom:6px;font-weight:600">היסטוריית הזמנות</div>${historyHtml}</div>
+    </div>`;
+  }).join('');
+}
+
+// ===== ORDERS =====
+function toggleOrdForm() {
+  const f = document.getElementById('ordForm');
+  const show = f.style.display==='none';
+  f.style.display = show?'block':'none';
+  if(show) populateOrdForm();
+}
+
+function populateOrdForm() {
+  const cs = document.getElementById('oCustomer');
+  cs.innerHTML = '<option value="">בחר לקוח...</option>' + CUSTOMERS.map(c=>`<option value="${c.id}">${c.name} (${c.phone})</option>`).join('');
+  const is = document.getElementById('oItem');
+  is.innerHTML = '<option value="">בחר פריט...</option>' + DATA.map(it=>{
+    const pr=calc(it);
+    return `<option value="${it.sku_lia}">${it.sku_lia} - ${it.name||'—'} (₪${Math.round(pr.p).toLocaleString()})</option>`;
+  }).join('');
+  is.onchange = () => {
+    const sku = is.value;
+    const it = DATA.find(d=>d.sku_lia===sku);
+    const szSel = document.getElementById('oSize');
+    if(!it){szSel.innerHTML='<option value="">בחר מידה...</option>';return}
+    const inv = INVENTORY[sku]||{};
+    szSel.innerHTML = Object.entries(inv).map(([sz,qty])=>`<option value="${sz}">${sz} (${qty>0?'במלאי: '+qty:'אזל'})</option>`).join('');
+    updateOrdPreview();
+  };
+  document.getElementById('oQty').onchange = updateOrdPreview;
+  document.getElementById('oDiscount').onchange = updateOrdPreview;
+}
+
+function updateOrdPreview() {
+  const sku = document.getElementById('oItem').value;
+  const it = DATA.find(d=>d.sku_lia===sku);
+  const prev = document.getElementById('oPreview');
+  if(!it){prev.innerHTML='';return}
+  const pr = calc(it);
+  const qty = parseInt(document.getElementById('oQty').value)||1;
+  const disc = parseFloat(document.getElementById('oDiscount').value)||0;
+  const total = pr.p * qty * (1-disc/100);
+  const size = document.getElementById('oSize').value;
+  const inStock = INVENTORY[sku]?.[size]>0;
+  prev.innerHTML = `<div style="background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.12);border-radius:10px;padding:14px">
+    <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+      <span style="font-size:13px;font-weight:600">${it.name||it.sku_lia}</span>
+      <span style="font-size:11px;color:${inStock?'var(--green)':'var(--orange)'}">
+        ${inStock?'⚡ במלאי - ישירות לאריזה':'🔨 לא במלאי - ייכנס לייצור'}
+      </span>
+    </div>
+    <div style="font-size:11px;color:var(--dim)">מחיר יח': ₪${Math.round(pr.p).toLocaleString()} × ${qty}${disc>0?' - '+disc+'%':''}</div>
+    <div style="font-size:22px;font-weight:700;color:var(--gold);margin-top:6px">₪${Math.round(total).toLocaleString()}</div>
+  </div>`;
+}
+
+function saveOrder() {
+  const custId = document.getElementById('oCustomer').value;
+  const sku = document.getElementById('oItem').value;
+  const size = document.getElementById('oSize').value;
+  const qty = parseInt(document.getElementById('oQty').value)||1;
+  const disc = parseFloat(document.getElementById('oDiscount').value)||0;
+  const notes = document.getElementById('oNotes').value;
+  if(!custId){toast('בחר לקוח');return}
+  if(!sku){toast('בחר פריט');return}
+  if(!size){toast('בחר מידה');return}
+  const it = DATA.find(d=>d.sku_lia===sku);
+  if(!it){toast('פריט לא נמצא');return}
+  const pr = calc(it);
+  const total = pr.p * qty * (1-disc/100);
+  const inStock = (INVENTORY[sku]?.[size]||0) >= qty;
+  let flow, stages;
+  if(inStock) {
+    INVENTORY[sku][size] -= qty;
+    flow = 'stock';
+    stages = [...FULL_FLOW_STOCK];
+  } else {
+    flow = 'prod';
+    stages = [...FULL_FLOW_PROD];
+  }
+  const order = {
+    id: 'ORD-'+String(ordIdCounter++).padStart(4,'0'),
+    custId, sku,
+    itemName: it.name || it.sku_lia,
+    size, qty, discount: disc,
+    unitPrice: pr.p, total,
+    flow, stages, stageIdx: 0,
+    date: new Date().toISOString().slice(0,10),
+    notes
+  };
+  ORDERS.unshift(order);
+  toggleOrdForm();
+  toast('הזמנה '+order.id+' נוצרה!');
+  renderOrd();
+  renderInv();
+}
+
+function advanceOrder(ordId) {
+  const o = ORDERS.find(x=>x.id===ordId);
+  if(!o) return;
+  if(o.stageIdx < o.stages.length-1) {
+    o.stageIdx++;
+    toast(o.id+': '+getStatusLabel(o));
+    renderOrd();
+  }
+}
+
+function renderOrd() {
+  const q = (document.getElementById('ordSearch')?.value||'').toLowerCase();
+  const f = document.getElementById('ordFilter')?.value||'';
+
+  let orders = ORDERS.filter(o => {
+    if(q) {
+      const c = CUSTOMERS.find(x=>x.id===o.custId);
+      if(![o.id,o.itemName,o.sku,c?.name||''].join(' ').toLowerCase().includes(q)) return false;
+    }
+    if(f) {
+      const st = getStatusLabel(o);
+      if(f==='ייצור' && !['זיהוי חומר','מודליסט / ייצור','בדיקת מידה + שיבוץ','ליטוש / גימור'].includes(st)) return false;
+      if(f==='אריזה' && !st.includes('אריזה')) return false;
+      if(f==='תשלום' && st!=='תשלום') return false;
+      if(f==='משלוח' && st!=='משלוח') return false;
+      if(f==='הושלם' && st!=='הושלם') return false;
+    }
+    return true;
+  });
+
+  // Stats
+  const total = ORDERS.length;
+  const active = ORDERS.filter(o=>getStatusLabel(o)!=='הושלם').length;
+  const inProd = ORDERS.filter(o=>o.flow==='prod'&&o.stageIdx<5).length;
+  const revenue = ORDERS.filter(o=>getStatusLabel(o)==='הושלם').reduce((a,o)=>a+o.total,0);
+  document.getElementById('ordStats').innerHTML = `
+    <div class="sum-st gold"><div class="ssv">${total}</div><div class="ssl">סה"כ הזמנות</div></div>
+    <div class="sum-st orange"><div class="ssv">${active}</div><div class="ssl">פעילות</div></div>
+    <div class="sum-st cyan"><div class="ssv">${inProd}</div><div class="ssl">בייצור</div></div>
+    <div class="sum-st green"><div class="ssv">₪${Math.round(revenue).toLocaleString()}</div><div class="ssl">הכנסות (הושלמו)</div></div>`;
+
+  document.getElementById('ordList').innerHTML = orders.map(o => {
+    const c = CUSTOMERS.find(x=>x.id===o.custId);
+    const isLast = o.stageIdx >= o.stages.length-1;
+
+    // Build timeline
+    let tlHtml = '<div class="tl-track">';
+    o.stages.forEach((stage, i) => {
+      let dotClass = 'pending';
+      let labelClass = '';
+      let icon = i+1;
+      if(i < o.stageIdx) { dotClass='done'; labelClass='done'; icon='✓'; }
+      else if(i === o.stageIdx) { dotClass='active'; labelClass='active'; icon = i+1; }
+
+      tlHtml += `<div class="tl-step"><div class="tl-dot ${dotClass}">${icon}</div><div class="tl-label ${labelClass}">${stage}</div></div>`;
+      if(i < o.stages.length-1) {
+        let connClass = '';
+        if(i < o.stageIdx) connClass='done';
+        else if(i === o.stageIdx) connClass='active';
+        tlHtml += `<div class="tl-connector ${connClass}"></div>`;
+      }
+    });
+    tlHtml += '</div>';
+
+    return `<div class="ord-card">
+      <div class="ord-top">
+        <div>
+          <div class="ord-id">${o.id}</div>
+          <div class="ord-customer">${c?.name||'לקוח לא ידוע'} · ${c?.phone||''}</div>
+          <div class="ord-item">${o.sku} · ${o.itemName} · מידה ${o.size} · כמות ${o.qty}</div>
+          <div class="ord-date">${o.date}${o.notes?' · '+o.notes:''}</div>
+        </div>
+        <div style="text-align:left">
+          <div class="ord-price">₪${Math.round(o.total).toLocaleString()}</div>
+          ${o.discount>0?`<div style="font-size:9px;color:var(--dim)">הנחה ${o.discount}%</div>`:''}
+          <div class="status-badge ${getStatusClass(o)}" style="margin-top:6px">${getStatusLabel(o)}</div>
+        </div>
+      </div>
+      <div class="timeline">${tlHtml}</div>
+      <div class="ord-actions">
+        ${!isLast?`<button class="btn btn-g btn-s" onclick="advanceOrder('${o.id}')">קדם לשלב הבא →</button>`:'<span style="color:var(--green);font-size:12px;font-weight:600">✓ הזמנה הושלמה</span>'}
+        <span style="font-size:10px;color:var(--dim);margin-right:auto">${o.flow==='prod'?'🔨 ייצור':'📦 מהמלאי'}</span>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ===== UI =====
+function go(pg,tab){
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.remove('on'));
+  document.getElementById('pg-'+pg).classList.add('on');
+  if(tab)tab.classList.add('on');
+  // Render tab content
+  if(pg==='inv') renderInv();
+  if(pg==='crm') renderCrm();
+  if(pg==='ord') renderOrd();
+}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3000)}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeM()});
+
+// ===== INIT =====
+recalc();
+FD=[...DATA];
+initInventory();
+initOrders();
+render();
+fetchP();
+setInterval(fetchP,5*60*1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,8021 @@
+[
+  {
+    "sku_original": "Adi_BR001",
+    "sku_lia": "LIA_B001",
+    "image": "Adi_BR001.png",
+    "type": "צמיד",
+    "material": "דן",
+    "name": "חמסה עם עין",
+    "dimensions": "13.1x7.65x1.2",
+    "gold_type": "14K",
+    "weight": 0.7,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.5*1.5"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_BR002",
+    "sku_lia": "LIA_B002",
+    "image": "Adi_BR002.png",
+    "type": "צמיד",
+    "material": "דן",
+    "name": "חמסה נקי",
+    "dimensions": "13.1x7.65x1.2",
+    "gold_type": "14K",
+    "weight": 0.72,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E001",
+    "sku_lia": "LIA_E001",
+    "image": "Adi_E001.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק עם סיומת מחודדת",
+    "dimensions": "12.5x10.2x2.4X1.5",
+    "gold_type": "14K",
+    "weight": 0.9,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E002",
+    "sku_lia": "LIA_E002",
+    "image": "Adi_E002.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל עגול עם יהלומים",
+    "dimensions": "5.4x1.6",
+    "gold_type": "14K",
+    "weight": 0.31,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.019,
+        "count": 5,
+        "size": "1*1"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E003",
+    "sku_lia": "LIA_E003",
+    "image": "Adi_E003.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "שן פיל עם יהלומים",
+    "dimensions": "8.03x1.4",
+    "gold_type": "14K",
+    "weight": 0.15,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 4,
+        "size": "1*1"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E004",
+    "sku_lia": "LIA_E004",
+    "image": "Adi_E004.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל צמוד",
+    "dimensions": "לא צויין",
+    "gold_type": "14K",
+    "weight": 0.2,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.5*1.5"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E005",
+    "sku_lia": "LIA_E005",
+    "image": "Adi_E005.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "פרח 3 עלי כותרת עם יהלומים",
+    "dimensions": "5.13x4.70x1.2",
+    "gold_type": "14K",
+    "weight": 0.14,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1*1"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E006",
+    "sku_lia": "LIA_E006",
+    "image": "Adi_E006.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "4.20x3.15x1.80X2.13",
+    "gold_type": "14K",
+    "weight": 0.14,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.033,
+        "count": 4,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E007",
+    "sku_lia": "LIA_E007",
+    "image": "Adi_E007.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל פרחוני",
+    "dimensions": "5.00x1.30",
+    "gold_type": "14K",
+    "weight": 0.28,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.049,
+        "count": 6,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E008",
+    "sku_lia": "LIA_E008",
+    "image": "Adi_E008.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל פרחוני תלוי",
+    "dimensions": "5.00X15.0X1.3",
+    "gold_type": "14K",
+    "weight": 0.37,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.049,
+        "count": 6,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E009",
+    "sku_lia": "LIA_E009",
+    "image": "Adi_E009.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון טיפה עם יהלום גדול וקטנים",
+    "dimensions": "8.21X2.13X0.8X13.54X1.14X1.40",
+    "gold_type": "14K",
+    "weight": 0.45,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 3,
+        "size": "1.70*1.70"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.17,
+        "count": 1,
+        "size": "5.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E010",
+    "sku_lia": "LIA_E010",
+    "image": "Adi_E010.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון טיפה עם יהלום ",
+    "dimensions": "7.34X2.28X0.8X0.86X1.40",
+    "gold_type": "14K",
+    "weight": 0.34,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.17,
+        "count": 1,
+        "size": "5.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E011",
+    "sku_lia": "LIA_E011",
+    "image": "Adi_E011.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "יהלום עם צינורות",
+    "dimensions": "5.21X6.15X2.47X1.30",
+    "gold_type": "14K",
+    "weight": 0.29,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 1,
+        "size": "3.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E012",
+    "sku_lia": "LIA_E012",
+    "image": "Adi_E012.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק עם קוצים",
+    "dimensions": "12.43X4.87X8.90X1.50",
+    "gold_type": "14K",
+    "weight": 0.89,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.09,
+        "count": 4,
+        "size": "1.80*1.80"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E013",
+    "sku_lia": "LIA_E013",
+    "image": "Adi_E013.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל תלוי עם אבן ורודה",
+    "dimensions": "12.15X5.98X20.40",
+    "gold_type": "14K",
+    "weight": 1.13,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.025,
+        "count": 3,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E014",
+    "sku_lia": "LIA_E014",
+    "image": "Adi_E014.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל צמוד עם שלושה עלי כותרת",
+    "dimensions": "4.04X3.04X1.41",
+    "gold_type": "14K",
+    "weight": 0.09,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E015",
+    "sku_lia": "LIA_E015",
+    "image": "Adi_E015.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל צמוד עם שלושה עלי כותרת",
+    "dimensions": "5.0X3.76X1.41",
+    "gold_type": "14K",
+    "weight": 0.13,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E016",
+    "sku_lia": "LIA_E016",
+    "image": "Adi_E016.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל תלוי עם עיגול גדול",
+    "dimensions": "14.76X6.0X9.78X6.19X2.50X1.0",
+    "gold_type": "14K",
+    "weight": 0.97,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E017",
+    "sku_lia": "LIA_E017",
+    "image": "Adi_E017.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק שלושה יהלומים וקוצים",
+    "dimensions": "13.0x9.50x1.60",
+    "gold_type": "14K",
+    "weight": 0.86,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.031,
+        "count": 2,
+        "size": "1.60*1.60"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E018",
+    "sku_lia": "LIA_E018",
+    "image": "Adi_E018.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל ארוך משובץ יהלומים",
+    "dimensions": "5.61x1.30x1.91",
+    "gold_type": "14K",
+    "weight": 0.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 1,
+        "size": "2.50*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E019",
+    "sku_lia": "LIA_E019",
+    "image": "Adi_E019.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון קטן עם אבנים",
+    "dimensions": "4.6x2.94x1.0x1.68",
+    "gold_type": "14K",
+    "weight": 0.11,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E020",
+    "sku_lia": "LIA_E020",
+    "image": "Adi_E020.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.41x1.40",
+    "gold_type": "14K",
+    "weight": 0.11,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.038,
+        "count": 3,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E021",
+    "sku_lia": "LIA_E021",
+    "image": "Adi_E021.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "5.59x3.68x1.40",
+    "gold_type": "14K",
+    "weight": 0.11,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.038,
+        "count": 3,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E022",
+    "sku_lia": "LIA_E022",
+    "image": "Adi_E022.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.59x4.55x2.0x2.01",
+    "gold_type": "14K",
+    "weight": 0.47,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E023",
+    "sku_lia": "LIA_E023",
+    "image": "Adi_E023.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל עין עם יהלום",
+    "dimensions": "7.84x4.90x2.1x0.70x1.45x1.0",
+    "gold_type": "14K",
+    "weight": 0.27,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.02,
+        "count": 1,
+        "size": "1.75*1.75"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E024",
+    "sku_lia": "LIA_E024",
+    "image": "Adi_E024.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.0x1.77x0.8x1.40",
+    "gold_type": "14K",
+    "weight": 0.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.031,
+        "count": 2,
+        "size": "1.60*1.60"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E025",
+    "sku_lia": "LIA_E025",
+    "image": "Adi_E025.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.20x1.50x1.40",
+    "gold_type": "14K",
+    "weight": 0.16,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 3,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E026",
+    "sku_lia": "LIA_E026",
+    "image": "Adi_E026.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "6.03X3.13X1.40",
+    "gold_type": "14K",
+    "weight": 0.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.025,
+        "count": 3,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E027",
+    "sku_lia": "LIA_E027",
+    "image": "Adi_E027.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.0X1.40",
+    "gold_type": "14K",
+    "weight": 0.41,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 3,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E028",
+    "sku_lia": "LIA_E028",
+    "image": "Adi_E028.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "9.5X0.95X0.85",
+    "gold_type": "14K",
+    "weight": 1.14,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.09,
+        "count": 3,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E029",
+    "sku_lia": "LIA_E029",
+    "image": "Adi_E029.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון טיפה אלגנטי",
+    "dimensions": "11.0X6.62X2.30X1.90X0.90",
+    "gold_type": "14K",
+    "weight": 0.66,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.04,
+        "count": 1,
+        "size": "2.20*2.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E030",
+    "sku_lia": "LIA_E030",
+    "image": "Adi_E030.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.45X6.79X1.20X1.0",
+    "gold_type": "14K",
+    "weight": 0.044,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.026,
+        "count": 4,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E031",
+    "sku_lia": "LIA_E031",
+    "image": "Adi_E031.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "4.85X4.53X1.41",
+    "gold_type": "14K",
+    "weight": 0.14,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E032",
+    "sku_lia": "LIA_E032",
+    "image": "Adi_E032.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "6.10X1.60",
+    "gold_type": "14K",
+    "weight": 0.33,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 9,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E033",
+    "sku_lia": "LIA_E033",
+    "image": "Adi_E033.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל עין עם יהלום",
+    "dimensions": "3.0X6.0X1.70",
+    "gold_type": "14K",
+    "weight": 0.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.022,
+        "count": 1,
+        "size": "1.80*1.80"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E034",
+    "sku_lia": "LIA_E034",
+    "image": "Adi_E034.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "10.22X1.83",
+    "gold_type": "14K",
+    "weight": 0.3,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E035",
+    "sku_lia": "LIA_E035",
+    "image": "Adi_E035.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "6.43X2.91X1.40",
+    "gold_type": "14K",
+    "weight": 0.15,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.002,
+        "count": 1,
+        "size": "0.8*0.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E036",
+    "sku_lia": "LIA_E036",
+    "image": "Adi_E036.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון לוטוס מעוצב",
+    "dimensions": "8.0X1.73X1.0",
+    "gold_type": "14K",
+    "weight": 0.4,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E037",
+    "sku_lia": "LIA_E037",
+    "image": "Adi_E037.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל לוטוס ",
+    "dimensions": "8.0X1.49",
+    "gold_type": "14K",
+    "weight": 0.39,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E038",
+    "sku_lia": "LIA_E038",
+    "image": "Adi_E038.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.25X4.89X2.60",
+    "gold_type": "14K",
+    "weight": 0.52,
+    "stones": [
+      {
+        "shape": "Marquisr",
+        "carat": 0.18,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E039",
+    "sku_lia": "LIA_E039",
+    "image": "Adi_E039.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.46X2.36X0.65",
+    "gold_type": "14K",
+    "weight": 0.6,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 1,
+        "size": "2.40*2.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E040",
+    "sku_lia": "",
+    "image": "Adi_E040.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "4.43X1.46X1.0",
+    "gold_type": "14K",
+    "weight": 0.16,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.038,
+        "count": 3,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E041",
+    "sku_lia": "LIA_E041",
+    "image": "Adi_E041.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "10.19X9.91X4.68",
+    "gold_type": "14K",
+    "weight": 0.62,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.005,
+        "count": 2,
+        "size": "0.9*0.9"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E042",
+    "sku_lia": "LIA_E042",
+    "image": "Adi_E042.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "4.40X10.0X1.30",
+    "gold_type": "14K",
+    "weight": 0.56,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.039,
+        "count": 6,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E043",
+    "sku_lia": "LIA_E043",
+    "image": "Adi_E043.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "23.50X1.80",
+    "gold_type": "14K",
+    "weight": 1.98,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 2,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E044",
+    "sku_lia": "LIA_E044",
+    "image": "Adi_E044.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "14.36X3.10X1.15X1.20",
+    "gold_type": "14K",
+    "weight": 0.68,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 2,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E045",
+    "sku_lia": "LIA_E045",
+    "image": "Adi_E045.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "5.71X3.59X1.30X1.30",
+    "gold_type": "14K",
+    "weight": 0.18,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E046",
+    "sku_lia": "LIA_E046",
+    "image": "Adi_E046.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "5.72X0.70X2.21X2.78",
+    "gold_type": "14K",
+    "weight": 0.16,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E047",
+    "sku_lia": "LIA_E047",
+    "image": "Adi_E047.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל לב ",
+    "dimensions": "3.28X2.89X1.30",
+    "gold_type": "14K",
+    "weight": 0.11,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E048",
+    "sku_lia": "LIA_E048",
+    "image": "Adi_E048.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק עם סיומת מחודדת",
+    "dimensions": "14.0X12.0X8.54X2.38",
+    "gold_type": "14K",
+    "weight": 1.13,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E049",
+    "sku_lia": "LIA_E049",
+    "image": "Adi_E049.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל תלוי עם לבבות",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.09,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E050",
+    "sku_lia": "LIA_E050",
+    "image": "Adi_E050.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "14.32X1.34X0.90X0.85",
+    "gold_type": "14K",
+    "weight": 0.29,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E051",
+    "sku_lia": "LIA_E051",
+    "image": "Adi_E051.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "13.72X10.08X1.20",
+    "gold_type": "14K",
+    "weight": 0.68,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 1,
+        "size": "2.30*2.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E052",
+    "sku_lia": "LIA_E052",
+    "image": "Adi_E052.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "13.0X3.41X5.71X7.76",
+    "gold_type": "14K",
+    "weight": 1.01,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E053",
+    "sku_lia": "LIA_E053",
+    "image": "Adi_E053.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "17.40X5.65X3.01X5.65X1.60X1.0",
+    "gold_type": "14K",
+    "weight": 0.63,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E054",
+    "sku_lia": "LIA_E054",
+    "image": "Adi_E054.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "20.2X2.80X1.60X0.83",
+    "gold_type": "14K",
+    "weight": 0.67,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E055",
+    "sku_lia": "LIA_E055",
+    "image": "Adi_E055.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.69X1.63X0.67X1.40",
+    "gold_type": "14K",
+    "weight": 0.17,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E056",
+    "sku_lia": "LIA_E056",
+    "image": "Adi_E056.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "לוטוס צמוד",
+    "dimensions": "3.23X0.30X1.28",
+    "gold_type": "14K",
+    "weight": 0.06,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E057",
+    "sku_lia": "LIA_E057",
+    "image": "Adi_E057.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק זהב",
+    "dimensions": "14.0X6.08X10.0X2.0",
+    "gold_type": "14K",
+    "weight": 1.26,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E058",
+    "sku_lia": "LIA_E058",
+    "image": "Adi_E058.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק עם סיומת מחודדת",
+    "dimensions": "18.0X5.10X5.05X2.92X1.80",
+    "gold_type": "14K",
+    "weight": 1.95,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E059",
+    "sku_lia": "LIA_E059",
+    "image": "Adi_E059.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "18.18X1.30",
+    "gold_type": "14K",
+    "weight": 0.39,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      },
+      {
+        "shape": "Baguette Straight",
+        "carat": 0.046,
+        "count": 1,
+        "size": "3.0*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E060",
+    "sku_lia": "LIA_E060",
+    "image": "Adi_E060.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק ",
+    "dimensions": "13.0X5.82X0.55X2.0",
+    "gold_type": "14K",
+    "weight": 0.89,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E061",
+    "sku_lia": "LIA_E061",
+    "image": "Adi_E061.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק זהב קטן",
+    "dimensions": "17.03X4.96X14.26X1.60X4.20X1.0",
+    "gold_type": "14K",
+    "weight": 1.29,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E062",
+    "sku_lia": "LIA_E062",
+    "image": "Adi_E062.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.09,
+        "count": 3,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E063",
+    "sku_lia": "LIA_E063",
+    "image": "Adi_E063.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "7.36X4.50X1.80X1.60",
+    "gold_type": "14K",
+    "weight": 0.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.022,
+        "count": 1,
+        "size": "1.80*1.80"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E064",
+    "sku_lia": "LIA_E064",
+    "image": "Adi_E064.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק עם יהלומים",
+    "dimensions": "16.50X5.50",
+    "gold_type": "14K",
+    "weight": 1.69,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.42,
+        "count": 5,
+        "size": "4.0*2.0"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 8,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E065",
+    "sku_lia": "LIA_E065",
+    "image": "Adi_E065.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "10.0X5.50",
+    "gold_type": "14K",
+    "weight": 1.11,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.17,
+        "count": 2,
+        "size": "4.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E066",
+    "sku_lia": "LIA_E066",
+    "image": "Adi_E066.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.34X7.67X0.70X0.50X0.90X0.70X3.0",
+    "gold_type": "14K",
+    "weight": 1.14,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.26,
+        "count": 1,
+        "size": "6.0*3.0"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 3,
+        "size": "1.70*1.70"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E067",
+    "sku_lia": "LIA_E067",
+    "image": "Adi_E067.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "13.0X5.06X9.60X0.70X0.90X1.90",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E068",
+    "sku_lia": "LIA_E068",
+    "image": "Adi_E068.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל נחש זהב צהוב",
+    "dimensions": "19.01X2.32X1.61X2.30X5.03X8.98",
+    "gold_type": "14K",
+    "weight": 1.12,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E069",
+    "sku_lia": "LIA_E069",
+    "image": "Adi_E069.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק חצי פתוח משובץ יהלומים",
+    "dimensions": "15.45X1.70X0.60",
+    "gold_type": "14K",
+    "weight": 1.5,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 8,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E070",
+    "sku_lia": "LIA_E070",
+    "image": "Adi_E070.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון חרב ייחודי",
+    "dimensions": "20.71X4.59X1.20X1.40X0.65",
+    "gold_type": "14K",
+    "weight": 0.95,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E071",
+    "sku_lia": "LIA_E071",
+    "image": "Adi_E071.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק מחודד עם מוט",
+    "dimensions": "18.0X3.9X4.0",
+    "gold_type": "14K",
+    "weight": 2.61,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E072",
+    "sku_lia": "LIA_E072",
+    "image": "Adi_E072.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "18.0X6.50X4.0",
+    "gold_type": "14K",
+    "weight": 1.89,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E073",
+    "sku_lia": "LIA_E073",
+    "image": "Adi_E073.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "5.77X3.15X0.90",
+    "gold_type": "14K",
+    "weight": 0.09,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 1,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E074",
+    "sku_lia": "LIA_E074",
+    "image": "Adi_E074.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "14.35X13.50X4.46X3.90X1.50",
+    "gold_type": "14K",
+    "weight": 1.09,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E075",
+    "sku_lia": "LIA_E075",
+    "image": "Adi_E075.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל צמוד עם יהלום במרכז",
+    "dimensions": "0.60X2.0X0.70X1.70X1.32",
+    "gold_type": "14K",
+    "weight": 0.37,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.12,
+        "count": 2,
+        "size": "2.50*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E076",
+    "sku_lia": "LIA_E076",
+    "image": "Adi_E076.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל בצורת עלה עם יהלומים",
+    "dimensions": "6.95X1.30",
+    "gold_type": "14K",
+    "weight": 0.23,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 4,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E077",
+    "sku_lia": "LIA_E077",
+    "image": "Adi_E077.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק דק עם יהלומים",
+    "dimensions": "14.28X5.0X1.60X1.30",
+    "gold_type": "14K",
+    "weight": 0.95,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 11,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E078",
+    "sku_lia": "LIA_E078",
+    "image": "Adi_E078.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק קטן עם יהלומים גדולים",
+    "dimensions": "10.20X6.80X1.60X5.32X1.80X1.40",
+    "gold_type": "14K",
+    "weight": 0.58,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E079",
+    "sku_lia": "LIA_E079",
+    "image": "",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "6.70x6.70x2.10",
+    "gold_type": "14K",
+    "weight": 0.16,
+    "stones": [
+      {
+        "shape": "7 יהלומים",
+        "carat": 0.07,
+        "count": 0,
+        "size": ""
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E080",
+    "sku_lia": "LIA_E080",
+    "image": "Adi_E080.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "לטאות צמודות אוזן",
+    "dimensions": "12.12X1.09",
+    "gold_type": "14K",
+    "weight": 0.51,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E081",
+    "sku_lia": "LIA_E081",
+    "image": "Adi_E081.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.20X5.0X3.36",
+    "gold_type": "14K",
+    "weight": 0.43,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E082",
+    "sku_lia": "LIA_E082",
+    "image": "Adi_E082.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון בינוני עם נגיעות אבנים",
+    "dimensions": "8.13X5.67X1.13X3.23X1.25",
+    "gold_type": "14K",
+    "weight": 0.34,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E083",
+    "sku_lia": "LIA_E083",
+    "image": "Adi_E083.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל מחומש משובץ יהלומים",
+    "dimensions": "16.17X14.0X1.50X1.80",
+    "gold_type": "14K",
+    "weight": 1.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 10,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E084",
+    "sku_lia": "LIA_E084",
+    "image": "Adi_E084.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון פרחוני בינוני",
+    "dimensions": "10.0X5.79X2.60",
+    "gold_type": "14K",
+    "weight": 2.38,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 1,
+        "size": "3.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E085",
+    "sku_lia": "LIA_E085",
+    "image": "Adi_E085.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל מעויין משובץ יהלומים",
+    "dimensions": "7.39X4.20X1.40",
+    "gold_type": "14K",
+    "weight": 0.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.02,
+        "count": 3,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E086",
+    "sku_lia": "LIA_E086",
+    "image": "Adi_E086.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק משושה עם יהלומים",
+    "dimensions": "14.58X14.0X11.0X5.50X1.80",
+    "gold_type": "14K",
+    "weight": 1.28,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.033,
+        "count": 5,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E087",
+    "sku_lia": "LIA_E087",
+    "image": "Adi_E087.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "חישוק משובץ",
+    "dimensions": "16.00 x 13.0X5.26X1.50X2.30",
+    "gold_type": "14K",
+    "weight": 1.65,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.09,
+        "count": 11,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E088",
+    "sku_lia": "LIA_E088",
+    "image": "Adi_E088.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל משובץ 3 אבנים",
+    "dimensions": "9.13 x 1.50",
+    "gold_type": "14K",
+    "weight": 0.32,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.044,
+        "count": 2,
+        "size": "1.80*1.80"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E089",
+    "sku_lia": "LIA_E089",
+    "image": "Adi_E089.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל זיגזג 3 אבנים",
+    "dimensions": "18.84 x 5.71 x 1.50",
+    "gold_type": "14K",
+    "weight": 0.37,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 3,
+        "size": "1.80*1.80"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E090",
+    "sku_lia": "LIA_E090",
+    "image": "Adi_E090.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל כפול משובץ",
+    "dimensions": "14.50 x 4.60 x 1.30",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.017,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E091",
+    "sku_lia": "LIA_E091",
+    "image": "Adi_E091.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק גיאומטרי חצי פתוח משובץ",
+    "dimensions": "21.00 x 18.31 x 1.60",
+    "gold_type": "14K",
+    "weight": 1.4,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 10,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E092",
+    "sku_lia": "LIA_E092",
+    "image": "Adi_E092.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "12.00 x 6.00 x 2.00",
+    "gold_type": "14K",
+    "weight": 1.06,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E093",
+    "sku_lia": "LIA_E093",
+    "image": "Adi_E093.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל טיפה משובץ",
+    "dimensions": "17.01 x 2.40",
+    "gold_type": "14K",
+    "weight": 0.54,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 0.13,
+        "count": 1,
+        "size": "4.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E094",
+    "sku_lia": "LIA_E094",
+    "image": "Adi_E094.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל שיבוץ כתר",
+    "dimensions": "3.60 x 2.60",
+    "gold_type": "14K",
+    "weight": 0.49,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.24,
+        "count": 1,
+        "size": "4.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E095",
+    "sku_lia": "LIA_E095",
+    "image": "Adi_E095.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "שן פיל צמוד משובץ",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.51,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E096",
+    "sku_lia": "LIA_E096",
+    "image": "Adi_E096.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק משולב יהלומים",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.26,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 1,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E097",
+    "sku_lia": "LIA_E097",
+    "image": "Adi_E097.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון מרקיזה משובץ",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.09,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.29,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E098",
+    "sku_lia": "LIA_E098",
+    "image": "Adi_E098.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק משושה",
+    "dimensions": "8.50 x 1.68 x 1.10",
+    "gold_type": "14K",
+    "weight": 0.47,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E099",
+    "sku_lia": "LIA_E099",
+    "image": "Adi_E099.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק עם שיבוץ צד",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.63,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.04,
+        "count": 1,
+        "size": "2.20*2.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E100",
+    "sku_lia": "LIA_E100",
+    "image": "Adi_E100.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.64,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E101",
+    "sku_lia": "LIA_E101",
+    "image": "Adi_E101.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "15.00 x 6.44",
+    "gold_type": "14K",
+    "weight": 2.08,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E102",
+    "sku_lia": "LIA_E102",
+    "image": "Adi_E102.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.07,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 3,
+        "size": "1.80*1.80"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.1,
+        "count": 1,
+        "size": "5.0*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E103",
+    "sku_lia": "LIA_E103",
+    "image": "Adi_E103.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "צמוד שלושה יהלומים",
+    "dimensions": "4.52 x 0.90",
+    "gold_type": "14K",
+    "weight": 0.2,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.09,
+        "count": 3,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E104",
+    "sku_lia": "LIA_E104",
+    "image": "Adi_E104.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגילים צמודים שישה יהלומים",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.26,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.011,
+        "count": 3,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E105",
+    "sku_lia": "LIA_E105",
+    "image": "Adi_E105.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל לוכד חלומות",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.93,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.022,
+        "count": 1,
+        "size": "1.80*1.80"
+      },
+      {
+        "shape": "Pear",
+        "carat": 0.35,
+        "count": 1,
+        "size": "6.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E106",
+    "sku_lia": "LIA_E106",
+    "image": "Adi_E106.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.98,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 2,
+        "size": "2.10*210"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E107",
+    "sku_lia": "LIA_E107",
+    "image": "Adi_E107.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.33,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 1,
+        "size": "2.50*2.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.17,
+        "count": 1,
+        "size": "5.0*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E108",
+    "sku_lia": "LIA_E108",
+    "image": "Adi_E108.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.6,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 1,
+        "size": "2.40*2.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E109",
+    "sku_lia": "LIA_E109",
+    "image": "Adi_E109.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.86,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 8,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.21,
+        "count": 4,
+        "size": "4.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E110",
+    "sku_lia": "LIA_E110",
+    "image": "Adi_E110.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל משובץ יהלומים",
+    "dimensions": "14.60x9.20x2.79",
+    "gold_type": "14K",
+    "weight": 3.0,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 6,
+        "size": "1.40*1.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E111",
+    "sku_lia": "LIA_E111",
+    "image": "Adi_E111.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל עגול משובץ",
+    "dimensions": "10.00x2.00x0.70",
+    "gold_type": "14K",
+    "weight": 1.27,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.02,
+        "count": 1,
+        "size": "1.75*1.75"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E112",
+    "sku_lia": "LIA_E112",
+    "image": "Adi_E112.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל עגול חצי פתוח משובץ",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.85,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.04,
+        "count": 1,
+        "size": "2.20*2.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E113",
+    "sku_lia": "LIA_E113",
+    "image": "Adi_E113.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "שפרירית נקייה",
+    "dimensions": "6.76x4.44x1.41",
+    "gold_type": "14K",
+    "weight": 0.18,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E114",
+    "sku_lia": "LIA_E114",
+    "image": "Adi_E114.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "שפרירית עם יהלומים",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.43,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E115",
+    "sku_lia": "LIA_E115",
+    "image": "",
+    "type": "",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_E116",
+    "sku_lia": "LIA_E116",
+    "image": "Adi_E116.jpg",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.24,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E117",
+    "sku_lia": "LIA_E117",
+    "image": "Adi_E117.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.32,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.016,
+        "count": 2,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E118",
+    "sku_lia": "LIA_E118",
+    "image": "Adi_E118.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "6.00x6.00x1.20",
+    "gold_type": "14K",
+    "weight": 0.18,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 1,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E119",
+    "sku_lia": "LIA_E119",
+    "image": "Adi_E119.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל חישוק משובץ",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.94,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E120",
+    "sku_lia": "LIA_E120",
+    "image": "Adi_E120.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל צמוד איקס יהלומים למחצה",
+    "dimensions": "14.30x5.00x0.95",
+    "gold_type": "14K",
+    "weight": 0.38,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 11,
+        "size": "0.90*0.90"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E121",
+    "sku_lia": "LIA_E121",
+    "image": "Adi_E121.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "עגיל מעוין משובץ יהלומים",
+    "dimensions": "15.00x7.80x1.80",
+    "gold_type": "14K",
+    "weight": 0.98,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 7,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E122",
+    "sku_lia": "LIA_E122",
+    "image": "Adi_E122.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "לבבות משולבים יהלומים בצדדים",
+    "dimensions": "5.05x5.03x2.00",
+    "gold_type": "14K",
+    "weight": 0.56,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.01,
+        "count": 2,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E123",
+    "sku_lia": "LIA_E123",
+    "image": "Adi_E123.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "5.05x5.03x2.00",
+    "gold_type": "14K",
+    "weight": 0.75,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.009,
+        "count": 1,
+        "size": "1.35*1.35"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E124",
+    "sku_lia": "LIA_E124",
+    "image": "Adi_E124.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "8.32x8.32x1.40",
+    "gold_type": "14K",
+    "weight": 0.47,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 16,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_E125",
+    "sku_lia": "LIA_E125",
+    "image": "Adi_E125.png",
+    "type": "עגיל",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.68,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P001",
+    "sku_lia": "LIA_P001",
+    "image": "Adi_P001.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "6.26x2X2.53",
+    "gold_type": "14K",
+    "weight": 0.35,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.12,
+        "count": 4,
+        "size": "2*2"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P002",
+    "sku_lia": "LIA_P002",
+    "image": "Adi_P002.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "12.81X7.80X2.30X0.80X1.50",
+    "gold_type": "14K",
+    "weight": 0.69,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.041,
+        "count": 5,
+        "size": "1.30*1.30"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.18,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P003",
+    "sku_lia": "LIA_P003",
+    "image": "Adi_P003.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "",
+    "dimensions": "10.00X2.30",
+    "gold_type": "14K",
+    "weight": 0.565,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.041,
+        "count": 5,
+        "size": "1.30*1.30"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.18,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P004",
+    "sku_lia": "LIA_P004",
+    "image": "Adi_P004.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "7.0X3.30X1.0X1.7",
+    "gold_type": "14K",
+    "weight": 0.23,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 2,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P005",
+    "sku_lia": "LIA_P005",
+    "image": "Adi_P005.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "11.00x7.00x2.69X1.10",
+    "gold_type": "14K",
+    "weight": 0.66,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.01,
+        "count": 1,
+        "size": "1.40*1.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P006",
+    "sku_lia": "LIA_P006",
+    "image": "Adi_P006.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "7.45X0.8X1.0X1.40X1.50",
+    "gold_type": "14K",
+    "weight": 0.36,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.18,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P007",
+    "sku_lia": "LIA_P007",
+    "image": "Adi_P007.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "17.0X10.0X2.7",
+    "gold_type": "14K",
+    "weight": 1.01,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.24,
+        "count": 1,
+        "size": "4.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P008",
+    "sku_lia": "LIA_P008",
+    "image": "Adi_P008.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון",
+    "dimensions": "10.41X8.0X2.33X1.83X0.7",
+    "gold_type": "14K",
+    "weight": 0.66,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 1,
+        "size": "2.50*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P009",
+    "sku_lia": "LIA_P009",
+    "image": "Adi_P009.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מעוין",
+    "dimensions": "9.12x6.26x2.00X0.7",
+    "gold_type": "14K",
+    "weight": 0.39,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.12,
+        "count": 4,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P010",
+    "sku_lia": "LIA_P010",
+    "image": "Adi_P010.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "",
+    "dimensions": "14.38X1.10X0.9X0.9X1.51",
+    "gold_type": "14K",
+    "weight": 0.99,
+    "stones": [
+      {
+        "shape": "Oval",
+        "carat": 1.09,
+        "count": 1,
+        "size": "8.0*6.0"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 1,
+        "size": "2.50*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P011",
+    "sku_lia": "LIA_P011",
+    "image": "Adi_P011.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד",
+    "dimensions": "11.00x2.20x1.41X1.10",
+    "gold_type": "14K",
+    "weight": 1.04,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P012",
+    "sku_lia": "LIA_P012",
+    "image": "Adi_P012.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה",
+    "dimensions": "8.50X1.10X1.92X1.50X1.0X1.20",
+    "gold_type": "14K",
+    "weight": 0.41,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.32,
+        "count": 1,
+        "size": "4.40*4.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P013",
+    "sku_lia": "LIA_P013",
+    "image": "Adi_P013.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון נחש",
+    "dimensions": "14.57x13.00x1.03X0.90X0.70",
+    "gold_type": "14K",
+    "weight": 0.3,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P014",
+    "sku_lia": "LIA_P014",
+    "image": "Adi_P014.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון קולב",
+    "dimensions": "25x1.80X1.40",
+    "gold_type": "14K",
+    "weight": 1.42,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.005,
+        "count": 1,
+        "size": "1.12*1.12"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P015",
+    "sku_lia": "LIA_P015",
+    "image": "Adi_P015.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון אובלי",
+    "dimensions": "11.38X1.0X0.60X0.80X1.52",
+    "gold_type": "14K",
+    "weight": 0.58,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.018,
+        "count": 1,
+        "size": "1.70*1.70"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.36,
+        "count": 1,
+        "size": "6.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P016",
+    "sku_lia": "LIA_P016",
+    "image": "Adi_P016.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "",
+    "dimensions": "11.30X1.0X0.60X0.80X1.92X1.50",
+    "gold_type": "14K",
+    "weight": 0.61,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.018,
+        "count": 1,
+        "size": "1.70*1.70"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.36,
+        "count": 1,
+        "size": "6.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P017",
+    "sku_lia": "LIA_P017",
+    "image": "Adi_P017.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה",
+    "dimensions": "17.50x10.0X3.50X3.11X1.23",
+    "gold_type": "14K",
+    "weight": 1.86,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 0.62,
+        "count": 1,
+        "size": "7.25*4.97"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P018",
+    "sku_lia": "LIA_P018",
+    "image": "Adi_P018.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מרקיזה",
+    "dimensions": "4.60x3.50X0.60",
+    "gold_type": "14K",
+    "weight": 0.78,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.34,
+        "count": 1,
+        "size": "6.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P019",
+    "sku_lia": "LIA_P019",
+    "image": "Adi_P019.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון אבנים",
+    "dimensions": "6.86x4.73X2.0X1.20X0.37",
+    "gold_type": "14K",
+    "weight": 0.46,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 4,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P020",
+    "sku_lia": "LIA_P020",
+    "image": "Adi_P020.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון משובץ",
+    "dimensions": "10.55x2",
+    "gold_type": "14K",
+    "weight": 0.44,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.019,
+        "count": 5,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P021",
+    "sku_lia": "LIA_P021",
+    "image": "Adi_P021.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד",
+    "dimensions": "7.40x1.20",
+    "gold_type": "14K",
+    "weight": 0.51,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P022",
+    "sku_lia": "LIA_P022",
+    "image": "Adi_P022.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד משובץ",
+    "dimensions": "9.11x2.40",
+    "gold_type": "14K",
+    "weight": 0.96,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.022,
+        "count": 6,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P023",
+    "sku_lia": "LIA_P023",
+    "image": "Adi_P023.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "",
+    "dimensions": "9.30x1.60",
+    "gold_type": "14K",
+    "weight": 0.57,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 1,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P024",
+    "sku_lia": "LIA_P024",
+    "image": "Adi_P024.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון כוכב משובץ",
+    "dimensions": "8.40x1.80",
+    "gold_type": "14K",
+    "weight": 0.7,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.11,
+        "count": 13,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P025",
+    "sku_lia": "LIA_P025",
+    "image": "Adi_P025.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "מגן דוד משובץ בפינות",
+    "dimensions": "12.80x1.50",
+    "gold_type": "14K",
+    "weight": 0.64,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P026",
+    "sku_lia": "LIA_P026",
+    "image": "Adi_P026.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "מגן דוד משובץ מלא",
+    "dimensions": "12.63x1.60",
+    "gold_type": "14K",
+    "weight": 0.81,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.13,
+        "count": 13,
+        "size": "1.40*1.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P027",
+    "sku_lia": "LIA_P027",
+    "image": "Adi_P027.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון ראש צבי",
+    "dimensions": "25.69x30",
+    "gold_type": "כסף 925",
+    "weight": 4.79,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P028",
+    "sku_lia": "LIA_P028",
+    "image": "Adi_P028.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון קשר",
+    "dimensions": "10.39x2.13",
+    "gold_type": "14K",
+    "weight": 0.85,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P029",
+    "sku_lia": "LIA_P029",
+    "image": "Adi_P029.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "",
+    "dimensions": "4.40x3.54",
+    "gold_type": "14K",
+    "weight": 0.37,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.32,
+        "count": 1,
+        "size": "4.40*4.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P030",
+    "sku_lia": "LIA_P030",
+    "image": "Adi_P030.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון NOVA נובה",
+    "dimensions": "14.83x1.50",
+    "gold_type": "14K",
+    "weight": 2.26,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P031",
+    "sku_lia": "LIA_P031",
+    "image": "Adi_P031.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד פתוח",
+    "dimensions": "9.80x1.40",
+    "gold_type": "14K",
+    "weight": 0.4,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P032",
+    "sku_lia": "LIA_P032",
+    "image": "Adi_P032.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון פרפר",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.53,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.35,
+        "count": 2,
+        "size": "6.0*3.0"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.2,
+        "count": 3,
+        "size": "2.60*2.60"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P033",
+    "sku_lia": "LIA_P033",
+    "image": "Adi_P033.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "מגן דוד קטן",
+    "dimensions": "7.40x2.00",
+    "gold_type": "14K",
+    "weight": 0.59,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P034",
+    "sku_lia": "LIA_P034",
+    "image": "Adi_P034.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "בן עם כתר",
+    "dimensions": "34.27",
+    "gold_type": "14K",
+    "weight": 4.01,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 1,
+        "size": "2.70*2.70"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P035",
+    "sku_lia": "LIA_P035",
+    "image": "Adi_P035.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד תלת ממדי",
+    "dimensions": "11.0",
+    "gold_type": "14K",
+    "weight": 1.5,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P036",
+    "sku_lia": "LIA_P036",
+    "image": "Adi_P036.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מגן דוד תלת ממדי גדול",
+    "dimensions": "12.0",
+    "gold_type": "14K",
+    "weight": 1.78,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P037",
+    "sku_lia": "LIA_P037",
+    "image": "Adi_P037.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "בן אלגנטי עם כתר",
+    "dimensions": "39.65",
+    "gold_type": "14K",
+    "weight": 4.69,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P038",
+    "sku_lia": "LIA_P038",
+    "image": "Adi_P038.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון מלבן לחריטה",
+    "dimensions": "25.0",
+    "gold_type": "14K",
+    "weight": 3.36,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P039",
+    "sku_lia": "LIA_P039",
+    "image": "Adi_P039.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה משובצת",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.98,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 1,
+        "size": "2.40*2.40"
+      },
+      {
+        "shape": "Pear",
+        "carat": 0.77,
+        "count": 1,
+        "size": "8.07*5.15"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P040",
+    "sku_lia": "LIA_P040",
+    "image": "Adi_P040.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון עין משובצת",
+    "dimensions": "20.89",
+    "gold_type": "14K",
+    "weight": 3.04,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P041",
+    "sku_lia": "LIA_P041",
+    "image": "Adi_P041.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון אמרלד משובץ",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.1,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 28,
+        "size": "1.0*1.0"
+      },
+      {
+        "shape": "Emerald",
+        "carat": 0.93,
+        "count": 1,
+        "size": "12.0*3.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P042",
+    "sku_lia": "LIA_P042",
+    "image": "Adi_P042.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון עם לב",
+    "dimensions": "12.3",
+    "gold_type": "14K",
+    "weight": 0.83,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P043",
+    "sku_lia": "LIA_P043",
+    "image": "Adi_P043.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה יהלום גדול",
+    "dimensions": "18.08",
+    "gold_type": "14K",
+    "weight": 1.58,
+    "stones": [
+      {
+        "shape": "Cabochon_pear",
+        "carat": 4.98,
+        "count": 1,
+        "size": "16.68*8.07"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P044",
+    "sku_lia": "LIA_P044",
+    "image": "Adi_P044.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון נחש",
+    "dimensions": "5.20X5.10X0.90",
+    "gold_type": "14K",
+    "weight": 0.11,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_P045",
+    "sku_lia": "LIA_P045",
+    "image": "Adi_P045.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה פתוח",
+    "dimensions": "8.97X6.72X4.47",
+    "gold_type": "14K",
+    "weight": 0.91,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 1.32,
+        "count": 1,
+        "size": "8.97*6.72"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P046",
+    "sku_lia": "LIA_P046",
+    "image": "Adi_P046.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה סגור",
+    "dimensions": "8.03X6.13X3.80",
+    "gold_type": "14K",
+    "weight": 2.26,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 1.13,
+        "count": 1,
+        "size": "8.03*6.13"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P047",
+    "sku_lia": "LIA_P047",
+    "image": "Adi_P047.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה יהלום גדול עם יהלום קטן נוסף",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.67,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.018,
+        "count": 1,
+        "size": "1.70*1.70"
+      },
+      {
+        "shape": "Pear",
+        "carat": 0.32,
+        "count": 1,
+        "size": "6.35*3.82"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P048",
+    "sku_lia": "LIA_P048",
+    "image": "Adi_P048.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון טיפה פתוח גדול",
+    "dimensions": "9.75X7.00X5.07",
+    "gold_type": "14K",
+    "weight": 1.2,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 1.77,
+        "count": 1,
+        "size": "9.75*7.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P049",
+    "sku_lia": "LIA_P049",
+    "image": "Adi_P049.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון פרח משובץ",
+    "dimensions": "7.12X7.27X1.40",
+    "gold_type": "14K",
+    "weight": 0.41,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.18,
+        "count": 3,
+        "size": "2.50*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P050",
+    "sku_lia": "LIA_P050",
+    "image": "Adi_P050.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון שפירית משובצת",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.79,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.016,
+        "count": 2,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_P051",
+    "sku_lia": "LIA_P051",
+    "image": "Adi_P051.png",
+    "type": "תליון",
+    "material": "דן",
+    "name": "תליון אות M",
+    "dimensions": "4.20X2.60X1.50",
+    "gold_type": "14K",
+    "weight": 0.37,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R001",
+    "sku_lia": "LIA_R001",
+    "image": "Adi_R001.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "טבעת משובצת",
+    "dimensions": "8.00X5.76X3.00",
+    "gold_type": "14K",
+    "weight": 4.42,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.045,
+        "count": 12,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R002",
+    "sku_lia": "LIA_R002",
+    "image": "Adi_R002.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "טבעת חלקה",
+    "dimensions": "9.50X9.00X3.00",
+    "gold_type": "14K",
+    "weight": 4.55,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R003",
+    "sku_lia": "LIA_R003",
+    "image": "Adi_R003.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 10,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R004",
+    "sku_lia": "LIA_R004",
+    "image": "Adi_R004.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.94,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R005",
+    "sku_lia": "LIA_R005",
+    "image": "Adi_R005.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.73,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.1,
+        "count": 1,
+        "size": "5.0*2.50"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R006",
+    "sku_lia": "LIA_R006",
+    "image": "Adi_R006.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.05,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.041,
+        "count": 5,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R007",
+    "sku_lia": "LIA_R007",
+    "image": "Adi_R007.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.4,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 0.17,
+        "count": 1,
+        "size": "5.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R008",
+    "sku_lia": "LIA_R008",
+    "image": "Adi_R008.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.09,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 1,
+        "size": "3.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R009",
+    "sku_lia": "LIA_R009",
+    "image": "Adi_R009.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.021,
+        "count": 2,
+        "size": "1.40*1.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R010",
+    "sku_lia": "LIA_R010",
+    "image": "Adi_R010.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 6.01,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R011",
+    "sku_lia": "LIA_R011",
+    "image": "Adi_R011.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.85,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R012",
+    "sku_lia": "LIA_R012",
+    "image": "Adi_R012.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.82,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R013",
+    "sku_lia": "LIA_R013",
+    "image": "Adi_R013.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.35,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 5,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R014",
+    "sku_lia": "LIA_R014",
+    "image": "Adi_R014.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.27,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.24,
+        "count": 1,
+        "size": "4.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R015",
+    "sku_lia": "LIA_R015",
+    "image": "Adi_R015.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.18,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.13,
+        "count": 27,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R016",
+    "sku_lia": "LIA_R016",
+    "image": "Adi_R016.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.45,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.14,
+        "count": 11,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R017",
+    "sku_lia": "LIA_R017",
+    "image": "Adi_R017.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.9,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R018",
+    "sku_lia": "LIA_R018",
+    "image": "Adi_R018.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.69,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.015,
+        "count": 4,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R019",
+    "sku_lia": "LIA_R019",
+    "image": "Adi_R019.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.87,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.013,
+        "count": 2,
+        "size": "1.20*1.20"
+      },
+      {
+        "shape": "Princess",
+        "carat": 0.27,
+        "count": 1,
+        "size": "3.50*3.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R020",
+    "sku_lia": "LIA_R020",
+    "image": "Adi_R020.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 8.89,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R021",
+    "sku_lia": "LIA_R021",
+    "image": "Adi_R021.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.26,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R022",
+    "sku_lia": "LIA_R022",
+    "image": "Adi_R022.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.1,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.021,
+        "count": 2,
+        "size": "1.40*1.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R023",
+    "sku_lia": "LIA_R023",
+    "image": "",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R024",
+    "sku_lia": "LIA_R024",
+    "image": "Adi_R024.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.62,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 2,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R025",
+    "sku_lia": "LIA_R025",
+    "image": "Adi_R025.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.06,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.044,
+        "count": 2,
+        "size": "1.80*1.80"
+      },
+      {
+        "shape": "Oval",
+        "carat": 1.09,
+        "count": 1,
+        "size": "8.0*6.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R026",
+    "sku_lia": "LIA_R026",
+    "image": "Adi_R026.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.37,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.025,
+        "count": 2,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Princess",
+        "carat": 0.4,
+        "count": 1,
+        "size": "4.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R027",
+    "sku_lia": "LIA_R027",
+    "image": "Adi_R027.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.02,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R028",
+    "sku_lia": "LIA_R028",
+    "image": "Adi_R028.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 6.31,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R029",
+    "sku_lia": "LIA_R029",
+    "image": "Adi_R029.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.86,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.06,
+        "count": 2,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R030",
+    "sku_lia": "LIA_R030",
+    "image": "Adi_R030.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.84,
+    "stones": [
+      {
+        "shape": "Oval",
+        "carat": 0.36,
+        "count": 1,
+        "size": "6.0*4.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R031",
+    "sku_lia": "LIA_R031",
+    "image": "Adi_R031.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.41,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.18,
+        "count": 6,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R032",
+    "sku_lia": "LIA_R032",
+    "image": "Adi_R032.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.25,
+        "count": 30,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R033",
+    "sku_lia": "LIA_R033",
+    "image": "Adi_R033.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.57,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.1,
+        "count": 2,
+        "size": "4.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R034",
+    "sku_lia": "LIA_R034",
+    "image": "Adi_R034.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.69,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 5.46,
+        "count": 1,
+        "size": "11.0*11.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R035",
+    "sku_lia": "LIA_R035",
+    "image": "Adi_R035.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.47,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 1.0,
+        "count": 25,
+        "size": "2.20*2.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R036",
+    "sku_lia": "LIA_R036",
+    "image": "Adi_R036.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.22,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.66,
+        "count": 1,
+        "size": "7.16*4.66"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R036-B",
+    "sku_lia": "LIA_R037",
+    "image": "Adi_R036-B.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.75,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.66,
+        "count": 1,
+        "size": "7.16*4.66"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R037",
+    "sku_lia": "LIA_R038",
+    "image": "Adi_R037.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R038",
+    "sku_lia": "LIA_R039",
+    "image": "Adi_R038.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.08,
+    "stones": [
+      {
+        "shape": "Baguette Steaight",
+        "carat": 1.41,
+        "count": 1,
+        "size": "7.0*5.0"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R039",
+    "sku_lia": "LIA_R040",
+    "image": "Adi_R039.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.31,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R040",
+    "sku_lia": "LIA_R041",
+    "image": "Adi_R040.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.87,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R041",
+    "sku_lia": "LIA_R042",
+    "image": "Adi_R041.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.09,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R042",
+    "sku_lia": "LIA_R043",
+    "image": "Adi_R042.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.1,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R043",
+    "sku_lia": "LIA_R044",
+    "image": "Adi_R043.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.86,
+    "stones": [
+      {
+        "shape": "Custom_Baguette",
+        "carat": 0.15,
+        "count": 1,
+        "size": "4.63*2.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R044",
+    "sku_lia": "LIA_R045",
+    "image": "Adi_R044.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.39,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R045",
+    "sku_lia": "LIA_R046",
+    "image": "Adi_R045.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.59,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R046",
+    "sku_lia": "LIA_R047",
+    "image": "Adi_R046.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.85,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R047",
+    "sku_lia": "LIA_R048",
+    "image": "Adi_R047.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.08,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R048",
+    "sku_lia": "LIA_R049",
+    "image": "Adi_R048.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.71,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R049",
+    "sku_lia": "LIA_R050",
+    "image": "Adi_R049.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.1,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R050",
+    "sku_lia": "LIA_R051",
+    "image": "Adi_R050.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.8,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.12,
+        "count": 19,
+        "size": "1.20*1.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R051",
+    "sku_lia": "LIA_R052",
+    "image": "Adi_R051.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.17,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Emerald",
+        "carat": 1.02,
+        "count": 1,
+        "size": "7.0*5.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R052",
+    "sku_lia": "LIA_R053",
+    "image": "Adi_R052.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.77,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.045,
+        "count": 12,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R053",
+    "sku_lia": "LIA_R054",
+    "image": "Adi_R053.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 21.51,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R054",
+    "sku_lia": "LIA_R055",
+    "image": "Adi_R054.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.42,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 16,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R055",
+    "sku_lia": "LIA_R056",
+    "image": "Adi_R055.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.89,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.16,
+        "count": 3,
+        "size": "4.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R056",
+    "sku_lia": "LIA_R057",
+    "image": "Adi_R056.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.5,
+    "stones": [
+      {
+        "shape": "Marquise",
+        "carat": 0.05,
+        "count": 1,
+        "size": "4.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R057",
+    "sku_lia": "LIA_R058",
+    "image": "Adi_R057.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.0,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.05,
+        "count": 4,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.1,
+        "count": 1,
+        "size": "5.0*2.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R058",
+    "sku_lia": "LIA_R059",
+    "image": "Adi_R058.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.77,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.18,
+        "count": 6,
+        "size": "2.0*2.0"
+      },
+      {
+        "shape": "Marquise",
+        "carat": 0.18,
+        "count": 1,
+        "size": "5.05*2.60"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R059",
+    "sku_lia": "LIA_R060",
+    "image": "Adi_R059.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.18,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.22,
+        "count": 1,
+        "size": "3.90*3.90"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R060",
+    "sku_lia": "LIA_R061",
+    "image": "Adi_R060.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.6,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R061",
+    "sku_lia": "LIA_R062",
+    "image": "Adi_R061.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.48,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 16,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R062",
+    "sku_lia": "LIA_R063",
+    "image": "Adi_R062.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.78,
+    "stones": [
+      {
+        "shape": "Oval",
+        "carat": 1.2,
+        "count": 1,
+        "size": "8.80*5.93"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R063",
+    "sku_lia": "LIA_R064",
+    "image": "Adi_R063.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.51,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.11,
+        "count": 1,
+        "size": "3.10*3.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R064",
+    "sku_lia": "LIA_R065",
+    "image": "Adi_R064.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.19,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.004,
+        "count": 1,
+        "size": "1.0*1.0"
+      },
+      {
+        "shape": "Oval",
+        "carat": 1.35,
+        "count": 1,
+        "size": "8.46*7.24"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R065",
+    "sku_lia": "LIA_R066",
+    "image": "Adi_R065.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.52,
+    "stones": [
+      {
+        "shape": "Triangle",
+        "carat": 0.4,
+        "count": 2,
+        "size": "4.21*4.90"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.02,
+        "count": 4,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R066",
+    "sku_lia": "LIA_R067",
+    "image": "Adi_R066.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.8,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 5,
+        "size": "1.60*1.60"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 5,
+        "size": "1.60*1.60"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 5,
+        "size": "1.60*1.60"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R067",
+    "sku_lia": "LIA_R068",
+    "image": "Adi_R067.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.99,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 8,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R068",
+    "sku_lia": "LIA_R069",
+    "image": "Adi_R068.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.2,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.47,
+        "count": 1,
+        "size": "5.0*5.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R069",
+    "sku_lia": "LIA_R070",
+    "image": "Adi_R069.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.81,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 2.23,
+        "count": 20,
+        "size": "3.10*3.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R070",
+    "sku_lia": "LIA_R071",
+    "image": "Adi_R070.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.65,
+    "stones": [
+      {
+        "shape": "Triangle",
+        "carat": 0.22,
+        "count": 2,
+        "size": "3.12*3.60"
+      },
+      {
+        "shape": "Emerald",
+        "carat": 1.18,
+        "count": 1,
+        "size": "6.20*5.46"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R071",
+    "sku_lia": "LIA_R072",
+    "image": "Adi_R071.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R072",
+    "sku_lia": "LIA_R073",
+    "image": "Adi_R072.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.6,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 16,
+        "size": "1.10*1.10"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R073",
+    "sku_lia": "LIA_R074",
+    "image": "Adi_R073.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.77,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 18,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R074",
+    "sku_lia": "LIA_R075",
+    "image": "Adi_R074.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.81,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R075",
+    "sku_lia": "LIA_R076",
+    "image": "Adi_R075.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.85,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.23,
+        "count": 4,
+        "size": "2.50*2.50"
+      },
+      {
+        "shape": "Princess",
+        "carat": 1.61,
+        "count": 1,
+        "size": "6.20*6.20"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R076",
+    "sku_lia": "LIA_R077",
+    "image": "Adi_R076.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.49,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.022,
+        "count": 6,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R077",
+    "sku_lia": "LIA_R078",
+    "image": "Adi_R077.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R078",
+    "sku_lia": "LIA_R079",
+    "image": "Adi_R078.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.85,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.14,
+        "count": 17,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R079",
+    "sku_lia": "LIA_R080",
+    "image": "Adi_R079.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.14,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.74,
+        "count": 5,
+        "size": "3.40*3.40"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R080",
+    "sku_lia": "LIA_R081",
+    "image": "Adi_R080.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "טבעת בשיבוץ מלא של יהלומים קטנים",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.98,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.26,
+        "count": 31,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R081",
+    "sku_lia": "LIA_R082",
+    "image": "Adi_R081.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.45,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.2,
+        "count": 2,
+        "size": "3.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R082",
+    "sku_lia": "LIA_R083",
+    "image": "Adi_R082.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.93,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R083",
+    "sku_lia": "LIA_R084",
+    "image": "Adi_R083.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.24,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R084",
+    "sku_lia": "LIA_R085",
+    "image": "Adi_R084.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "לב גדול",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 10.0,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R085",
+    "sku_lia": "LIA_R086",
+    "image": "Adi_R085.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.88,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.51,
+        "count": 5,
+        "size": "3.0*3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R086",
+    "sku_lia": "LIA_R087",
+    "image": "Adi_R086.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "שני קווים משתלבים",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.47,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R087",
+    "sku_lia": "LIA_R088",
+    "image": "Adi_R087.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.11,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      },
+      {
+        "shape": "Baguette Straight",
+        "carat": 1.16,
+        "count": 1,
+        "size": "7.0*5.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R088",
+    "sku_lia": "LIA_R089",
+    "image": "Adi_R088.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.61,
+    "stones": [
+      {
+        "shape": "Pear",
+        "carat": 0.24,
+        "count": 2,
+        "size": "4.10*2.60"
+      },
+      {
+        "shape": "Round",
+        "carat": 0.51,
+        "count": 1,
+        "size": "5.15*5.15"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R089",
+    "sku_lia": "LIA_R090",
+    "image": "Adi_R089.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.89,
+    "stones": []
+  },
+  {
+    "sku_original": "Adi_R090",
+    "sku_lia": "LIA_R091",
+    "image": "Adi_R090.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.16,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.07,
+        "count": 8,
+        "size": "1.30*1.30"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R091",
+    "sku_lia": "LIA_R092",
+    "image": "Adi_R091.jpg",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.68,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.007,
+        "count": 2,
+        "size": "1.0*1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R092",
+    "sku_lia": "LIA_R093",
+    "image": "Adi_R092.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.87,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.1,
+        "count": 8,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R093",
+    "sku_lia": "LIA_R094",
+    "image": "Adi_R093.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.51,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.025,
+        "count": 2,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R094",
+    "sku_lia": "LIA_R095",
+    "image": "Adi_R094.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.65,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.11,
+        "count": 6,
+        "size": "1.70*1.70"
+      },
+      {
+        "shape": "Oval",
+        "carat": 0.49,
+        "count": 1,
+        "size": "6.60*4.25"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R095",
+    "sku_lia": "LIA_R096",
+    "image": "Adi_R095.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.53,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.03,
+        "count": 1,
+        "size": "2.0*2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R096",
+    "sku_lia": "LIA_R097",
+    "image": "Adi_R096.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.9,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.037,
+        "count": 2,
+        "size": "1.70*1.70"
+      }
+    ]
+  },
+  {
+    "sku_original": "Adi_R097",
+    "sku_lia": "LIA_R098",
+    "image": "Adi_R097.png",
+    "type": "טבעת",
+    "material": "דן",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.75,
+    "stones": [
+      {
+        "shape": "Round",
+        "carat": 0.08,
+        "count": 6,
+        "size": "1.50*1.50"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת קלטי",
+    "sku_lia": "LIA_R099",
+    "image": "טבעת קלטי.JPG",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.02,
+        "count": 1,
+        "size": "1.7"
+      }
+    ]
+  },
+  {
+    "sku_original": "עגיל פרח",
+    "sku_lia": "LIA_E126",
+    "image": "עגיל פרח.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 4,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "עגיל מרקיזה\nL+R",
+    "sku_lia": "LIA_E127",
+    "image": "עגיל מרקיזות.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "תליון פרח 4 אבנים",
+    "sku_lia": "",
+    "image": "תליון פרח 4 אבנים.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 4,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "פרח ללא לולאה עליונה",
+    "sku_lia": "",
+    "image": "פרח ללא לולאה עליונה.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 4,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "תליון בית אבן מעויין",
+    "sku_lia": "",
+    "image": "תליון בית אבן מעויין.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "תליון פרמידה עם אבן למריחה",
+    "sku_lia": "",
+    "image": "תליון פרמידה עם שיבוץ מריחה.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.023,
+        "count": 1,
+        "size": "1.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "תליון קונוס",
+    "sku_lia": "",
+    "image": "תליון קונוס.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "2 STONE A",
+    "sku_lia": "LIA_E128",
+    "image": "2 STONE A.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.085,
+        "count": 1,
+        "size": "2.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "2 STONE B",
+    "sku_lia": "LIA_E129",
+    "image": "2 STONE B.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.085,
+        "count": 1,
+        "size": "2.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "2 STONE CHARM",
+    "sku_lia": "",
+    "image": "2 STONE CHARM.JPG",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.085,
+        "count": 1,
+        "size": "2.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "חישוק 10 שיבוץ פרח",
+    "sku_lia": "LIA_E130",
+    "image": "חישוק 10 שיבוץ פרח.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.014,
+        "count": 5,
+        "size": "1.5"
+      }
+    ]
+  },
+  {
+    "sku_original": "מטפס קשט\nL+R",
+    "sku_lia": "LIA_E131",
+    "image": "מטפס קשת- ימין.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "עגיל אמורפי\nL+R",
+    "sku_lia": "LIA_E132",
+    "image": "עגיל אמורפי- ימין.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "סקיצה ללקוח- ינואר 24 שורה 17",
+    "sku_lia": "",
+    "image": "אין קבצים",
+    "type": "אין קבצים",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת וינטג' אובלי",
+    "sku_lia": "",
+    "image": "אין קבצים",
+    "type": "אין קבצים",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת אובלית",
+    "sku_lia": "LIA_R100",
+    "image": "טבעת אובלית.JPG",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.012,
+        "count": 2,
+        "size": "1.4"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת אובלית חדש : התאמות לפי בקשות של ברק:\nלהרחיב את בית האבן\nלהרחיק ולשנות קיפוף של השיניים לאובל",
+    "sku_lia": "LIA_R101",
+    "image": "טבעת אובלית- חדש.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.012,
+        "count": 2,
+        "size": "1.4"
+      }
+    ]
+  },
+  {
+    "sku_original": "תליון ע'",
+    "sku_lia": "LIA_P052",
+    "image": "ע.JPG",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.008,
+        "count": 3,
+        "size": "1.2"
+      }
+    ]
+  },
+  {
+    "sku_original": "סטאד 2 מ\"מ",
+    "sku_lia": "LIA_E133",
+    "image": "סטאד 2 ממ.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 1,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "סטאד 2.9 מ\"מ",
+    "sku_lia": "LIA_E134",
+    "image": "סטאד 2.9 ממ.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.092,
+        "count": 1,
+        "size": "2.9"
+      }
+    ]
+  },
+  {
+    "sku_original": "סטאד מעוצב 3 מ\"מ",
+    "sku_lia": "LIA_E135",
+    "image": "סטאד מעוצב 3 ממ.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.103,
+        "count": 1,
+        "size": "3.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "Spike 3",
+    "sku_lia": "LIA_E136",
+    "image": "Spike 3.JPG",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.017,
+        "count": 1,
+        "size": "1.6"
+      }
+    ]
+  },
+  {
+    "sku_original": "Model 002",
+    "sku_lia": "LIA_P053",
+    "image": "Model 002.JPG",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת פסטות",
+    "sku_lia": "LIA_R102",
+    "image": "טבעת פסטות.JPG",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 9.0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת פסטות מרוקן",
+    "sku_lia": "LIA_R103",
+    "image": "טבעת פסטות מרוקן.JPG",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.6,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חותם עגול- חלק",
+    "sku_lia": "LIA_R104",
+    "image": "חותם עגול חלק.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 1,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת חותם עגול שיבוץ צד",
+    "sku_lia": "LIA_R105",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 1,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת חותם עגול שיבוץ למעלה",
+    "sku_lia": "LIA_R106",
+    "image": "חותם עגול שיבוץ למעלה.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 1,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת אמרלד קאט עם היילו",
+    "sku_lia": "LIA_R107",
+    "image": "טבעת אמרלד קאט עם היילו.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.008,
+        "count": 18,
+        "size": "1.2"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת וינטג' בגט",
+    "sku_lia": "LIA_R108",
+    "image": "טבעת וינטג' בגט.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.01,
+        "count": 2,
+        "size": "1.3"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת אבנים כחולות",
+    "sku_lia": "LIA_R109",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת אבנים סגולות",
+    "sku_lia": "LIA_R110",
+    "image": "טבעת אבנים סגולות.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.4,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת מלבן אמייל ושיבוצים",
+    "sku_lia": "LIA_R111",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.006,
+        "count": 33,
+        "size": "1.1"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת מלבן אמייל ושיבוצים 0.2",
+    "sku_lia": "LIA_R112",
+    "image": "טבעת מלבן אמייל ושיבוצים 0.2.jpeg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.006,
+        "count": 32,
+        "size": "1.1"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת אובלית מלא",
+    "sku_lia": "LIA_R113",
+    "image": "טבעת אובלית- מלא.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.5,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.023,
+        "count": 1,
+        "size": "1.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת אובלית חלולה",
+    "sku_lia": "LIA_R114",
+    "image": "טבעת אובלית חלולה.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.4,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.023,
+        "count": 1,
+        "size": "1.8"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת שמש מרקיזה- יהלומים",
+    "sku_lia": "LIA_R115",
+    "image": "טבעת שמש מרקיזה- יהלומים.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.5,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.005,
+        "count": 4,
+        "size": "1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת שמש מרקיזה-כדורים",
+    "sku_lia": "LIA_R116",
+    "image": "טבעת שמש מרקיזה-כדור.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.25,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.014,
+        "count": 2,
+        "size": "1.5"
+      }
+    ]
+  },
+  {
+    "sku_original": "חותם חריצים",
+    "sku_lia": "LIA_R117",
+    "image": "חותם חריצים.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 8.0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת מרקיזה וינטג'",
+    "sku_lia": "LIA_R118",
+    "image": "טבעת וינטג' מרקיזה.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 5.0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.031,
+        "count": 1,
+        "size": "2.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "No4 מידה 57",
+    "sku_lia": "LIA_R119",
+    "image": "No4 מידה 57.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.005,
+        "count": 2,
+        "size": "1.0"
+      }
+    ]
+  },
+  {
+    "sku_original": "חישוק 10 שיבוץ פרח 0.95",
+    "sku_lia": "LIA_E137",
+    "image": "חישוק 10 שיבוץ פרח 0.95.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.014,
+        "count": 5,
+        "size": "1.5"
+      }
+    ]
+  },
+  {
+    "sku_original": "בית מריחה 3 מ\"מ לולאה",
+    "sku_lia": "LIA_E138",
+    "image": "בית מריחה 3 ממ- לולאה.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "בית מריחה 3 מ\"מ יהלום",
+    "sku_lia": "LIA_E139",
+    "image": "בית מריחה 3 ממ- יהלום.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "בית מריחה 3 מ\"מ כדור",
+    "sku_lia": "LIA_E140",
+    "image": "בית מריחה 3 ממ- כדור.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חותם מרובע עם פינות חתוכים",
+    "sku_lia": "LIA_R120",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": [
+      {
+        "shape": "RD",
+        "carat": 0.008,
+        "count": 8,
+        "size": "1.2"
+      }
+    ]
+  },
+  {
+    "sku_original": "טבעת פיתוח",
+    "sku_lia": "LIA_R121",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת פיזור אבנים ושיבוץ פרח",
+    "sku_lia": "LIA_R122",
+    "image": "טבעת פיזור אבנים שיבוץ פרח.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חותם מלבני עם שיבוצים",
+    "sku_lia": "LIA_R123",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חותם מלבני עם שיבוצים 1",
+    "sku_lia": "LIA_R124",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חותם מלבני עם שיבוצים 1.1",
+    "sku_lia": "LIA_R125",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "תליון לב נסתר ",
+    "sku_lia": "LIA_P054",
+    "image": "תליון לב ניסתר.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 100",
+    "sku_lia": "LIA_R126",
+    "image": "LIA100.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 101",
+    "sku_lia": "LIA_P055",
+    "image": "LIA101.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA102A",
+    "sku_lia": "LIA_P056",
+    "image": "LIA102A.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 102B",
+    "sku_lia": "LIA_P057",
+    "image": "LIA102B.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 103",
+    "sku_lia": "LIA_R127",
+    "image": "LIA103.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 104",
+    "sku_lia": "LIA_R128",
+    "image": "LIA104.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת אבנים כחולות 0.2",
+    "sku_lia": "LIA_R129",
+    "image": "טבעת אבנים כחולות 0.2.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 105",
+    "sku_lia": "LIA_P058",
+    "image": "אין קבצים",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 106",
+    "sku_lia": "LIA_R130",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 107",
+    "sku_lia": "LIA_R131",
+    "image": "LIA107.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 108",
+    "sku_lia": "LIA_E141",
+    "image": "LIA108.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 109",
+    "sku_lia": "LIA_R132",
+    "image": "LIA109 (1).jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 110",
+    "sku_lia": "LIA_R133",
+    "image": "LIA110.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 111",
+    "sku_lia": "LIA_E142",
+    "image": "LIA111.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 112",
+    "sku_lia": "LIA_R134",
+    "image": "LIA112.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.6,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 113",
+    "sku_lia": "LIA_E143",
+    "image": "LIA113.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 114",
+    "sku_lia": "LIA_B003",
+    "image": "LIA114.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 115",
+    "sku_lia": "LIA_B004",
+    "image": "LIA115.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.9,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 116",
+    "sku_lia": "LIA_B005",
+    "image": "LIA116.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 117",
+    "sku_lia": "LIA_E144",
+    "image": "LIA117.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 118",
+    "sku_lia": "LIA_E145",
+    "image": "LIA118.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.35,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 119",
+    "sku_lia": "LIA_E146",
+    "image": "LIA119.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 120",
+    "sku_lia": "LIA_R135",
+    "image": "LIA120.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 121",
+    "sku_lia": "LIA_R136",
+    "image": "LIA121.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 121 HEAD 2",
+    "sku_lia": "LIA_R137",
+    "image": "LIA121-2.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 123",
+    "sku_lia": "LIA_R138",
+    "image": "LIA123.jpeg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.8,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 124",
+    "sku_lia": "LIA_R139",
+    "image": "LIA124.jpeg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.1,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 125",
+    "sku_lia": "LIA_R140",
+    "image": "LIA125.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 126",
+    "sku_lia": "LIA_R141",
+    "image": "LIA126.jpeg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 127- A",
+    "sku_lia": "LIA_E147",
+    "image": "LIA127.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 127- B",
+    "sku_lia": "",
+    "image": "",
+    "type": "",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 128",
+    "sku_lia": "LIA_P059",
+    "image": "LIA128.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 129",
+    "sku_lia": "LIA_R142",
+    "image": "LIA129.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 130",
+    "sku_lia": "LIA_R143",
+    "image": "LIA130 (1).jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.7,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 130 חדש:  להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R144",
+    "image": "LIA130 (1).jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 131",
+    "sku_lia": "LIA_R145",
+    "image": "LIA131.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 132",
+    "sku_lia": "LIA_R146",
+    "image": "LIA132.jpeg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 133",
+    "sku_lia": "LIA_P060",
+    "image": "אין קבצים",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 134",
+    "sku_lia": "LIA_P061",
+    "image": "LIA134.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.9,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 134 (2)",
+    "sku_lia": "LIA_P062",
+    "image": "LIA134(2).png",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 135",
+    "sku_lia": "LIA_B006",
+    "image": "LIA135.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.6,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 136",
+    "sku_lia": "LIA_P063",
+    "image": "אין קבצים",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 137",
+    "sku_lia": "LIA_P064",
+    "image": "LIA137.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.7,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 138",
+    "sku_lia": "LIA_B007",
+    "image": "LIA138.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.8,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 139",
+    "sku_lia": "LIA_B008",
+    "image": "LIA139.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.7,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 140",
+    "sku_lia": "LIA_E148",
+    "image": "LIA140.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 141",
+    "sku_lia": "LIA_E149",
+    "image": "LIA141.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 142",
+    "sku_lia": "LIA_E150",
+    "image": "LIA142.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 143",
+    "sku_lia": "LIA_R147",
+    "image": "LIA143.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "סקיצה חדשה עבורLIA 143 - נמצא בסיכום אוגוסט וספטמבר אוקטובר ונובמבר",
+    "sku_lia": "LIA_R148",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "טבעת חריצים 2 0.8MM",
+    "sku_lia": "LIA_R149",
+    "image": "טבעת חריצים-0.8 ממ.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 145",
+    "sku_lia": "LIA_B009",
+    "image": "LIA145.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 146",
+    "sku_lia": "LIA_B010",
+    "image": "LIA146.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.2,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 147",
+    "sku_lia": "LIA_R150",
+    "image": "LIA147.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 148",
+    "sku_lia": "LIA_P065",
+    "image": "LIA148.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.8,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 149",
+    "sku_lia": "LIA_B011",
+    "image": "LIA149.jpg",
+    "type": "צמיד",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 150",
+    "sku_lia": "LIA_E151",
+    "image": "LIA150.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.35,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 151",
+    "sku_lia": "LIA_E152",
+    "image": "LIA151.png",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.25,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 152",
+    "sku_lia": "LIA_E153",
+    "image": "LIA152.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 153",
+    "sku_lia": "LIA_E154",
+    "image": "LIA153.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 154",
+    "sku_lia": "LIA_P066",
+    "image": "LIA154.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.16,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 155",
+    "sku_lia": "LIA_R151",
+    "image": "LIA155.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 155 חדש: להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R152",
+    "image": "LIA155.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 156",
+    "sku_lia": "LIA_E155",
+    "image": "LIA156.png",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 157",
+    "sku_lia": "LIA_E156",
+    "image": "LIA157.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 158",
+    "sku_lia": "LIA_E157",
+    "image": "LIA158.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 158-1",
+    "sku_lia": "LIA_E158",
+    "image": "LIA158-1.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 159",
+    "sku_lia": "LIA_R153",
+    "image": "LIA159.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 160",
+    "sku_lia": "LIA_R154",
+    "image": "LIA160.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.6,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 161",
+    "sku_lia": "LIA_E159",
+    "image": "LIA161.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.2,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 161-1",
+    "sku_lia": "LIA_E160",
+    "image": "LIA161-1.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.4,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 162",
+    "sku_lia": "LIA_R155",
+    "image": "LIA162.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 163",
+    "sku_lia": "LIA_R156",
+    "image": "LIA163.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 164",
+    "sku_lia": "LIA_R157",
+    "image": "LIA164.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 164 חדש: להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R158",
+    "image": "LIA164.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 165",
+    "sku_lia": "LIA_P067",
+    "image": "LIA165.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.85,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 166",
+    "sku_lia": "LIA_R159",
+    "image": "LIA166.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 167",
+    "sku_lia": "LIA_P068",
+    "image": "LIA167.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 168",
+    "sku_lia": "LIA_R160",
+    "image": "LIA168.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.6,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 169",
+    "sku_lia": "LIA_R161",
+    "image": "LIA169.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 170",
+    "sku_lia": "LIA_E161",
+    "image": "LIA170.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.09,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 171",
+    "sku_lia": "LIA_E162",
+    "image": "LIA171.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.04,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 171-A",
+    "sku_lia": "LIA_E163",
+    "image": "LIA171-A.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 171-B",
+    "sku_lia": "LIA_E164",
+    "image": "LIA171-B.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 171-C",
+    "sku_lia": "LIA_E165",
+    "image": "LIA171-C.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 172",
+    "sku_lia": "LIA_R162",
+    "image": "LIA172.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 173",
+    "sku_lia": "LIA_E166",
+    "image": "LIA173.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 174",
+    "sku_lia": "",
+    "image": "LIA174.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 175",
+    "sku_lia": "LIA_E167",
+    "image": "LIA175.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 176",
+    "sku_lia": "LIA_P069",
+    "image": "LIA176.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 177",
+    "sku_lia": "LIA_P070",
+    "image": "LIA177.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 178",
+    "sku_lia": "LIA_P071",
+    "image": "LIA178.png",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 179",
+    "sku_lia": "LIA_E168",
+    "image": "LIA179.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.45,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 180",
+    "sku_lia": "LIA_E169",
+    "image": "LIA180.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 180 A",
+    "sku_lia": "LIA_E170",
+    "image": "LIA180 A.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 180 B",
+    "sku_lia": "LIA_E171",
+    "image": "LIA180 B.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 181",
+    "sku_lia": "LIA_E172",
+    "image": "LIA181.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 181- A",
+    "sku_lia": "LIA_E173",
+    "image": "LIA181-A.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 181- B",
+    "sku_lia": "LIA_E174",
+    "image": "LIA181-B.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 181- C",
+    "sku_lia": "LIA_E175",
+    "image": "LIA181-C.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 182-1.3",
+    "sku_lia": "LIA_E176",
+    "image": "LIA182-1.3.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 182-1.5",
+    "sku_lia": "LIA_E177",
+    "image": "LIA182-1.5.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 183",
+    "sku_lia": "LIA_R163",
+    "image": "LIA183.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.8,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 184",
+    "sku_lia": "LIA_R164",
+    "image": "LIA184.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 184 חדש: להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R165",
+    "image": "LIA184.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 185",
+    "sku_lia": "LIA_R166",
+    "image": "LIA185.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 186",
+    "sku_lia": "LIA_R167",
+    "image": "LIA186.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 187",
+    "sku_lia": "LIA_R168",
+    "image": "LIA187.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 187 חדש: להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R169",
+    "image": "LIA187.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 188",
+    "sku_lia": "",
+    "image": "LIA188.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 189",
+    "sku_lia": "LIA_P072",
+    "image": "LIA189.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 190",
+    "sku_lia": "LIA_E178",
+    "image": "LIA190.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.2,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 191",
+    "sku_lia": "LIA_P073",
+    "image": "LIA191.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.75,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 192",
+    "sku_lia": "LIA_E179",
+    "image": "LIA192.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.45,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 193",
+    "sku_lia": "LIA_E180",
+    "image": "LIA193.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.55,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 194",
+    "sku_lia": "LIA_E181",
+    "image": "LIA194.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.68,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 194 001",
+    "sku_lia": "LIA_E182",
+    "image": "LIA194 001.png",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 195",
+    "sku_lia": "LIA_R170",
+    "image": "LIA195.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 196",
+    "sku_lia": "LIA_R171",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 197",
+    "sku_lia": "LIA_R172",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 198",
+    "sku_lia": "LIA_R173",
+    "image": "LIA198.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 199",
+    "sku_lia": "LIA_R174",
+    "image": "LIA199.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 200",
+    "sku_lia": "LIA_R175",
+    "image": "LIA200.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 201",
+    "sku_lia": "LIA_R176",
+    "image": "LIA201.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 201.1",
+    "sku_lia": "LIA_R177",
+    "image": "LIA201.1.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 202",
+    "sku_lia": "LIA_R178",
+    "image": "LIA202.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 202 חדש: להרחיק את השיניים המשוטפות התאמות לפי בקשות של ברק:\n",
+    "sku_lia": "LIA_R179",
+    "image": "LIA202.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 203",
+    "sku_lia": "LIA_R180",
+    "image": "LIA203.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 204",
+    "sku_lia": "LIA_P074",
+    "image": "LIA204.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.2,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 205",
+    "sku_lia": "LIA_R181",
+    "image": "LIA205.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 206",
+    "sku_lia": "LIA_R182",
+    "image": "LIA206.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 207",
+    "sku_lia": "LIA_R183",
+    "image": "LIA207.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 4.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 208",
+    "sku_lia": "LIA_R184",
+    "image": "LIA208.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.1,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 209",
+    "sku_lia": "LIA_P075",
+    "image": "אין קבצים",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 210",
+    "sku_lia": "",
+    "image": "אין קבצים",
+    "type": "אין נתונים",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 211",
+    "sku_lia": "",
+    "image": "אין קבצים",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 212",
+    "sku_lia": "LIA_E183",
+    "image": "LIA212.png",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 212 להוסיף בית אבן ולעבות שיניים בשתי הקבצים בנפרד ולסגור שוב",
+    "sku_lia": "LIA_E184",
+    "image": "אין קבצים",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 213",
+    "sku_lia": "LIA_E185",
+    "image": "LIA213.png",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 213 להוסיף בית אבן ולעבות שיניים בשתי הקבצים בנפרד ולסגור שוב",
+    "sku_lia": "LIA_E186",
+    "image": "אין קבצים",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 214",
+    "sku_lia": "LIA_R185",
+    "image": "LIA214.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 215",
+    "sku_lia": "",
+    "image": "LIA215.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 216",
+    "sku_lia": "",
+    "image": "LIA216.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 216.1",
+    "sku_lia": "",
+    "image": "LIA216.1.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 216.2",
+    "sku_lia": "",
+    "image": "LIA216.2.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.7,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 217",
+    "sku_lia": "LIA_R186",
+    "image": "LIA217.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 218",
+    "sku_lia": "LIA_E187",
+    "image": "LIA218.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 219",
+    "sku_lia": "LIA_E188",
+    "image": "LIA219.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 220",
+    "sku_lia": "LIA_R186",
+    "image": "LIA220.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 221",
+    "sku_lia": "LIA_R187",
+    "image": "LIA221.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 222",
+    "sku_lia": "LIA_R188",
+    "image": "LIA222.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 223",
+    "sku_lia": "LIA_R189",
+    "image": "LIA223.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 224",
+    "sku_lia": "LIA_P076",
+    "image": "LIA224.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 225",
+    "sku_lia": "LIA_R190",
+    "image": "LIA225.png",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 226",
+    "sku_lia": "LIA_R191",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 227",
+    "sku_lia": "LIA_E189",
+    "image": "אין קבצים",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 228",
+    "sku_lia": "LIA_R192",
+    "image": "LIA228.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.2,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 229",
+    "sku_lia": "LIA_R193",
+    "image": "LIA229.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 230",
+    "sku_lia": "LIA_E190",
+    "image": "LIA230.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "בסיכום חודש ינואראין אבן אך בתמונה יש אבן",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 231",
+    "sku_lia": "LIA_P077",
+    "image": "LIA231.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 232",
+    "sku_lia": "LIA_R194",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 233",
+    "sku_lia": "LIA_P078",
+    "image": "LIA233.png",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.5,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 234",
+    "sku_lia": "LIA_R195",
+    "image": "LIA234.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.3,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 235",
+    "sku_lia": "LIA_P079",
+    "image": "אין קבצים",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236",
+    "sku_lia": "",
+    "image": "LIA236 (1).jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236-1",
+    "sku_lia": "",
+    "image": "",
+    "type": "",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236-2",
+    "sku_lia": "",
+    "image": "",
+    "type": "",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236-3",
+    "sku_lia": "",
+    "image": "",
+    "type": "",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236-4",
+    "sku_lia": "",
+    "image": "",
+    "type": "",
+    "material": "",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 236-5",
+    "sku_lia": "",
+    "image": "LIA236-5.jpg",
+    "type": "צ'ארם",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 237",
+    "sku_lia": "LIA_E191",
+    "image": "LIA237.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0.56,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 238-1",
+    "sku_lia": "LIA_E192",
+    "image": "LIA238-1.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 238-2",
+    "sku_lia": "LIA_E193",
+    "image": "LIA238-2.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 238-3",
+    "sku_lia": "LIA_E194",
+    "image": "LIA238-3.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 239",
+    "sku_lia": "LIA_R196",
+    "image": "LIA239.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 2.8,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 240",
+    "sku_lia": "LIA_R197",
+    "image": "אין קבצים",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 241",
+    "sku_lia": "LIA_P080",
+    "image": "LIA241.jpg",
+    "type": "תליון",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 242",
+    "sku_lia": "LIA_R198",
+    "image": "LIA242.jpg",
+    "type": "טבעת",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 3.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 243",
+    "sku_lia": "LIA_E195",
+    "image": "LIA243.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  },
+  {
+    "sku_original": "LIA 244",
+    "sku_lia": "LIA_E196",
+    "image": "LIA244.jpg",
+    "type": "עגיל",
+    "material": "שירה",
+    "name": "",
+    "dimensions": "",
+    "gold_type": "14K",
+    "weight": 1.0,
+    "stones": []
+  }
+]
