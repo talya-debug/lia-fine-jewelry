@@ -33,7 +33,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--txt);min-he
 
 /* STATS */
 .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:20px}
-.st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:14px;text-align:center}
+.st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:14px;text-align:center;transition:.2s}.st:hover{border-color:var(--gold);transform:translateY(-2px)}
 .st .sv{font-size:28px;font-weight:800;color:var(--gold)}
 .st .sl{font-size:10px;color:var(--dim);margin-top:2px}
 
@@ -238,7 +238,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--txt);min-he
 
 /* SUMMARY STATS */
 .sum-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px}
-.sum-st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:16px;text-align:center}
+.sum-st{background:var(--card);border:1px solid rgba(201,168,76,0.08);border-radius:12px;padding:16px;text-align:center;transition:.2s}.sum-st:hover{border-color:var(--gold);transform:translateY(-2px)}
 .sum-st .ssv{font-size:26px;font-weight:800}
 .sum-st .ssl{font-size:10px;color:var(--dim);margin-top:2px}
 .sum-st.gold .ssv{color:var(--gold)}
@@ -283,11 +283,11 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--txt);min-he
   <!-- CATALOG -->
   <div class="pg on" id="pg-cat">
     <div class="stats">
-      <div class="st"><div class="sv" id="sAll">0</div><div class="sl">סה"כ</div></div>
-      <div class="st"><div class="sv" id="sR">0</div><div class="sl">טבעות</div></div>
-      <div class="st"><div class="sv" id="sE">0</div><div class="sl">עגילים</div></div>
-      <div class="st"><div class="sv" id="sP">0</div><div class="sl">תליונים</div></div>
-      <div class="st"><div class="sv" id="sB">0</div><div class="sl">צמידים / צ'יינס</div></div>
+      <div class="st" style="cursor:pointer" onclick="document.getElementById('fType').value='';fil()"><div class="sv" id="sAll">0</div><div class="sl">סה"כ</div></div>
+      <div class="st" style="cursor:pointer" onclick="document.getElementById('fType').value='טבעת';fil()"><div class="sv" id="sR">0</div><div class="sl">טבעות</div></div>
+      <div class="st" style="cursor:pointer" onclick="document.getElementById('fType').value='עגיל';fil()"><div class="sv" id="sE">0</div><div class="sl">עגילים</div></div>
+      <div class="st" style="cursor:pointer" onclick="document.getElementById('fType').value='תליון';fil()"><div class="sv" id="sP">0</div><div class="sl">תליונים</div></div>
+      <div class="st" style="cursor:pointer" onclick="document.getElementById('fType').value='צמיד';fil()"><div class="sv" id="sB">0</div><div class="sl">צמידים / צ'יינס</div></div>
     </div>
     <div class="filters">
       <div class="sbox"><input id="qSearch" placeholder="חיפוש מק&quot;ט, שם..." oninput="fil()"></div>
@@ -723,10 +723,10 @@ function renderInv() {
   const outStock = totalItems - inStock;
   const totalUnits = DATA.reduce((a,it)=>a+getItemStock(it.sku_lia),0);
   document.getElementById('invStats').innerHTML = `
-    <div class="sum-st gold"><div class="ssv">${totalItems}</div><div class="ssl">פריטים בקטלוג</div></div>
-    <div class="sum-st green"><div class="ssv">${inStock}</div><div class="ssl">במלאי</div></div>
-    <div class="sum-st red"><div class="ssv">${outStock}</div><div class="ssl">אזל מהמלאי</div></div>
-    <div class="sum-st blue"><div class="ssv">${totalUnits}</div><div class="ssl">סה"כ יחידות</div></div>`;
+    <div class="sum-st gold" style="cursor:pointer" onclick="document.getElementById('invFilter').value='';renderInv()"><div class="ssv">${totalItems}</div><div class="ssl">פריטים בקטלוג</div></div>
+    <div class="sum-st green" style="cursor:pointer" onclick="document.getElementById('invFilter').value='in';renderInv()"><div class="ssv">${inStock}</div><div class="ssl">במלאי</div></div>
+    <div class="sum-st red" style="cursor:pointer" onclick="document.getElementById('invFilter').value='out';renderInv()"><div class="ssv">${outStock}</div><div class="ssl">אזל מהמלאי</div></div>
+    <div class="sum-st blue" style="cursor:pointer" onclick="document.getElementById('invFilter').value='';renderInv()"><div class="ssv">${totalUnits}</div><div class="ssl">סה"כ יחידות</div></div>`;
 
   document.getElementById('invGrid').innerHTML = items.map(it => {
     const inv = INVENTORY[it.sku_lia] || {};
@@ -947,10 +947,10 @@ function renderOrd() {
   const inProd = ORDERS.filter(o=>o.flow==='prod'&&o.stageIdx<5).length;
   const revenue = ORDERS.filter(o=>getStatusLabel(o)==='הושלם').reduce((a,o)=>a+o.total,0);
   document.getElementById('ordStats').innerHTML = `
-    <div class="sum-st gold"><div class="ssv">${total}</div><div class="ssl">סה"כ הזמנות</div></div>
-    <div class="sum-st orange"><div class="ssv">${active}</div><div class="ssl">פעילות</div></div>
-    <div class="sum-st cyan"><div class="ssv">${inProd}</div><div class="ssl">בייצור</div></div>
-    <div class="sum-st green"><div class="ssv">₪${Math.round(revenue).toLocaleString()}</div><div class="ssl">הכנסות (הושלמו)</div></div>`;
+    <div class="sum-st gold" style="cursor:pointer" onclick="document.getElementById('ordFilter').value='';renderOrd()"><div class="ssv">${total}</div><div class="ssl">סה"כ הזמנות</div></div>
+    <div class="sum-st orange" style="cursor:pointer" onclick="document.getElementById('ordFilter').value='';renderOrd()"><div class="ssv">${active}</div><div class="ssl">פעילות</div></div>
+    <div class="sum-st cyan" style="cursor:pointer" onclick="document.getElementById('ordFilter').value='ייצור';renderOrd()"><div class="ssv">${inProd}</div><div class="ssl">בייצור</div></div>
+    <div class="sum-st green" style="cursor:pointer" onclick="document.getElementById('ordFilter').value='הושלם';renderOrd()"><div class="ssv">₪${Math.round(revenue).toLocaleString()}</div><div class="ssl">הכנסות (הושלמו)</div></div>`;
 
   document.getElementById('ordList').innerHTML = orders.map(o => {
     const c = CUSTOMERS.find(x=>x.id===o.custId);
