@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIA - תהליך הזמנה מלא v3</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Heebo',sans-serif;background:#f5f3ee;color:#2a2a2a;padding:30px;max-width:1000px;margin:0 auto}
+h1{text-align:center;font-size:1.6em;color:#1a3a5c;margin-bottom:3px}
+.sub{text-align:center;color:#888;margin-bottom:35px;font-size:0.9em}
+
+.step{margin-bottom:6px;position:relative;padding-right:50px}
+.step::before{content:'';position:absolute;right:22px;top:40px;bottom:-6px;width:3px;background:#ddd}
+.step:last-child::before{display:none}
+
+.step-num{position:absolute;right:0;top:10px;width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4em;z-index:2;background:#1a3a5c;color:white}
+
+.step-card{background:white;border-radius:14px;padding:20px 24px;box-shadow:0 2px 10px rgba(0,0,0,0.05);border-right:5px solid #ddd}
+
+.step-title{font-size:1.1em;font-weight:700;color:#1a3a5c;margin-bottom:4px}
+.step-desc{font-size:0.9em;color:#555;line-height:1.6;margin-bottom:10px}
+
+/* Status badge */
+.status-badge{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.78em;font-weight:700;margin-bottom:10px}
+.sb-blue{background:#e3f2fd;color:#1565c0;border:1px solid #90caf9}
+.sb-orange{background:#fff3e0;color:#e65100;border:1px solid #ffcc80}
+.sb-purple{background:#f3e5f5;color:#6a1b9a;border:1px solid #ce93d8}
+.sb-green{background:#e8f5e9;color:#2e7d32;border:1px solid #a5d6a7}
+.sb-red{background:#ffebee;color:#c62828;border:1px solid #ef9a9a}
+.sb-teal{background:#e0f2f1;color:#00695c;border:1px solid #80cbc4}
+.sb-gold{background:#faf6ed;color:#8b6914;border:1px solid #e8d9b0}
+.sb-pink{background:#fce4ec;color:#ad1457;border:1px solid #f48fb1}
+
+/* Action boxes - only 2 types: auto and human */
+.auto-box{background:#faf6ed;border:1px solid #e8d9b0;border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.auto-box .auto-label{display:flex;align-items:center;gap:6px;font-size:0.72em;font-weight:700;color:#c9a84c;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.auto-box .auto-label::before{content:'🤖';font-size:1.2em}
+.auto-box .auto-text{font-size:0.85em;color:#6d5c00;line-height:1.6}
+
+.human-box{background:#edf7ee;border:1px solid #c8e6c9;border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.human-box .human-label{display:flex;align-items:center;gap:6px;font-size:0.72em;font-weight:700;color:#2e7d32;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.human-box .human-label::before{content:'👤';font-size:1.2em}
+.human-box .human-text{font-size:0.85em;color:#1b5e20;line-height:1.6}
+
+.question-box{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:12px 16px;margin-bottom:8px}
+.question-box .q-label{display:flex;align-items:center;gap:6px;font-size:0.72em;font-weight:700;color:#f57f17;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.question-box .q-label::before{content:'❓';font-size:1.2em}
+.question-box .q-text{font-size:0.85em;color:#6d5c00;line-height:1.6}
+
+.email-preview{display:block;background:white;border:1px solid #e0d6bf;border-radius:8px;padding:10px 14px;margin-top:8px;font-size:0.92em;color:#444;line-height:1.5}
+.email-preview strong{color:#1a3a5c}
+
+.decision{display:flex;gap:12px;margin:10px 0}
+.decision-option{flex:1;padding:12px;border-radius:10px;font-size:0.85em}
+.opt-yes{background:#e8f5e9;border:1px solid #a5d6a7;color:#2e7d32}
+.opt-no{background:#fff3e0;border:1px solid #ffcc80;color:#e65100}
+.opt-yes strong,.opt-no strong{display:block;margin-bottom:4px}
+
+.section-divider{background:linear-gradient(90deg,#1a3a5c,#2a5a8c);color:white;text-align:center;padding:14px 20px;border-radius:12px;margin:30px 0 20px;font-weight:700;font-size:1.05em}
+
+.note{background:#fff8e1;border:1px solid #ffe082;border-radius:10px;padding:14px 18px;margin:12px 0 20px;font-size:0.88em;color:#6d5c00;line-height:1.6}
+.note strong{color:#4a3d00}
+
+.parallel-box{background:#e8eaf6;border:1px solid #c5cae9;border-radius:10px;padding:14px 18px;margin:12px 0 20px;font-size:0.88em;color:#283593;line-height:1.6}
+.parallel-box strong{color:#1a237e}
+
+/* Requirements */
+.req-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.req-card{background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.05);border-right:4px solid #1a3a5c}
+.req-card h4{font-size:0.95em;color:#1a3a5c;margin-bottom:6px}
+.req-card ul{list-style:none;font-size:0.85em;color:#555}
+.req-card ul li{padding:3px 0;border-bottom:1px solid #f0f0f0}
+.req-card ul li::before{content:'▸ ';color:#c9a84c;font-weight:700}
+
+@media(max-width:600px){.decision{flex-direction:column}.req-grid{grid-template-columns:1fr}}
+@media print{.step-card{box-shadow:none;border:1px solid #ddd}.section-divider{background:#1a3a5c!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<h1>LIA Fine Jewelry — מערכת ניהול הזמנות</h1>
+<p class="sub">תהליך ניהול הזמנה מקצה לקצה — מקבלת ההזמנה ועד המסירה ללקוח</p>
+
+<!-- ==================== שלב 1 ==================== -->
+<div class="section-divider">שלב 1 — קליטת הזמנה</div>
+
+<div class="step">
+  <div class="step-num">📥</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="status-badge sb-blue">סטטוס: הזמנה חדשה</div>
+    <div class="step-title">הזמנה חדשה נכנסת למערכת</div>
+
+    <div class="decision">
+      <div class="decision-option opt-yes">
+        <strong>מהאתר (שופיפיי)</strong>
+        <div class="auto-box" style="margin-top:8px;margin-bottom:0">
+          <div class="auto-label">המערכת עושה לבד</div>
+          <div class="auto-text">ההזמנה נקלטת אוטומטית מהאתר — פרטי לקוח, מוצר, מידה, תשלום. לא צריך לעשות כלום.</div>
+        </div>
+      </div>
+      <div class="decision-option opt-no">
+        <strong>מהחנות / אינסטגרם / טלפון</strong>
+        <div class="human-box" style="margin-top:8px;margin-bottom:0">
+          <div class="human-label">הזנה ידנית</div>
+          <div class="human-text">פתיחת המערכת → לחיצה על "הזמנה חדשה" → הזנת שם לקוח, טלפון, בחירת פריט מהקטלוג, מידה (בטבעות), הערות, ובחירת אופן מסירה: <strong>איסוף עצמי / משלוח</strong>.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auto-box" style="margin-top:12px">
+      <div class="auto-label">המערכת עושה לבד</div>
+      <div class="auto-text">
+        ✅ שמירת לקוח (לקוח חוזר — מזוהה אוטומטית ומקושר להיסטוריה)<br>
+        ✅ פתיחת כרטיס הזמנה חדש: <strong>ORD-0049</strong><br>
+        ✅ אם נבחר <strong>משלוח</strong> — מסמנת שצריך לתאם משלוח בסוף התהליך<br>
+        ✅ ממשיכה אוטומטית לשלב הבא →
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== שלב 2 ==================== -->
+<div class="section-divider">שלב 2 — בדיקת אבנים ושריון (מיידי!)</div>
+
+<div class="note"><strong>למה בשלב הזה ולא בשלב השיבוץ?</strong> הזמנת אבנים מהיהלומן עלולה להימשך מספר ימים. ביצוע הבדיקה כבר בשלב קליטת ההזמנה מאפשר להזמין את האבנים במקביל לתהליך הייצור — וכך לחסוך ימי עבודה יקרים.</div>
+
+<div class="step">
+  <div class="step-num">💎</div>
+  <div class="step-card" style="border-right-color:#e8a030">
+    <div class="status-badge sb-orange">סטטוס: בדיקת אבנים</div>
+    <div class="step-title">האם יש אבנים בתכשיט?</div>
+
+    <div class="auto-box">
+      <div class="auto-label">המערכת בודקת לבד</div>
+      <div class="auto-text">בדיקת מפרט הדגם בקטלוג — האם נדרשות אבנים לתכשיט זה?</div>
+    </div>
+
+    <div class="decision">
+      <div class="decision-option opt-yes"><strong>כן, יש אבנים →</strong>ממשיכים — המערכת שולחת מייל לעדי</div>
+      <div class="decision-option opt-no"><strong>אין אבנים →</strong>מדלגים ישר לשלב 3 (בדיקת מידה)</div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">📧</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="status-badge sb-orange">סטטוס: ⏳ ממתין לאישור אבנים</div>
+    <div class="step-title">מייל אוטומטי לעדי</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת שולחת מייל אוטומטי</div>
+      <div class="auto-text">
+        <div class="email-preview">
+          <strong>אל:</strong> עדי<br>
+          <strong>נושא:</strong> ORD-0049 — נדרשות אבנים<br><br>
+          היי עדי,<br>
+          נכנסה הזמנה שדורשת אבנים:<br><br>
+          <strong>הזמנה:</strong> ORD-0049 — טבעת LIA_R045<br>
+          <strong>לקוח/ה:</strong> רונית כהן<br>
+          <strong>אבנים נדרשות:</strong><br>
+          — Round 1.5×1.5 (×5 יח') — 0.019ct כל אחת<br>
+          — Oval 5.0×3.0 (×1 יח') — 0.17ct<br><br>
+          <strong><a href="#">👉 לחצי כאן לאשר במערכת</a></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">👩</div>
+  <div class="step-card" style="border-right-color:#2d8f5e">
+    <div class="step-title">עדי בודקת מלאי ומאשרת — במערכת</div>
+    <div class="step-desc">עדי לוחצת על הלינק במייל → נפתח כרטיס ההזמנה במערכת → רואה 3 כפתורים:</div>
+    <div class="human-box">
+      <div class="human-label">עדי עושה במערכת</div>
+      <div class="human-text">
+        <strong>כפתור 1:</strong> "✅ יש הכל במלאי — שריינתי" ← המערכת מסמנת אבנים OK<br>
+        <strong>כפתור 2:</strong> "⚠️ חסר חלק — צריך להזמין" ← המערכת מוסיפה לרשימה לרפאל<br>
+        <strong>כפתור 3:</strong> "❌ חסר הכל — צריך להזמין" ← המערכת מוסיפה הכל לרשימה לרפאל<br><br>
+        וגם: כשהאבנים מגיעות פיזית ← עדי נכנסת לאותו כרטיס הזמנה ולוחצת <strong>"האבנים הגיעו"</strong>. המערכת מעדכנת סטטוס ויודעת שאפשר להמשיך לשיבוץ.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">📋</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="status-badge sb-red">סטטוס: ⏳ ממתין לאבנים מהיהלומן</div>
+    <div class="step-title">ריכוז הזמנה לרפאל (יהלומן)</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת מייצרת ריכוז</div>
+      <div class="auto-text">
+        המערכת מרכזת את כל האבנים החסרות מכל ההזמנות הפתוחות בדף אחד.
+        <div class="email-preview">
+          <strong>ריכוז הזמנת אבנים:</strong><br><br>
+          מ-ORD-0049: Round 1.5×1.5 (×5)<br>
+          מ-ORD-0043: Oval 5.0×3.0 (×1)<br>
+          מ-ORD-0046: Round 1.3×1.3 (×6)<br><br>
+          <strong>סה"כ: 12 אבנים</strong>
+        </div>
+      </div>
+    </div>
+    <div class="human-box">
+      <div class="human-label">משימה פתוחה לעדי</div>
+      <div class="human-text">
+        עדי מקבלת משימה במערכת: <strong>"יש אבנים חסרות — שלחי הזמנה לרפאל"</strong> עם הריכוז המוכן.<br>
+        עדי לוחצת "שלח לרפאל" ← הרשימה נשלחת.<br>
+        כשהאבנים מגיעות פיזית ← עדי לוחצת <strong>"האבנים הגיעו"</strong> והמשימה נסגרת.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="parallel-box">
+  <strong>⚡ מכאן האבנים רצות במקביל!</strong> ההזמנה ממשיכה לשלבים הבאים (מידה, יציקה, צורפות) בלי לחכות. כשמגיעים לשיבוץ — האבנים כבר מוכנות.
+</div>
+
+<!-- ==================== שלב 3 ==================== -->
+<div class="section-divider">שלב 3 — בדיקת מידה (טבעות בלבד)</div>
+
+<div class="step">
+  <div class="step-num">💍</div>
+  <div class="step-card" style="border-right-color:#e8a030">
+    <div class="step-title">האם זו טבעת?</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת בודקת לבד</div>
+      <div class="auto-text">המערכת מזהה את סוג התכשיט מהקטלוג. עגיל, תליון או צמיד — ממשיכים ישירות לשלב 5 (בית יציקה).</div>
+    </div>
+    <div class="decision">
+      <div class="decision-option opt-yes"><strong>כן, טבעת →</strong>בודקים אם יש דגם (קובץ STL) במידה שהלקוח צריך</div>
+      <div class="decision-option opt-no"><strong>לא →</strong>ישר לבית יציקה (שלב 5)</div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">🔍</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="step-title">קיים דגם במידה?</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת בודקת לבד</div>
+      <div class="auto-text">
+        המערכת בודקת בקטלוג אילו מידות קיימות לדגם זה.<br>
+        <strong>דוגמה:</strong> לדגם LIA_R045 קיימות מידות 54, 55, 57. הלקוחה מבקשת מידה 48.<br>
+        <strong>המידה לא קיימת ← הפניה למודליסט.</strong>
+      </div>
+    </div>
+    <div class="decision">
+      <div class="decision-option opt-yes"><strong>יש מידה ✅</strong>מדלגים על מודליסט → ישר לבית יציקה (שלב 5)</div>
+      <div class="decision-option opt-no"><strong>אין מידה ❌</strong>ממשיכים לשלב 4 → מודליסט</div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== שלב 4 ==================== -->
+<div class="section-divider">שלב 4 — מודליסט (רק אם צריך)</div>
+
+<div class="step">
+  <div class="step-num">📧</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="status-badge sb-purple">סטטוס: אצל מודליסט</div>
+    <div class="step-title">מייל אוטומטי למודליסט</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת שולחת מייל אוטומטי</div>
+      <div class="auto-text">
+        <div class="email-preview">
+          <strong>אל:</strong> שירה (מודליסטית)<br>
+          <strong>נושא:</strong> ORD-0049 — דגם חדש במידה 48<br><br>
+          היי שירה,<br>
+          צריך דגם חדש:<br><br>
+          <strong>דגם:</strong> Adi_R045 (LIA_R045)<br>
+          <strong>מידה נדרשת:</strong> 48<br>
+          <strong>מידות קיימות:</strong> 54, 55, 57<br>
+          <strong>קובץ מקורי:</strong> [מצורף — STL מידה 54]<br><br>
+          כשהקובץ מוכן, העלי אותו כאן:<br>
+          <strong><a href="#">👉 לינק העלאה ישיר למערכת</a></strong>
+        </div>
+      </div>
+    </div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת עוקבת</div>
+      <div class="auto-text">
+        ⏰ אחרי 3 ימים — תזכורת אוטומטית לשירה<br>
+        ⏰ אחרי 5 ימים — התראה למשיקו: "ORD-0049 מחכה למודליסט כבר 5 ימים"
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">📤</div>
+  <div class="step-card" style="border-right-color:#6b4c9a">
+    <div class="step-title">שירה מחזירה קובץ STL</div>
+    <div class="step-desc">המודליסטית לוחצת על לינק ההעלאה שקיבלה במייל, מעלה את הקובץ, והוא נכנס ישירות למערכת.</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת עושה לבד</div>
+      <div class="auto-text">
+        ✅ שומרת את הקובץ ומקשרת אותו להזמנה<br>
+        ✅ <strong>שומרת את המידה החדשה בקטלוג!</strong> בפעם הבאה שמישהו יזמין מידה 48 — כבר יש<br>
+        ✅ ממשיכה אוטומטית לבית יציקה →
+      </div>
+    </div>
+    <div class="note"><strong>לגבי אחסון קבצי STL:</strong> קבצי STL נשמרים בתיקיית Google Drive הקיימת. המערכת שומרת את הקישור לקובץ בלבד — ללא עלות אחסון נוספת.</div>
+  </div>
+</div>
+
+<div class="note"><strong>יתרון מצטבר:</strong> ככל שעובר זמן, פחות ופחות הזמנות דורשות מודליסט — כל מידה חדשה שנוצרת נשמרת בקטלוג לשימוש חוזר.</div>
+
+<!-- ==================== שלב 5 ==================== -->
+<div class="section-divider">שלב 5 — בית יציקה</div>
+
+<div class="step">
+  <div class="step-num">🏭</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="status-badge sb-orange">סטטוס: ביציקה</div>
+    <div class="step-title">שליחה אוטומטית לבית היציקה</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת שולחת אוטומטית</div>
+      <div class="auto-text">
+        <div class="email-preview">
+          <strong>אל:</strong> בית היציקה<br>
+          <strong>נושא:</strong> ORD-0049 — הזמנת יציקה<br><br>
+          <strong>קובץ STL:</strong> [מצורף]<br>
+          <strong>דגם:</strong> Adi_R045<br>
+          <strong>חומר:</strong> זהב 14K<br>
+          <strong>מידה:</strong> 48<br>
+          <strong>כמות:</strong> 1
+        </div>
+      </div>
+    </div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת עוקבת</div>
+      <div class="auto-text">
+        ⏰ אם עברו 5 ימים — שולחת התראה למשיקו: "ORD-0049 ביציקה כבר 5 ימים"
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="note"><strong>תהליך קבוע:</strong> לאחר היציקה, התכשיט חוזר תמיד למשיקו/גבריאל לעיבוד צורפות ראשוני. היציקה יוצאת גולמית ודורשת עבודת יד לפני כל שלב נוסף.</div>
+
+<!-- ==================== שלב 6 ==================== -->
+<div class="section-divider">שלב 6 — צורפות ראשונית</div>
+
+<div class="step">
+  <div class="step-num">🔨</div>
+  <div class="step-card" style="border-right-color:#2d8f5e">
+    <div class="status-badge sb-pink">סטטוס: בצורפות</div>
+    <div class="step-title">משימת צורפות — גבריאל</div>
+    <div class="auto-box">
+      <div class="auto-label">תצוגת המשימות של גבריאל במערכת</div>
+      <div class="auto-text">
+        <div class="email-preview">
+          <strong>המשימות שלי:</strong><br><br>
+          1. 🔨 צורפות ראשונית — טבעת LIA_R045 (מידה 48) — ORD-0049<br>
+          2. 🔨 צורפות ראשונית — עגיל LIA_E007 — ORD-0042<br>
+          3. ✨ ליטוש — צמיד LIA_B001 — ORD-0046<br><br>
+          <em>גבריאל רואה רק את המשימות שלו. לא רואה מחירים, לקוחות, או שום דבר אחר.</em>
+        </div>
+      </div>
+    </div>
+    <div class="human-box">
+      <div class="human-label">פעולה נדרשת</div>
+      <div class="human-text">
+        גבריאל מבצע את עבודת הצורפות. בסיום — לחיצה על <strong>"סיימתי"</strong> והמערכת ממשיכה אוטומטית לשלב הבא.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== שלב 7 ==================== -->
+<div class="section-divider">שלב 7 — שיבוץ (רק אם יש אבנים)</div>
+
+<div class="step">
+  <div class="step-num">💎</div>
+  <div class="step-card" style="border-right-color:#c9a84c">
+    <div class="step-title">המערכת בודקת: האבנים מוכנות?</div>
+    <div class="step-desc">בשלב 2 עדי ביצעה הזמנת אבנים מהיהלומן. כעת המערכת מוודאת שהאבנים הגיעו ושוריינו להזמנה זו.</div>
+
+    <div class="decision">
+      <div class="decision-option opt-yes"><strong>האבנים הגיעו ✅</strong>ממשיכים לשיבוץ</div>
+      <div class="decision-option opt-no"><strong>עדיין חסרות ❌</strong>התראה דחופה לעדי + ההזמנה ממתינה</div>
+    </div>
+
+    <div class="auto-box">
+      <div class="auto-label">אם חסרות — המערכת שולחת</div>
+      <div class="auto-text">
+        <div class="email-preview">
+          <strong>אל:</strong> עדי<br>
+          <strong>נושא:</strong> ⚠️ ORD-0049 מוכנה לשיבוץ — אבל חסרות אבנים!<br><br>
+          ההזמנה סיימה צורפות ומחכה לשיבוץ, אבל האבנים עדיין לא סומנו כ"הגיעו".<br>
+          <strong><a href="#">👉 עדכני סטטוס אבנים</a></strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">🔶</div>
+  <div class="step-card" style="border-right-color:#6b4c9a">
+    <div class="status-badge sb-purple">סטטוס: בשיבוץ</div>
+    <div class="step-title">שיבוץ — גבריאל (בסיסי) או משבץ חיצוני</div>
+    <div class="human-box">
+      <div class="human-label">מי עושה</div>
+      <div class="human-text">
+        שיבוצים בסיסיים — גבריאל בחנות (מופיע ברשימת המשימות שלו).<br>
+        שיבוצים מורכבים — יוצאים למשבץ חיצוני.<br>
+        <strong>אחרי שיבוץ — חוזר תמיד למשיקו/גבריאל לפינישים.</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== שלב 8 ==================== -->
+<div class="section-divider">שלב 8 — ליטוש וגימור סופי</div>
+
+<div class="step">
+  <div class="step-num">✨</div>
+  <div class="step-card" style="border-right-color:#2d8f5e">
+    <div class="status-badge sb-teal">סטטוס: בגימור</div>
+    <div class="step-title">פינישים — ליטוש, ניקוי, בדיקה סופית</div>
+    <div class="human-box">
+      <div class="human-label">פעולה נדרשת</div>
+      <div class="human-text">
+        שלב אחרון בתהליך הייצור. בסיום — לחיצה על <strong>"מוכן למסירה"</strong> והמערכת ממשיכה לשלב המסירה.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== שלב 9 ==================== -->
+<div class="section-divider">שלב 9 — מסירה</div>
+
+<div class="step">
+  <div class="step-num">🎁</div>
+  <div class="step-card" style="border-right-color:#e8a030">
+    <div class="status-badge sb-green">סטטוס: מוכן למסירה</div>
+    <div class="step-title">התכשיט מוכן — מה עכשיו?</div>
+    <div class="step-desc">המערכת מזהה את אופן המסירה שנבחר בעת קליטת ההזמנה:</div>
+
+    <div class="decision">
+      <div class="decision-option opt-yes">
+        <strong>איסוף עצמי מהחנות</strong>
+        <div class="auto-box" style="margin-top:8px;margin-bottom:0">
+          <div class="auto-label">המערכת שולחת אוטומטית</div>
+          <div class="auto-text">
+            <div class="email-preview">
+              <strong>אל:</strong> רונית כהן (וואטסאפ / SMS)<br><br>
+              היי רונית! 💛<br>
+              התכשיט שלך מוכן!<br>
+              ניתן לאסוף מהחנות בשעות הפתיחה.<br>
+              נשמח לראות אותך!<br><br>
+              LIA Fine Jewelry ✨
+            </div>
+          </div>
+        </div>
+        <div class="human-box" style="margin-top:8px;margin-bottom:0">
+          <div class="human-label">פעולה נדרשת</div>
+          <div class="human-text">הלקוח/ה מגיע/ה לחנות ← סימון "נמסר" במערכת.</div>
+        </div>
+      </div>
+      <div class="decision-option opt-no">
+        <strong>משלוח</strong>
+        <div class="auto-box" style="margin-top:8px;margin-bottom:0">
+          <div class="auto-label">המערכת עושה</div>
+          <div class="auto-text">
+            שולחת חיווי לחברת המשלוחים — כתובת, טלפון, פרטי חבילה.<br>
+            מקבלת מספר מעקב.<br>
+            שולחת ללקוח/ה: "התכשיט שלך בדרך אליך! מספר מעקב: XXX"
+          </div>
+        </div>
+        <div class="human-box" style="margin-top:8px;margin-bottom:0">
+          <div class="human-label">פעולה נדרשת</div>
+          <div class="human-text">אריזת החבילה. לאחר איסוף על ידי השליח ← סימון "נשלח" במערכת.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="step">
+  <div class="step-num">✅</div>
+  <div class="step-card" style="border-right-color:#22c55e">
+    <div class="status-badge sb-green" style="background:#c8e6c9;color:#1b5e20">סטטוס: נמסר ✓</div>
+    <div class="step-title">הזמנה הושלמה!</div>
+    <div class="auto-box">
+      <div class="auto-label">המערכת עושה לבד</div>
+      <div class="auto-text">
+        ✅ העברת ההזמנה לארכיון<br>
+        ✅ שמירת היסטוריית לקוח מלאה — פריטים, תאריכים, מחירים<br>
+        ✅ <strong>בשלבים הבאים:</strong> אפשרות לשליחת תזכורות ליום הולדת, הצעות טרייד-אין, עדכוני קולקציות חדשות
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== BENEFITS ==================== -->
+<div class="section-divider" style="margin-top:40px">היתרונות של המערכת</div>
+
+<div class="req-grid">
+  <div class="req-card" style="border-right-color:#c9a84c">
+    <h4>⏱ חיסכון בזמן</h4>
+    <ul>
+      <li>אין צורך לזכור מה הסטטוס של כל הזמנה — הכל מרוכז במקום אחד</li>
+      <li>מיילים לספקים נשלחים אוטומטית — בלי להעתיק, להדביק ולנסח</li>
+      <li>ריכוז אבנים ליהלומן בלחיצת כפתור במקום לרשום על פתק</li>
+    </ul>
+  </div>
+  <div class="req-card" style="border-right-color:#c9a84c">
+    <h4>🔒 אפס שכחות</h4>
+    <ul>
+      <li>תזכורות אוטומטיות כשמשהו תקוע — מודליסט, יציקה, אבנים</li>
+      <li>התראות בזמן אמת כשהזמנה מחכה יותר מדי</li>
+      <li>הלקוח מקבל הודעה אוטומטית ברגע שהתכשיט מוכן</li>
+    </ul>
+  </div>
+  <div class="req-card" style="border-right-color:#c9a84c">
+    <h4>📊 שקיפות מלאה</h4>
+    <ul>
+      <li>כל אחד בצוות רואה בדיוק מה רלוונטי אליו</li>
+      <li>משיקו רואה תמונת מצב כוללת בכל רגע</li>
+      <li>היסטוריית לקוחות שלמה — מה הוזמן, מתי, באיזה מחיר</li>
+    </ul>
+  </div>
+  <div class="req-card" style="border-right-color:#c9a84c">
+    <h4>📈 מוכנות לצמיחה</h4>
+    <ul>
+      <li>המערכת מתחברת לאתר שופיפיי — הזמנות אונליין נקלטות אוטומטית</li>
+      <li>ככל שהעסק גדל — המערכת מתמודדת בלי מאמץ נוסף</li>
+      <li>בסיס לשלבים הבאים: ניהול מלאי, תמחור אוטומטי, דוחות</li>
+    </ul>
+  </div>
+</div>
+
+<div style="text-align:center;padding:30px 0 10px;color:#888;font-size:0.85em">
+  טליה אושר — שדרוג לעסקים | 054-4407557 | talya@talyaosher.com
+</div>
+
+</body>
+</html>
